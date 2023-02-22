@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>@yield('title')</title>
+    <title>@yield('title') - Kompas Indorama</title>
 
     <!-- META SECTION -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
