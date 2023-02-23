@@ -39,61 +39,108 @@
                     <span class="text-bolder text-uppercase text-sm">Phone:</span>
                     <p>{{ $dataUser->hp }}</p>
                 </div>
-
-            </div>
-
-            <div class="row row-table">
-                <div class="col-md-12 col-xs-12">
-                    <span class="text-bolder text-uppercase text-sm">Competency Profile:</span>
-                    <p>
-                    <h3 class="label label-info label-bordered">Bertindak Sebagai Pemilik</h3>
-                    @foreach ($profile as $x)
-                        @if ($x->id_kompetensi == 'A1' || $x->id_kompetensi == 'A2' || $x->id_kompetensi == 'A3')
-                            <ul>
-                                <li style="list-style-type: '\2014 &nbsp;'">
-                                    {{ $x->deskripsi }}
-                                </li>
-                            </ul>
-                        @endif
-                    @endforeach
-
-                    <h3 class="label label-danger label-bordered">Beradaptasi</h3>
-                    @foreach ($profile as $x)
-                        @if ($x->id_kompetensi == 'B1' || $x->id_kompetensi == 'B2' || $x->id_kompetensi == 'B3')
-                            <ul>
-                                <li style="list-style-type: '\2014 &nbsp;'">{{ $x->deskripsi }}</li>
-                            </ul>
-                        @endif
-                    @endforeach
-
-                    <h3 class="label label-warning label-bordered">Menunjukan kepedulian mendalam</h3>
-                    @foreach ($profile as $x)
-                        @if ($x->id_kompetensi == 'C1' || $x->id_kompetensi == 'C2' || $x->id_kompetensi == 'C3')
-                            <ul>
-                                <li style="list-style-type: '\2014 &nbsp;'">{{ $x->deskripsi }}</li>
-                            </ul>
-                        @endif
-                    @endforeach
-
-                    <h3 class="label label-success label-bordered">Menghasilkan Keunggulan</h3>
-                    @foreach ($profile as $x)
-                        @if ($x->id_kompetensi == 'D1' || $x->id_kompetensi == 'D2' || $x->id_kompetensi == 'D3')
-                            <ul>
-                                <li style="list-style-type: '\2014 &nbsp;'">{{ $x->deskripsi }}</li>
-                            </ul>
-                        @endif
-                    @endforeach
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="row row-table">
-                <div class="col-xs-12">
-                    <a href="/dashboard" class="btn btn-info pull-right ">See More Competency</a>
-                </div>
             </div>
         </div>
+    </div>
+    <div class="block block-condensed">
+        <div class="app-heading app-heading-small" id="app-tour-heading-inside">
+            <div class="title">
+                <h3 style="font-size: 18px;color:rgb(0, 0, 0);font-weight: 700">Competencies Profile:</h3>
+                <p>Berikut ini adalah kompetensi yang harus di kuasai</p>
+            </div>
+        </div>
+        <div class="block-content">
+            <div class="app-timeline">
+                <div class="app-timeline-item">
+                    <div class="user"><img src="asset/a.png" alt="A"></div>
+                    <div class="content">
+                        <div class="title">
+                            <span class="label label-warning label-bordered"
+                                style="font-size: 14px;font-weight: 700">Bertindak
+                                Sebagai Pemilik</span>
+                        </div>
+                        <div class="comments">
+                            <div class="total">
+                                <ol>
+                                    @foreach ($profile as $x)
+                                        @if ($x->id_kompetensi == 'A1' || $x->id_kompetensi == 'A2' || $x->id_kompetensi == 'A3')
+                                            <li>
+                                                <span style="font-size: 15px"> {{ $x->deskripsi }}</span>
+                                            </li>
+                                        @endif
+                                    @endforeach
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-timeline-item">
+                    <div class="user"><img src="asset/b.png" alt="A"></div>
+                    <div class="content">
+                        <span class="label label-warning label-bordered"
+                            style="font-size: 14px;font-weight: 700">Beradaptasi</span>
+                        <div class="comments">
+                            <div class="total">
+                                <ol>
+                                    @foreach ($profile as $x)
+                                        @if ($x->id_kompetensi == 'B1' || $x->id_kompetensi == 'B2' || $x->id_kompetensi == 'B3')
+                                            <li>
+                                                <span style="font-size: 15px"> {{ $x->deskripsi }}</span>
+                                            </li>
+                                        @endif
+                                    @endforeach
+                                </ol>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="app-timeline-item">
+                    <div class="user"><img src="asset/c.png" alt="A"></div>
+                    <div class="content">
+                        <span class="label label-warning label-bordered" style="font-size: 14px;font-weight: 700">Menunjukan
+                            kepedulian mendalam</span>
+                        <div class="comments">
+                            <div class="total">
+                                <ol>
+                                    @foreach ($profile as $x)
+                                        @if ($x->id_kompetensi == 'C1' || $x->id_kompetensi == 'C2' || $x->id_kompetensi == 'C3')
+                                            <li>
+                                                <span style="font-size: 15px"> {{ $x->deskripsi }}</span>
+                                            </li>
+                                        @endif
+                                    @endforeach
+                                </ol>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="app-timeline-item">
+                    <div class="user"><img src="asset/d.png" alt="A"></div>
+                    <div class="content">
+                        <span class="label label-warning label-bordered"
+                            style="font-size: 14px;font-weight: 700">Menghasilkan Keunggulan</span>
+                        <div class="comments">
+                            <div class="total">
+                                <ol>
+                                    @foreach ($profile as $x)
+                                        @if ($x->id_kompetensi == 'D1' || $x->id_kompetensi == 'D2' || $x->id_kompetensi == 'D3')
+                                            <li>
+                                                <span style="font-size: 15px"> {{ $x->deskripsi }}</span>
+                                            </li>
+                                        @endif
+                                    @endforeach
+                                </ol>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="/dashboard" class="btn btn-info pull-right ">See More Competency</a>
+        </div>
+    </div>
     </div>
 @endsection
 
