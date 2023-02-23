@@ -31,17 +31,24 @@ class UtamaController extends Controller
         $dataNilai = Nilai::all();
         $dataLevel = Level::all();
         $dataPeran = Peran::all();
-        $dataProfile = Profile::join('nilai', 'profile.nilai', '=', 'nilai.id_nilai')
-            ->join('peran', 'peran.id_peran', '=', 'profile.peran')
-            ->join('level', 'level.id_level', '=', 'profile.level')
-            ->where('profile.peran', '=', Auth::user()->function)
-            ->where('profile.level', '=', Auth::user()->level)
-            ->orderBy('nilai', 'asc')
-            ->get(['nilai.*', 'profile.*', 'peran.*', 'level.*']);
-        $dataUser = User::join('peran', 'peran.id_peran', '=', 'users.function')
-            ->join('level', 'level.id_level', '=', 'users.level')
-            ->where('users.id_user', '=', Auth::user()->id_user)
-            ->get(['users.*', 'level.*', 'peran.*'])->first();
+        if (isset(Auth::user()->id_user)) {
+            $dataProfile = Profile::join('nilai', 'profile.nilai', '=', 'nilai.id_nilai')
+                ->join('peran', 'peran.id_peran', '=', 'profile.peran')
+                ->join('level', 'level.id_level', '=', 'profile.level')
+                ->where('profile.peran', '=', Auth::user()->function)
+                ->where('profile.level', '=', Auth::user()->level)
+                ->orderBy('nilai', 'asc')
+                ->get(['nilai.*', 'profile.*', 'peran.*', 'level.*']);
+
+            $dataUser = User::join('peran', 'peran.id_peran', '=', 'users.function')
+                ->join('level', 'level.id_level', '=', 'users.level')
+                ->where('users.id_user', '=', Auth::user()->id_user)
+                ->get(['users.*', 'level.*', 'peran.*'])->first();
+        } else {
+            return view('login');
+        }
+
+
         return view('profile', ['dataUser' => $dataUser, 'nilai' => $dataNilai, 'level' => $dataLevel, 'peran' => $dataPeran, 'profile' => $dataProfile]);
     }
     public function login()
