@@ -46,55 +46,43 @@
                 <div class="col-md-12 col-xs-12">
                     <span class="text-bolder text-uppercase text-sm">Competency Profile:</span>
                     <p>
-
-                        @if ($dataUser->nm_peran == 'Manufaktur')
-                            @if ($dataUser->id_level == 1)
-                                <h3 class="label label-info label-bordered">Bertindak Sebagai Pemilik</h3>
-                                @foreach ($profile as $x)
-                                    @if ($x->id_kompetensi == 'A1' || $x->id_kompetensi == 'A2' || $x->id_kompetensi == 'A3')
-                                        <ul>
-                                            <li style="list-style-type: '\2014 &nbsp;'">
-                                                {{ $x->deskripsi }}
-                                            </li>
-                                        </ul>
-                                    @endif
-                                @endforeach
-
-                                <h3 class="label label-danger label-bordered">Beradaptasi</h3>
-                                @foreach ($profile as $x)
-                                    @if ($x->id_kompetensi == 'B1' || $x->id_kompetensi == 'B2' || $x->id_kompetensi == 'B3')
-                                        <ul>
-                                            <li style="list-style-type: '\2014 &nbsp;'">{{ $x->deskripsi }}</li>
-                                        </ul>
-                                    @endif
-                                @endforeach
-
-                                <h3 class="label label-warning label-bordered">Menunjukan kepedulian mendalam</h3>
-                                @foreach ($profile as $x)
-                                    @if ($x->id_kompetensi == 'C1' || $x->id_kompetensi == 'C2' || $x->id_kompetensi == 'C3')
-                                        <ul>
-                                            <li style="list-style-type: '\2014 &nbsp;'">{{ $x->deskripsi }}</li>
-                                        </ul>
-                                    @endif
-                                @endforeach
-
-                                <h3 class="label label-success label-bordered">Menghasilkan Keunggulan</h3>
-                                @foreach ($profile as $x)
-                                    @if ($x->id_kompetensi == 'D1' || $x->id_kompetensi == 'D2' || $x->id_kompetensi == 'D3')
-                                        <ul>
-                                            <li style="list-style-type: '\2014 &nbsp;'">{{ $x->deskripsi }}</li>
-                                        </ul>
-                                    @endif
-                                @endforeach
-                            @endif
-
-                            @if ($dataUser->id_level == 2)
-                            @endif
-                            @if ($dataUser->id_level == 3)
-                            @endif
-                            @if ($dataUser->id_level == 4)
-                            @endif
+                    <h3 class="label label-info label-bordered">Bertindak Sebagai Pemilik</h3>
+                    @foreach ($profile as $x)
+                        @if ($x->id_kompetensi == 'A1' || $x->id_kompetensi == 'A2' || $x->id_kompetensi == 'A3')
+                            <ul>
+                                <li style="list-style-type: '\2014 &nbsp;'">
+                                    {{ $x->deskripsi }}
+                                </li>
+                            </ul>
                         @endif
+                    @endforeach
+
+                    <h3 class="label label-danger label-bordered">Beradaptasi</h3>
+                    @foreach ($profile as $x)
+                        @if ($x->id_kompetensi == 'B1' || $x->id_kompetensi == 'B2' || $x->id_kompetensi == 'B3')
+                            <ul>
+                                <li style="list-style-type: '\2014 &nbsp;'">{{ $x->deskripsi }}</li>
+                            </ul>
+                        @endif
+                    @endforeach
+
+                    <h3 class="label label-warning label-bordered">Menunjukan kepedulian mendalam</h3>
+                    @foreach ($profile as $x)
+                        @if ($x->id_kompetensi == 'C1' || $x->id_kompetensi == 'C2' || $x->id_kompetensi == 'C3')
+                            <ul>
+                                <li style="list-style-type: '\2014 &nbsp;'">{{ $x->deskripsi }}</li>
+                            </ul>
+                        @endif
+                    @endforeach
+
+                    <h3 class="label label-success label-bordered">Menghasilkan Keunggulan</h3>
+                    @foreach ($profile as $x)
+                        @if ($x->id_kompetensi == 'D1' || $x->id_kompetensi == 'D2' || $x->id_kompetensi == 'D3')
+                            <ul>
+                                <li style="list-style-type: '\2014 &nbsp;'">{{ $x->deskripsi }}</li>
+                            </ul>
+                        @endif
+                    @endforeach
                     </p>
                 </div>
 

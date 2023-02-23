@@ -32,8 +32,12 @@ class UtamaController extends Controller
         $dataLevel = Level::all();
         $dataPeran = Peran::all();
         $dataProfile = Profile::join('nilai', 'profile.nilai', '=', 'nilai.id_nilai')
+            ->join('peran', 'peran.id_peran', '=', 'profile.peran')
+            ->join('level', 'level.id_level', '=', 'profile.level')
+            ->where('profile.peran', '=', Auth::user()->function)
+            ->where('profile.level', '=', Auth::user()->level)
             ->orderBy('nilai', 'asc')
-            ->get(['nilai.*', 'profile.*']);
+            ->get(['nilai.*', 'profile.*', 'peran.*', 'level.*']);
         $dataUser = User::join('peran', 'peran.id_peran', '=', 'users.function')
             ->join('level', 'level.id_level', '=', 'users.level')
             ->where('users.id_user', '=', Auth::user()->id_user)
