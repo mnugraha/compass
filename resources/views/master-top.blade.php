@@ -60,6 +60,9 @@
                                         <a href="/profile"><span class="icon-user"></span> My Profile</a>
                                     </li>
                                 @endif
+                                <li>
+                                    <a href="/test"><span class="icon-laptop-phone"></span> Assessment</a>
+                                </li>
                                 {{-- <li>
                                     <a href="#"><span class="icon-sync"></span> Materi</a>
                                 </li>

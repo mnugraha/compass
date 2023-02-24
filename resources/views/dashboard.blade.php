@@ -9,7 +9,7 @@
 
 @section('konten-tanpa-frame')
     <div class="block">
-        <iframe src="/file/kompas-indorama.pdf" height="400" width="100%"></iframe>
+        <embed src="/file/kompas-indorama.pdf" height="400" width="100%">
     </div>
     <div class="panel panel-biru">
         <div class="panel-heading">
