@@ -10,6 +10,9 @@
 @section('konten-tanpa-frame')
     <div class="block">
         <object data="/file/kompas-indorama.pdf" type="application/pdf" width="100%" height="400"></object>
+        <p>Jika file tidak muncul, silahkan <a href="/file/kompas-indorama.pdf"> download</a> Handbook Kompas Indorama <a
+                href="/file/kompas-indorama.pdf">disini</a>
+        </p>
     </div>
     <div class="panel panel-biru">
         <div class="panel-heading">
