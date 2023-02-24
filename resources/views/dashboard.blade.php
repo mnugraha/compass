@@ -9,7 +9,7 @@
 
 @section('konten-tanpa-frame')
     <div class="block">
-        <embed src="/file/kompas-indorama.pdf" height="400" width="100%">
+        <object data="/file/kompas-indorama.pdf" type="application/pdf" width="100%" height="400"></object>
     </div>
     <div class="panel panel-biru">
         <div class="panel-heading">
