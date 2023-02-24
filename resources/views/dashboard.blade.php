@@ -26,7 +26,8 @@
                 </div>
             </div>
         </div>
-
+    </div>
+    <div class="panel panel-biru">
         <div class="panel-heading" style="background-color: #c7170e">
             <div class="row">
                 <div class="col-md-2">
@@ -42,7 +43,6 @@
             </div>
         </div>
     </div>
-
     <div class="panel panel-primary">
         <div class="panel-heading">
             <h3 class="panel-title" style="font-size: 18px;"><span class="fa fa-area-chart"></span> Kemampuan</h3>
