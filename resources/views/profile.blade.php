@@ -66,9 +66,11 @@
             <table class="table table-striped table-responsive">
                 <tr style="background-color: cornflowerblue">
                     <th class="text-center" style="color: aliceblue"></th>
-                    <th class="text-center" style="color: aliceblue">Integritas</th>
-                    <th class="text-center" style="color: aliceblue">Berorientasi Tujuan</th>
-                    <th class="text-center" style="color: aliceblue">Keselamatan</th>
+                    @foreach ($struktur as $k)
+                        @if ($k->id_kompetensi == 'A1')
+                            <th class="text-center" style="color: aliceblue">{{ $k->nm_struktur }}</th>
+                        @endif
+                    @endforeach
                 </tr>
                 <tbody>
                     <tr>
@@ -77,7 +79,7 @@
                                 <td style="vertical-align:top">
                                     <h5 style="font-weight: 700;color: cornflowerblue">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5><br>
-                                    {{ $k->definisi }}
+                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}</div>
                                 </td>
                             @endif
                         @endforeach
@@ -89,9 +91,11 @@
                     </tr>
                     <tr style="background-color: cornflowerblue">
                         <th class="text-center" style="color: aliceblue"></th>
-                        <th class="text-center" style="color: aliceblue">Keputusan yang meyakinkan</th>
-                        <th class="text-center" style="color: aliceblue">Akuntabilitas</th>
-                        <th class="text-center" style="color: aliceblue">Komunikasi yang meyakinkan</th>
+                        @foreach ($struktur as $k)
+                            @if ($k->id_kompetensi == 'A2')
+                                <th class="text-center" style="color: aliceblue">{{ $k->nm_struktur }}</th>
+                            @endif
+                        @endforeach
                     </tr>
                     <tr>
                         @foreach ($kompetensi as $k)
@@ -100,7 +104,7 @@
                                     <h5 style="font-weight: 700;color: cornflowerblue">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5>
                                     <br>
-                                    {{ $k->definisi }}
+                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}</div>
                                 </td>
                             @endif
                         @endforeach
@@ -112,9 +116,11 @@
                     </tr>
                     <tr style="background-color: cornflowerblue">
                         <th class="text-center" style="color: aliceblue"></th>
-                        <th class="text-center" style="color: aliceblue">Analisi Biaya/Manfaat</th>
-                        <th class="text-center" style="color: aliceblue">Mempertimbangkan pendapat orang lain</th>
-                        <th class="text-center" style="color: aliceblue">Berorientasi masa depan</th>
+                        @foreach ($struktur as $k)
+                            @if ($k->id_kompetensi == 'A3')
+                                <th class="text-center" style="color: aliceblue">{{ $k->nm_struktur }}</th>
+                            @endif
+                        @endforeach
                     </tr>
                     <tr>
                         @foreach ($kompetensi as $k)
@@ -122,7 +128,7 @@
                                 <td>
                                     <h5 style="font-weight: 700;color: cornflowerblue">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5><br>
-                                    {{ $k->definisi }}
+                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}</div>
                                 </td>
                             @endif
                         @endforeach
@@ -153,10 +159,11 @@
                 <thead>
                     <tr style="background-color: blueviolet">
                         <th class="text-center" style="color: aliceblue"></th>
-                        <th class="text-center" style="color: aliceblue">Perencanaan detail</th>
-                        <th class="text-center" style="color: aliceblue">Penyelesaian masalah</th>
-                        <th class="text-center" style="color: aliceblue">Menghasilkan keunggulan secara konsisten
-                        </th>
+                        @foreach ($struktur as $k)
+                            @if ($k->id_kompetensi == 'B1')
+                                <th class="text-center" style="color: aliceblue">{{ $k->nm_struktur }}</th>
+                            @endif
+                        @endforeach
                     </tr>
                 </thead>
                 <tbody>
@@ -166,7 +173,7 @@
                                 <td style="vertical-align:top">
                                     <h5 style="font-weight: 700;color: blueviolet">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5><br>
-                                    {{ $k->definisi }}
+                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}</div>
                                 </td>
                             @endif
                         @endforeach
@@ -178,9 +185,11 @@
                     </tr>
                     <tr style="background-color: blueviolet">
                         <th class="text-center" style="color: aliceblue"></th>
-                        <th class="text-center" style="color: aliceblue">Wawasan diri</th>
-                        <th class="text-center" style="color: aliceblue">Menghargai umpan balik</th>
-                        <th class="text-center" style="color: aliceblue">Mengambil peluang untuk maju</th>
+                        @foreach ($struktur as $k)
+                            @if ($k->id_kompetensi == 'B2')
+                                <th class="text-center" style="color: aliceblue">{{ $k->nm_struktur }}</th>
+                            @endif
+                        @endforeach
                     </tr>
                     <tr>
                         @foreach ($kompetensi as $k)
@@ -189,7 +198,7 @@
                                     <h5 style="font-weight: 700;color: blueviolet">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5>
                                     <br>
-                                    {{ $k->definisi }}
+                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}</div>
                                 </td>
                             @endif
                         @endforeach
@@ -201,9 +210,11 @@
                     </tr>
                     <tr style="background-color: blueviolet">
                         <th class="text-center" style="color: aliceblue"></th>
-                        <th class="text-center" style="color: aliceblue">Integritas</th>
-                        <th class="text-center" style="color: aliceblue">Berorientasi Tujuan</th>
-                        <th class="text-center" style="color: aliceblue">Keselamatan</th>
+                        @foreach ($struktur as $k)
+                            @if ($k->id_kompetensi == 'B3')
+                                <th class="text-center" style="color: aliceblue">{{ $k->nm_struktur }}</th>
+                            @endif
+                        @endforeach
                     </tr>
                     <tr>
                         @foreach ($kompetensi as $k)
@@ -211,7 +222,7 @@
                                 <td>
                                     <h5 style="font-weight: 700;color: blueviolet">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5><br>
-                                    {{ $k->definisi }}
+                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}</div>
                                 </td>
                             @endif
                         @endforeach
@@ -244,11 +255,11 @@
                 <thead>
                     <tr style="background-color: goldenrod">
                         <th class="text-center" style="color: aliceblue"></th>
-                        <th class="text-center" style="color: aliceblue">Perencanaan detail</th>
-                        <th class="text-center" style="color: aliceblue">Penyelesaian masalah</th>
-                        <th class="text-center" style="color: aliceblue">Menghasilkan keunggulan secara
-                            konsisten
-                        </th>
+                        @foreach ($struktur as $k)
+                            @if ($k->id_kompetensi == 'C1')
+                                <th class="text-center" style="color: aliceblue">{{ $k->nm_struktur }}</th>
+                            @endif
+                        @endforeach
                     </tr>
                 </thead>
                 <tbody>
@@ -258,7 +269,7 @@
                                 <td style="vertical-align:top">
                                     <h5 style="font-weight: 700;color: goldenrod">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5><br>
-                                    {{ $k->definisi }}
+                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}</div>
                                 </td>
                             @endif
                         @endforeach
@@ -270,9 +281,11 @@
                     </tr>
                     <tr style="background-color: goldenrod">
                         <th class="text-center" style="color: aliceblue"></th>
-                        <th class="text-center" style="color: aliceblue">Wawasan diri</th>
-                        <th class="text-center" style="color: aliceblue">Menghargai umpan balik</th>
-                        <th class="text-center" style="color: aliceblue">Mengambil peluang untuk maju</th>
+                        @foreach ($struktur as $k)
+                            @if ($k->id_kompetensi == 'C2')
+                                <th class="text-center" style="color: aliceblue">{{ $k->nm_struktur }}</th>
+                            @endif
+                        @endforeach
                     </tr>
                     <tr>
                         @foreach ($kompetensi as $k)
@@ -281,7 +294,7 @@
                                     <h5 style="font-weight: 700;color: goldenrod">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5>
                                     <br>
-                                    {{ $k->definisi }}
+                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}</div>
                                 </td>
                             @endif
                         @endforeach
@@ -293,9 +306,11 @@
                     </tr>
                     <tr style="background-color: goldenrod">
                         <th class="text-center" style="color: aliceblue"></th>
-                        <th class="text-center" style="color: aliceblue">Integritas</th>
-                        <th class="text-center" style="color: aliceblue">Berorientasi Tujuan</th>
-                        <th class="text-center" style="color: aliceblue">Keselamatan</th>
+                        @foreach ($struktur as $k)
+                            @if ($k->id_kompetensi == 'C3')
+                                <th class="text-center" style="color: aliceblue">{{ $k->nm_struktur }}</th>
+                            @endif
+                        @endforeach
                     </tr>
                     <tr>
                         @foreach ($kompetensi as $k)
@@ -303,7 +318,7 @@
                                 <td>
                                     <h5 style="font-weight: 700;color: goldenrod">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5><br>
-                                    {{ $k->definisi }}
+                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}</div>
                                 </td>
                             @endif
                         @endforeach
@@ -336,11 +351,12 @@
                 <thead>
                     <tr style="background-color: cadetblue">
                         <th class="text-center" style="color: aliceblue"></th>
-                        <th class="text-center" style="color: aliceblue">Perencanaan detail</th>
-                        <th class="text-center" style="color: aliceblue">Penyelesaian masalah</th>
-                        <th class="text-center" style="color: aliceblue">Menghasilkan keunggulan secara
-                            konsisten
-                        </th>
+                        @foreach ($struktur as $k)
+                            @if ($k->id_kompetensi == 'D1')
+                                <th class="text-center" style="color: aliceblue">{{ $k->nm_struktur }}
+                                </th>
+                            @endif
+                        @endforeach
                     </tr>
                 </thead>
                 <tbody>
@@ -350,7 +366,8 @@
                                 <td style="vertical-align:top">
                                     <h5 style="font-weight: 700;color: cadetblue">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5><br>
-                                    {{ $k->definisi }}
+                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}
+                                    </div>
                                 </td>
                             @endif
                         @endforeach
@@ -362,9 +379,12 @@
                     </tr>
                     <tr style="background-color: cadetblue">
                         <th class="text-center" style="color: aliceblue"></th>
-                        <th class="text-center" style="color: aliceblue">Wawasan diri</th>
-                        <th class="text-center" style="color: aliceblue">Menghargai umpan balik</th>
-                        <th class="text-center" style="color: aliceblue">Mengambil peluang untuk maju</th>
+                        @foreach ($struktur as $k)
+                            @if ($k->id_kompetensi == 'D2')
+                                <th class="text-center" style="color: aliceblue">{{ $k->nm_struktur }}
+                                </th>
+                            @endif
+                        @endforeach
                     </tr>
                     <tr>
                         @foreach ($kompetensi as $k)
@@ -373,7 +393,8 @@
                                     <h5 style="font-weight: 700;color: cadetblue">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5>
                                     <br>
-                                    {{ $k->definisi }}
+                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}
+                                    </div>
                                 </td>
                             @endif
                         @endforeach
@@ -385,9 +406,12 @@
                     </tr>
                     <tr style="background-color: cadetblue">
                         <th class="text-center" style="color: aliceblue"></th>
-                        <th class="text-center" style="color: aliceblue">Integritas</th>
-                        <th class="text-center" style="color: aliceblue">Berorientasi Tujuan</th>
-                        <th class="text-center" style="color: aliceblue">Keselamatan</th>
+                        @foreach ($struktur as $k)
+                            @if ($k->id_kompetensi == 'D3')
+                                <th class="text-center" style="color: aliceblue">{{ $k->nm_struktur }}
+                                </th>
+                            @endif
+                        @endforeach
                     </tr>
                     <tr>
                         @foreach ($kompetensi as $k)
@@ -395,7 +419,8 @@
                                 <td>
                                     <h5 style="font-weight: 700;color: cadetblue">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5><br>
-                                    {{ $k->definisi }}
+                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}
+                                    </div>
                                 </td>
                             @endif
                         @endforeach

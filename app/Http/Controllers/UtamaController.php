@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\Models\Kompetensi;
+use App\Models\Struktur;
 use App\Models\Nilai;
 use App\Models\Level;
 use App\Models\User;
@@ -30,6 +31,7 @@ class UtamaController extends Controller
     {
         $dataNilai = Nilai::all();
         $dataKompetensi = Kompetensi::all();
+        $dataStruktur = Struktur::all();
         $dataLevel = Level::all();
         $dataPeran = Peran::all();
         if (isset(Auth::user()->id_user)) {
@@ -48,9 +50,7 @@ class UtamaController extends Controller
         } else {
             return view('login');
         }
-
-
-        return view('profile', ['dataUser' => $dataUser, 'nilai' => $dataNilai, 'level' => $dataLevel, 'peran' => $dataPeran, 'profile' => $dataProfile, 'kompetensi' => $dataKompetensi]);
+        return view('profile', ['dataUser' => $dataUser, 'nilai' => $dataNilai, 'level' => $dataLevel, 'peran' => $dataPeran, 'profile' => $dataProfile, 'kompetensi' => $dataKompetensi, 'struktur' => $dataStruktur]);
     }
     public function login()
     {
