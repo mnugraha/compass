@@ -409,7 +409,7 @@
             </table>
         </div>
 
-        <a href="/dashboard" class="btn btn-info pull-right ">See More Competency</a>
+        <a href="/dashboard" class="btn btn-default pull-right ">See More Competency</a>
     </div>
 </div>
 </div>
