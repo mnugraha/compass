@@ -29,6 +29,7 @@ class UtamaController extends Controller
     public function profil()
     {
         $dataNilai = Nilai::all();
+        $dataKompetensi = Kompetensi::all();
         $dataLevel = Level::all();
         $dataPeran = Peran::all();
         if (isset(Auth::user()->id_user)) {
@@ -49,7 +50,7 @@ class UtamaController extends Controller
         }
 
 
-        return view('profile', ['dataUser' => $dataUser, 'nilai' => $dataNilai, 'level' => $dataLevel, 'peran' => $dataPeran, 'profile' => $dataProfile]);
+        return view('profile', ['dataUser' => $dataUser, 'nilai' => $dataNilai, 'level' => $dataLevel, 'peran' => $dataPeran, 'profile' => $dataProfile, 'kompetensi' => $dataKompetensi]);
     }
     public function login()
     {

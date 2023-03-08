@@ -50,102 +50,373 @@
             </div>
         </div>
         <div class="block-content">
-            <div class="app-timeline">
-                <div class="app-timeline-item">
-                    <div class="user"><img src="asset/a.png" alt="A"></div>
-                    <div class="content">
-                        <div class="title">
-                            <span class="label label-warning label-bordered"
-                                style="font-size: 14px;font-weight: 700">Bertindak
-                                Sebagai Pemilik</span>
-                        </div>
-                        <div class="comments">
-                            <div class="total">
-                                <ol>
-                                    @foreach ($profile as $x)
-                                        @if ($x->id_kompetensi == 'A1' || $x->id_kompetensi == 'A2' || $x->id_kompetensi == 'A3')
-                                            <li>
-                                                <span style="font-size: 15px"> {{ $x->deskripsi }}</span>
-                                            </li>
-                                        @endif
-                                    @endforeach
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="app-timeline-item">
-                    <div class="user"><img src="asset/b.png" alt="A"></div>
-                    <div class="content">
-                        <span class="label label-warning label-bordered"
-                            style="font-size: 14px;font-weight: 700">Beradaptasi</span>
-                        <div class="comments">
-                            <div class="total">
-                                <ol>
-                                    @foreach ($profile as $x)
-                                        @if ($x->id_kompetensi == 'B1' || $x->id_kompetensi == 'B2' || $x->id_kompetensi == 'B3')
-                                            <li>
-                                                <span style="font-size: 15px"> {{ $x->deskripsi }}</span>
-                                            </li>
-                                        @endif
-                                    @endforeach
-                                </ol>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="app-timeline-item">
-                    <div class="user"><img src="asset/c.png" alt="A"></div>
-                    <div class="content">
-                        <span class="label label-warning label-bordered" style="font-size: 14px;font-weight: 700">Menunjukan
-                            kepedulian mendalam</span>
-                        <div class="comments">
-                            <div class="total">
-                                <ol>
-                                    @foreach ($profile as $x)
-                                        @if ($x->id_kompetensi == 'C1' || $x->id_kompetensi == 'C2' || $x->id_kompetensi == 'C3')
-                                            <li>
-                                                <span style="font-size: 15px"> {{ $x->deskripsi }}</span>
-                                            </li>
-                                        @endif
-                                    @endforeach
-                                </ol>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="app-timeline-item">
-                    <div class="user"><img src="asset/d.png" alt="A"></div>
-                    <div class="content">
-                        <span class="label label-warning label-bordered"
-                            style="font-size: 14px;font-weight: 700">Menghasilkan Keunggulan</span>
-                        <div class="comments">
-                            <div class="total">
-                                <ol>
-                                    @foreach ($profile as $x)
-                                        @if ($x->id_kompetensi == 'D1' || $x->id_kompetensi == 'D2' || $x->id_kompetensi == 'D3')
-                                            <li>
-                                                <span style="font-size: 15px"> {{ $x->deskripsi }}</span>
-                                            </li>
-                                        @endif
-                                    @endforeach
-                                </ol>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+            <div class="app-heading title-only" style="background-color: cornflowerblue;box-shadow: -2px 3px 5px #888888;">
+                <div class="title">
+                    @foreach ($kompetensi as $k)
+                        @if ($k->id_kompetensi == 'A1')
+                            <h3 style="font-weight: 700;color: aliceblue">{{ 'A. ' . $k->value }}</h3>
+                        @break
+                    @endif
+                @endforeach
             </div>
-            <a href="/dashboard" class="btn btn-info pull-right ">See More Competency</a>
         </div>
+        &nbsp;
+
+        <div style="overflow-x:auto;">
+            <table class="table table-striped table-responsive">
+                <tr style="background-color: cornflowerblue">
+                    <th class="text-center" style="color: aliceblue"></th>
+                    <th class="text-center" style="color: aliceblue">Integritas</th>
+                    <th class="text-center" style="color: aliceblue">Berorientasi Tujuan</th>
+                    <th class="text-center" style="color: aliceblue">Keselamatan</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        @foreach ($kompetensi as $k)
+                            @if ($k->id_kompetensi == 'A1')
+                                <td style="vertical-align:top">
+                                    <h5 style="font-weight: 700;color: cornflowerblue">
+                                        {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5><br>
+                                    {{ $k->definisi }}
+                                </td>
+                            @endif
+                        @endforeach
+                        @foreach ($profile as $x)
+                            @if ($x->id_kompetensi == 'A1')
+                                <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @endif
+                        @endforeach
+                    </tr>
+                    <tr style="background-color: cornflowerblue">
+                        <th class="text-center" style="color: aliceblue"></th>
+                        <th class="text-center" style="color: aliceblue">Keputusan yang meyakinkan</th>
+                        <th class="text-center" style="color: aliceblue">Akuntabilitas</th>
+                        <th class="text-center" style="color: aliceblue">Komunikasi yang meyakinkan</th>
+                    </tr>
+                    <tr>
+                        @foreach ($kompetensi as $k)
+                            @if ($k->id_kompetensi == 'A2')
+                                <td>
+                                    <h5 style="font-weight: 700;color: cornflowerblue">
+                                        {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5>
+                                    <br>
+                                    {{ $k->definisi }}
+                                </td>
+                            @endif
+                        @endforeach
+                        @foreach ($profile as $x)
+                            @if ($x->id_kompetensi == 'A2')
+                                <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @endif
+                        @endforeach
+                    </tr>
+                    <tr style="background-color: cornflowerblue">
+                        <th class="text-center" style="color: aliceblue"></th>
+                        <th class="text-center" style="color: aliceblue">Analisi Biaya/Manfaat</th>
+                        <th class="text-center" style="color: aliceblue">Mempertimbangkan pendapat orang lain</th>
+                        <th class="text-center" style="color: aliceblue">Berorientasi masa depan</th>
+                    </tr>
+                    <tr>
+                        @foreach ($kompetensi as $k)
+                            @if ($k->id_kompetensi == 'A3')
+                                <td>
+                                    <h5 style="font-weight: 700;color: cornflowerblue">
+                                        {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5><br>
+                                    {{ $k->definisi }}
+                                </td>
+                            @endif
+                        @endforeach
+                        @foreach ($profile as $x)
+                            @if ($x->id_kompetensi == 'A3')
+                                <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @endif
+                        @endforeach
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr style="border-top: 1px solid black;">
+        <div class="block-content">
+            <div class="app-heading title-only" style="background-color: blueviolet;box-shadow: -2px 3px 5px #888888;">
+                <div class="title">
+                    @foreach ($kompetensi as $k)
+                        @if ($k->id_kompetensi == 'B1')
+                            <h3 style="font-weight: 700;color: aliceblue">{{ 'B. ' . $k->value }}</h3>
+                        @break
+                    @endif
+                @endforeach
+            </div>
+        </div>
+        &nbsp;
+        <div style="overflow-x:auto;">
+            <table class="table table-striped table-responsive">
+                <thead>
+                    <tr style="background-color: blueviolet">
+                        <th class="text-center" style="color: aliceblue"></th>
+                        <th class="text-center" style="color: aliceblue">Perencanaan detail</th>
+                        <th class="text-center" style="color: aliceblue">Penyelesaian masalah</th>
+                        <th class="text-center" style="color: aliceblue">Menghasilkan keunggulan secara konsisten
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        @foreach ($kompetensi as $k)
+                            @if ($k->id_kompetensi == 'B1')
+                                <td style="vertical-align:top">
+                                    <h5 style="font-weight: 700;color: blueviolet">
+                                        {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5><br>
+                                    {{ $k->definisi }}
+                                </td>
+                            @endif
+                        @endforeach
+                        @foreach ($profile as $x)
+                            @if ($x->id_kompetensi == 'B1')
+                                <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @endif
+                        @endforeach
+                    </tr>
+                    <tr style="background-color: blueviolet">
+                        <th class="text-center" style="color: aliceblue"></th>
+                        <th class="text-center" style="color: aliceblue">Wawasan diri</th>
+                        <th class="text-center" style="color: aliceblue">Menghargai umpan balik</th>
+                        <th class="text-center" style="color: aliceblue">Mengambil peluang untuk maju</th>
+                    </tr>
+                    <tr>
+                        @foreach ($kompetensi as $k)
+                            @if ($k->id_kompetensi == 'B2')
+                                <td>
+                                    <h5 style="font-weight: 700;color: blueviolet">
+                                        {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5>
+                                    <br>
+                                    {{ $k->definisi }}
+                                </td>
+                            @endif
+                        @endforeach
+                        @foreach ($profile as $x)
+                            @if ($x->id_kompetensi == 'B2')
+                                <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @endif
+                        @endforeach
+                    </tr>
+                    <tr style="background-color: blueviolet">
+                        <th class="text-center" style="color: aliceblue"></th>
+                        <th class="text-center" style="color: aliceblue">Integritas</th>
+                        <th class="text-center" style="color: aliceblue">Berorientasi Tujuan</th>
+                        <th class="text-center" style="color: aliceblue">Keselamatan</th>
+                    </tr>
+                    <tr>
+                        @foreach ($kompetensi as $k)
+                            @if ($k->id_kompetensi == 'B3')
+                                <td>
+                                    <h5 style="font-weight: 700;color: blueviolet">
+                                        {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5><br>
+                                    {{ $k->definisi }}
+                                </td>
+                            @endif
+                        @endforeach
+                        @foreach ($profile as $x)
+                            @if ($x->id_kompetensi == 'B3')
+                                <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @endif
+                        @endforeach
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr style="border-top: 1px solid black;">
+        <div class="block-content">
+            <div class="app-heading title-only"
+                style="background-color: goldenrod;box-shadow: -2px 3px 5px #888888;">
+                <div class="title">
+                    @foreach ($kompetensi as $k)
+                        @if ($k->id_kompetensi == 'C1')
+                            <h3 style="font-weight: 700;color: aliceblue">{{ 'C. ' . $k->value }}</h3>
+                        @break
+                    @endif
+                @endforeach
+            </div>
+        </div>
+        &nbsp;
+
+        <div style="overflow-x:auto;">
+            <table class="table table-striped table-responsive">
+                <thead>
+                    <tr style="background-color: goldenrod">
+                        <th class="text-center" style="color: aliceblue"></th>
+                        <th class="text-center" style="color: aliceblue">Perencanaan detail</th>
+                        <th class="text-center" style="color: aliceblue">Penyelesaian masalah</th>
+                        <th class="text-center" style="color: aliceblue">Menghasilkan keunggulan secara
+                            konsisten
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        @foreach ($kompetensi as $k)
+                            @if ($k->id_kompetensi == 'C1')
+                                <td style="vertical-align:top">
+                                    <h5 style="font-weight: 700;color: goldenrod">
+                                        {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5><br>
+                                    {{ $k->definisi }}
+                                </td>
+                            @endif
+                        @endforeach
+                        @foreach ($profile as $x)
+                            @if ($x->id_kompetensi == 'C1')
+                                <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @endif
+                        @endforeach
+                    </tr>
+                    <tr style="background-color: goldenrod">
+                        <th class="text-center" style="color: aliceblue"></th>
+                        <th class="text-center" style="color: aliceblue">Wawasan diri</th>
+                        <th class="text-center" style="color: aliceblue">Menghargai umpan balik</th>
+                        <th class="text-center" style="color: aliceblue">Mengambil peluang untuk maju</th>
+                    </tr>
+                    <tr>
+                        @foreach ($kompetensi as $k)
+                            @if ($k->id_kompetensi == 'C2')
+                                <td>
+                                    <h5 style="font-weight: 700;color: goldenrod">
+                                        {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5>
+                                    <br>
+                                    {{ $k->definisi }}
+                                </td>
+                            @endif
+                        @endforeach
+                        @foreach ($profile as $x)
+                            @if ($x->id_kompetensi == 'C2')
+                                <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @endif
+                        @endforeach
+                    </tr>
+                    <tr style="background-color: goldenrod">
+                        <th class="text-center" style="color: aliceblue"></th>
+                        <th class="text-center" style="color: aliceblue">Integritas</th>
+                        <th class="text-center" style="color: aliceblue">Berorientasi Tujuan</th>
+                        <th class="text-center" style="color: aliceblue">Keselamatan</th>
+                    </tr>
+                    <tr>
+                        @foreach ($kompetensi as $k)
+                            @if ($k->id_kompetensi == 'C3')
+                                <td>
+                                    <h5 style="font-weight: 700;color: goldenrod">
+                                        {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5><br>
+                                    {{ $k->definisi }}
+                                </td>
+                            @endif
+                        @endforeach
+                        @foreach ($profile as $x)
+                            @if ($x->id_kompetensi == 'C3')
+                                <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @endif
+                        @endforeach
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr style="border-top: 1px solid black;">
+        <div class="block-content">
+            <div class="app-heading title-only"
+                style="background-color: cadetblue;box-shadow: -2px 3px 5px #888888;">
+                <div class="title">
+                    @foreach ($kompetensi as $k)
+                        @if ($k->id_kompetensi == 'D1')
+                            <h3 style="font-weight: 700;color: aliceblue">{{ 'D. ' . $k->value }}</h3>
+                        @break
+                    @endif
+                @endforeach
+            </div>
+        </div>
+        &nbsp;
+
+        <div style="overflow-x:auto;">
+            <table class="table table-striped table-responsive">
+                <thead>
+                    <tr style="background-color: cadetblue">
+                        <th class="text-center" style="color: aliceblue"></th>
+                        <th class="text-center" style="color: aliceblue">Perencanaan detail</th>
+                        <th class="text-center" style="color: aliceblue">Penyelesaian masalah</th>
+                        <th class="text-center" style="color: aliceblue">Menghasilkan keunggulan secara
+                            konsisten
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        @foreach ($kompetensi as $k)
+                            @if ($k->id_kompetensi == 'D1')
+                                <td style="vertical-align:top">
+                                    <h5 style="font-weight: 700;color: cadetblue">
+                                        {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5><br>
+                                    {{ $k->definisi }}
+                                </td>
+                            @endif
+                        @endforeach
+                        @foreach ($profile as $x)
+                            @if ($x->id_kompetensi == 'D1')
+                                <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @endif
+                        @endforeach
+                    </tr>
+                    <tr style="background-color: cadetblue">
+                        <th class="text-center" style="color: aliceblue"></th>
+                        <th class="text-center" style="color: aliceblue">Wawasan diri</th>
+                        <th class="text-center" style="color: aliceblue">Menghargai umpan balik</th>
+                        <th class="text-center" style="color: aliceblue">Mengambil peluang untuk maju</th>
+                    </tr>
+                    <tr>
+                        @foreach ($kompetensi as $k)
+                            @if ($k->id_kompetensi == 'D2')
+                                <td>
+                                    <h5 style="font-weight: 700;color: cadetblue">
+                                        {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5>
+                                    <br>
+                                    {{ $k->definisi }}
+                                </td>
+                            @endif
+                        @endforeach
+                        @foreach ($profile as $x)
+                            @if ($x->id_kompetensi == 'D2')
+                                <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @endif
+                        @endforeach
+                    </tr>
+                    <tr style="background-color: cadetblue">
+                        <th class="text-center" style="color: aliceblue"></th>
+                        <th class="text-center" style="color: aliceblue">Integritas</th>
+                        <th class="text-center" style="color: aliceblue">Berorientasi Tujuan</th>
+                        <th class="text-center" style="color: aliceblue">Keselamatan</th>
+                    </tr>
+                    <tr>
+                        @foreach ($kompetensi as $k)
+                            @if ($k->id_kompetensi == 'D3')
+                                <td>
+                                    <h5 style="font-weight: 700;color: cadetblue">
+                                        {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}</h5><br>
+                                    {{ $k->definisi }}
+                                </td>
+                            @endif
+                        @endforeach
+                        @foreach ($profile as $x)
+                            @if ($x->id_kompetensi == 'D3')
+                                <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @endif
+                        @endforeach
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <a href="/dashboard" class="btn btn-info pull-right ">See More Competency</a>
     </div>
-    </div>
+</div>
+</div>
 @endsection
 
 @section('konten')
 @endsection
 @section('footer')
-    @TRPL-PEI
+@TRPL-PEI
 @endsection
