@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UtamaController;
+use App\Http\Controllers\EnglishController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,5 +43,8 @@ Route::get('/C3', [UtamaController::class, 'C3']);
 Route::get('/D1', [UtamaController::class, 'D1']);
 Route::get('/D2', [UtamaController::class, 'D2']);
 Route::get('/D3', [UtamaController::class, 'D3']);
-
 Route::get('/test', [UtamaController::class, 'underConstruction']);
+
+
+
+Route::get('/profile-en', [EnglishController::class, 'profil_en']);
