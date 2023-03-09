@@ -8,12 +8,6 @@
 @endsection
 
 @section('konten-tanpa-frame')
-    <div class="block">
-        <object data="/file/kompas-indorama.pdf" type="application/pdf" width="100%" height="400"></object>
-        <p>Jika file tidak muncul, silahkan <a href="/file/kompas-indorama.pdf"> download</a> Handbook Kompas Indorama <a
-                href="/file/kompas-indorama.pdf">disini</a>
-        </p>
-    </div>
     <div class="panel panel-biru">
         <div class="panel-heading">
             <div class="row">
@@ -101,7 +95,7 @@
         </div>
     </div>
 
-    <div class="panel panel-primary">
+    <div class="panel panel-primary" id="nilai-nilai">
         <div class="panel-heading">
             <h3 class="panel-title" style="font-size: 18px;"><span class="fa fa-heartbeat"></span> Nilai-nilai (Value)
             </h3>
@@ -170,6 +164,12 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="block">
+        <object data="/file/kompas-indorama.pdf" type="application/pdf" width="100%" height="400"></object>
+        <p>Jika file tidak muncul, silahkan <a href="/file/kompas-indorama.pdf"> download</a> Handbook Kompas Indorama <a
+                href="/file/kompas-indorama.pdf">disini</a>
+        </p>
     </div>
 @endsection
 

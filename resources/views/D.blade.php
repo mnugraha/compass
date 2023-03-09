@@ -15,7 +15,8 @@
                     <div class="panel-heading">
                         <h3 class="panel-title"> {{ $x->nm_kompetensi }}</h3>
                         <div class="panel-elements pull-right">
-                            <span class="label label-success label-bordered label-ghost" style="font-size: 18px">
+                            <span class="label label-bordered label-ghost"
+                                style="font-size: 18px; background-color: cadetblue">
                                 {{ $x->id_kompetensi }}</span>
 
                         </div>
@@ -34,7 +35,9 @@
             </div>
         @endforeach
     </div>
-    <a href="/dashboard" class="btn btn-default btn-icon-fixed"><span class="icon-arrow-left"></span> Kembali</a>
+    <a href="/dashboard#nilai-nilai" class="btn btn-default btn-icon-fixed" style="box-shadow: -1px 2px 3px #888888"><span
+            class="icon-arrow-left"></span>
+        Kembali</a>
     <br>
     <br>
 @endsection
