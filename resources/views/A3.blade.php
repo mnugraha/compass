@@ -1,138 +1,68 @@
 @extends('master-top')
 @section('title')
-    Kompetensi - Kompas Indorama
+    Kompetensi A3 - Kompas Indorama
 @endsection
 
 @section('judul')
-    <span class="label label-info label-bordered" style="font-size: 18px; color:black">
-        {{ $kompetensi->nm_kompetensi }}</span>
-    <p class="subheader" style="font-size: 11px">Mengambil tanggung jawab untuk menciptakan dan mewujudkan hasil yang
-        nyata sesuai tujuan sosial Indorama dengan mengedepankan integritas, keselamatan, kode etik, serta lingkungan,
-        sosial, dan tata kelola (ESG).</p>
+    <div class="app-heading app-heading-bordered" style="background-color: cornflowerblue;box-shadow: -1px 3px 5px #888888">
+        <div class="title">
+            <h2 style="font-size: 20px;font-weight: 700;color:bisque">
+                {{ $kompetensi->id_kompetensi . '. ' . $kompetensi->nm_kompetensi }}</h2>
+            <p style="font-size: 13px;color: aliceblue">{{ $kompetensi->definisi }}</p>
+        </div>
+    </div>
 @endsection
 
 @section('konten-tanpa-frame')
-    <div class="block block-condensed">
+    <div class="block block-condensed" style="box-shadow: -1px 1px 2px #888888">
         <div class="block-content margin-top-15">
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
-                                aria-expanded="true" aria-controls="collapseOne">
-                                {{ $A11->nm_struktur }}
-                            </a>
-                        </h4>
-                        <div class="panel-elements pull-right">
-                            <span class="label label-info">A3</span>
-                        </div>
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            <div class="list-group">
-                                @php
-                                    $a = 1;
-                                @endphp
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Point</th>
-                                            <th>Deskripsi</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($jointabel1 as $x)
-                                            <tr>
-                                                <td style="text-align: center">{{ $a++ }}</td>
-                                                <td>{{ $x->deskripsi }}</td>
-                                            </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingTwo">
-                        <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
-                                aria-expanded="true" aria-controls="collapseOne">
-                                {{ $A12->nm_struktur }}
-                            </a>
-                        </h4>
-                        <div class="panel-elements pull-right">
-                            <span class="label label-info">A3</span>
-                        </div>
-                    </div>
-                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                        <div class="panel-body">
-                            <div class="list-group">
-                                @php
-                                    $a = 1;
-                                @endphp
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Point</th>
-                                            <th>Deskripsi</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($jointabel2 as $x)
-                                            <tr>
-                                                <td style="text-align: center">{{ $a++ }}</td>
-                                                <td>{{ $x->deskripsi }}</td>
-                                            </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingThree">
-                        <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
-                                aria-expanded="true" aria-controls="collapseOne">
-                                {{ $A13->nm_struktur }}
-                            </a>
-                        </h4>
-                        <div class="panel-elements pull-right">
-                            <span class="label label-info">A3</span>
-                        </div>
-                    </div>
-                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                        <div class="panel-body">
-                            <div class="list-group">
-                                @php
-                                    $a = 1;
-                                @endphp
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Point</th>
-                                            <th>Deskripsi</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($jointabel3 as $x)
-                                            <tr>
-                                                <td style="text-align: center">{{ $a++ }}</td>
-                                                <td>{{ $x->deskripsi }}</td>
-                                            </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div style="overflow-x:auto;">
+                <table class="table table-striped table-responsive">
+                    <tr style="background-color: cornflowerblue">
+                        <th class="text-center" style="color: bisque">Struktur / Poin</th>
+                        @for ($i = 1; $i <= 5; $i++)
+                            <th class="text-center" style="color: bisque; ">{{ $i }}</th>
+                        @endfor
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td style="vertical-align:top">
+                                <h5 style="font-weight: 700;color: cornflowerblue">
+                                    {{ $A11->nm_struktur }}</h5><br>
+                                <div style="color: #7F8FA4; font-size: 11px"> {{ $A11->definisi }}</div>
+                            </td>
+                            @foreach ($jointabel1 as $x)
+                                <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <td style="vertical-align:top">
+                                <h5 style="font-weight: 700;color: cornflowerblue">
+                                    {{ $A12->nm_struktur }}</h5><br>
+                                <div style="color: #7F8FA4; font-size: 11px"> {{ $A12->definisi }}</div>
+                            </td>
+                            @foreach ($jointabel2 as $x)
+                                <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @endforeach
+                        </tr>
+                        <tr>
+                            <td style="vertical-align:top">
+                                <h5 style="font-weight: 700;color: cornflowerblue">
+                                    {{ $A13->nm_struktur }}</h5><br>
+                                <div style="color: #7F8FA4; font-size: 11px"> {{ $A13->definisi }}</div>
+                            </td>
+                            @foreach ($jointabel3 as $x)
+                                <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @endforeach
+                        </tr>
+
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-    <a href="/A" class="btn btn-default btn-icon-fixed"><span class="icon-arrow-left"></span> Kembali</a>
+    <a href="/A" class="btn btn-default btn-icon-fixed" style="box-shadow: -1px 2px 3px #888888"><span
+            class="icon-arrow-left"></span> Kembali</a>
     <br>
     <br>
 @endsection

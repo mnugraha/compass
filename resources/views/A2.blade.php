@@ -28,8 +28,8 @@
                         <tr>
                             <td style="vertical-align:top">
                                 <h5 style="font-weight: 700;color: cornflowerblue">
-                                    {{ $A12->nm_struktur }}</h5><br>
-                                <div style="color: #7F8FA4; font-size: 11px"> {{ $A12->definisi }}</div>
+                                    {{ $A11->nm_struktur }}</h5><br>
+                                <div style="color: #7F8FA4; font-size: 11px"> {{ $A11->definisi }}</div>
                             </td>
                             @foreach ($jointabel1 as $x)
                                 <td style="vertical-align:top">{{ $x->deskripsi }}</td>
@@ -38,8 +38,8 @@
                         <tr>
                             <td style="vertical-align:top">
                                 <h5 style="font-weight: 700;color: cornflowerblue">
-                                    {{ $A22->nm_struktur }}</h5><br>
-                                <div style="color: #7F8FA4; font-size: 11px"> {{ $A22->definisi }}</div>
+                                    {{ $A12->nm_struktur }}</h5><br>
+                                <div style="color: #7F8FA4; font-size: 11px"> {{ $A12->definisi }}</div>
                             </td>
                             @foreach ($jointabel2 as $x)
                                 <td style="vertical-align:top">{{ $x->deskripsi }}</td>
@@ -48,8 +48,8 @@
                         <tr>
                             <td style="vertical-align:top">
                                 <h5 style="font-weight: 700;color: cornflowerblue">
-                                    {{ $A23->nm_struktur }}</h5><br>
-                                <div style="color: #7F8FA4; font-size: 11px"> {{ $A23->definisi }}</div>
+                                    {{ $A13->nm_struktur }}</h5><br>
+                                <div style="color: #7F8FA4; font-size: 11px"> {{ $A13->definisi }}</div>
                             </td>
                             @foreach ($jointabel3 as $x)
                                 <td style="vertical-align:top">{{ $x->deskripsi }}</td>

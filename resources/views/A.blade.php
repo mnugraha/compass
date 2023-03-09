@@ -15,7 +15,8 @@
                     <div class="panel-heading">
                         <h3 class="panel-title"> {{ $x->nm_kompetensi }}</h3>
                         <div class="panel-elements pull-right">
-                            <span class="label label-info label-bordered label-ghost" style="font-size: 18px">
+                            <span class="label  label-bordered label-ghost"
+                                style="font-size: 18px; background-color: cornflowerblue">
                                 {{ $x->id_kompetensi }}</span>
 
                         </div>
