@@ -48,3 +48,4 @@ Route::get('/test', [UtamaController::class, 'underConstruction']);
 
 
 Route::get('/profile-en', [EnglishController::class, 'profil_en']);
+Route::get('/en', [EnglishController::class, 'dashboard_en']);

@@ -17,6 +17,10 @@ use App\Models\User;
 
 class EnglishController extends Controller
 {
+    public function dashboard_en()
+    {
+        return view('dashboard_en');
+    }
     public function profil_en()
     {
         $dataNilai = Nilai_en::all();

@@ -4,7 +4,7 @@
 @endsection
 
 @section('judul')
-    Your Profile
+    Profil Anda
 @endsection
 
 @section('konten-tanpa-frame')

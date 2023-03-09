@@ -36,9 +36,8 @@
                     <div class="app-header-buttons pull-right">
                         @if (isset(auth()->user()->name))
                             Welcome,<a href="/profile"> <strong> {{ auth()->user()->name }}</strong></a> -
-                            <a href="/en"><img src="uk.png" height="10px"
-                                    style="margin-bottom: 5px; margin-right: 3px"></img>English
-                                Version</a>
+                            <a href="/"><img src="idn.png" height="10px"
+                                    style="margin-bottom: 5px; margin-right: 3px"></img>Versi Indonesia</a>
                             <a href="/logout" class="btn btn-sm btn-danger">Log Out</a>
                         @else
                             <a href="/login" class="btn btn-sm btn-info">Login</a>
@@ -56,15 +55,15 @@
                         <nav>
                             <ul>
                                 <li>
-                                    <a href="/"><span class="icon-earth"></span> Beranda</a>
+                                    <a href="/en"><span class="icon-earth"></span> Home</a>
                                 </li>
                                 @if (isset(auth()->user()->name))
                                     <li>
-                                        <a href="/profile"><span class="icon-user"></span> Profil Saya</a>
+                                        <a href="/profile-en"><span class="icon-user"></span> My Profile</a>
                                     </li>
                                 @endif
                                 <li>
-                                    <a href="/test"><span class="icon-laptop-phone"></span> Penilaian</a>
+                                    <a href="/test"><span class="icon-laptop-phone"></span> Assessment</a>
                                 </li>
                                 {{-- <li>
                                     <a href="#"><span class="icon-sync"></span> Materi</a>
