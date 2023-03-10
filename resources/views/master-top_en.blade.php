@@ -32,17 +32,19 @@
                                 data-navigation-horizontal-toggle="true"><span class="icon-menu"></span></a></li>
                     </ul>
 
-                    <img src="/logo_indorama.png">
-                    <div class="app-header-buttons pull-right">
+                    <img src="/logo_indorama.png" style="margin-top: 5px">
+                    <div class="app-header-buttons pull-right" style="margin-top: 10px">
                         @if (isset(auth()->user()->name))
                             Welcome,<a href="/profile"> <strong> {{ auth()->user()->name }}</strong></a> -
                             <a href="/"><img src="idn.png" height="10px"
                                     style="margin-bottom: 5px; margin-right: 3px"></img>Versi Indonesia</a>
-                            <a href="/logout" class="btn btn-sm btn-danger">Log Out</a>
+                            <a href="/logout" class="btn btn-xs btn-danger btn-rounded"
+                                style="box-shadow: -1px 1px 3px #888888; margin-left: 20px">Log Out</a>
                         @else
                             <a href="/"><img src="idn.png" height="10px"
                                     style="margin-bottom: 5px; margin-right: 3px"></img>Versi Indonesia</a>
-                            <a href="/login" class="btn btn-sm btn-info">Login</a>
+                            <a href="/login" class="btn btn-sm btn-info"
+                                style="box-shadow: -1px 1px 3px #888888; margin-left: 20px">Login</a>
                         @endif
 
                     </div>
