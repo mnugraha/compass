@@ -45,7 +45,7 @@
     <div class="block block-condensed">
         <div class="app-heading app-heading-small" id="app-tour-heading-inside">
             <div class="title">
-                <h3 style="font-size: 18px;color:rgb(0, 0, 0);font-weight: 700">Competencies Profile:</h3>
+                <h3 style="font-size: 18px;color:rgb(0, 0, 0);font-weight: 700">Profil Kompetensi Anda:</h3>
                 <p>Berikut ini adalah kompetensi yang harus di kuasai</p>
             </div>
         </div>

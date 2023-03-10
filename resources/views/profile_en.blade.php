@@ -45,7 +45,7 @@
     <div class="block block-condensed">
         <div class="app-heading app-heading-small" id="app-tour-heading-inside">
             <div class="title">
-                <h3 style="font-size: 18px;color:rgb(0, 0, 0);font-weight: 700">Competencies Profile:</h3>
+                <h3 style="font-size: 18px;color:rgb(0, 0, 0);font-weight: 700">Your Competencies Profile:</h3>
                 <p>The following are the competencies that must be know</p>
             </div>
         </div>
