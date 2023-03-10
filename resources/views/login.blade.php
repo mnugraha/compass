@@ -69,7 +69,7 @@
                 </div>
 
                 <div class="app-login-box-footer">
-                    &copy;HR Indorama. All rights reserved.
+                    &copy;HR Indorama. All rights reserved. <a href="/">Home</a>
                 </div>
             </div>
 
