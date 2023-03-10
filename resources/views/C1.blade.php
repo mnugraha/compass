@@ -1,6 +1,6 @@
-@extends('master-top')
+@extends('master-top_en')
 @section('title')
-    Kompetensi C1 - Kompas Indorama
+    Kompetensi C - Kompas Indorama
 @endsection
 
 @section('judul')
@@ -21,7 +21,19 @@
                     <tr style="background-color: goldenrod">
                         <th class="text-center" style="color: darkslategrey">Struktur / Poin</th>
                         @for ($i = 1; $i <= 5; $i++)
-                            <th class="text-center" style="color: darkslategrey; ">{{ $i }}</th>
+                            <th class="text-center" style="color: bisque; ">{{ $i }}
+                                @if ($i == 1)
+                                    <br> {{ 'Tidak Ada Bukti' }}
+                                @elseif($i == 2)
+                                    <br> {{ 'Dalam Pengembangan' }}
+                                @elseif($i == 3)
+                                    <br> {{ 'Mahir' }}
+                                @elseif($i == 4)
+                                    <br> {{ 'Panutan' }}
+                                @elseif($i == 5)
+                                    <br> {{ 'Strategis' }}
+                                @endif
+                            </th>
                         @endfor
                     </tr>
                     <tbody>

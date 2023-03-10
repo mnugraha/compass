@@ -40,6 +40,8 @@
                                     style="margin-bottom: 5px; margin-right: 3px"></img>Versi Indonesia</a>
                             <a href="/logout" class="btn btn-sm btn-danger">Log Out</a>
                         @else
+                            <a href="/"><img src="idn.png" height="10px"
+                                    style="margin-bottom: 5px; margin-right: 3px"></img>Versi Indonesia</a>
                             <a href="/login" class="btn btn-sm btn-info">Login</a>
                         @endif
 
@@ -55,16 +57,17 @@
                         <nav>
                             <ul>
                                 <li>
-                                    <a href="/en"><span class="icon-earth"></span> Home</a>
+                                    <a href="/en"><span class="icon-home"></span> Home</a>
                                 </li>
                                 @if (isset(auth()->user()->name))
                                     <li>
                                         <a href="/profile-en"><span class="icon-user"></span> My Profile</a>
                                     </li>
+
+                                    <li>
+                                        <a href="/test"><span class="icon-laptop-phone"></span> Assessment</a>
+                                    </li>
                                 @endif
-                                <li>
-                                    <a href="/test"><span class="icon-laptop-phone"></span> Assessment</a>
-                                </li>
                                 {{-- <li>
                                     <a href="#"><span class="icon-sync"></span> Materi</a>
                                 </li>

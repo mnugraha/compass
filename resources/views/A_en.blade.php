@@ -1,10 +1,10 @@
-@extends('master-top')
+@extends('master-top_en')
 @section('title')
-    Competency - Compass Indorama
+    Compentency A - Kompas Indorama
 @endsection
 
 @section('judul')
-    Competency
+    Compentency A - {{ $kompetensi1->value }}
 @endsection
 
 @section('konten-tanpa-frame')
@@ -12,12 +12,11 @@
         @foreach ($kompetensi as $x)
             <div class="col-md-4" style="margin-bottom: 20px">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"> {{ $x->nm_kompetensi }}</h3>
+                    <div class="panel-heading" style="font-size: 18px; background-color: cornflowerblue">
+                        <h3 class="panel-title" style="color: bisque;"> {{ $x->nm_kompetensi }}</h3>
                         <div class="panel-elements pull-right">
-                            <span class="label label-info label-bordered label-ghost" style="font-size: 18px">
+                            <span class="label  label-bordered label-ghost" style="font-size: 18px;color:bisque">
                                 {{ $x->id_kompetensi }}</span>
-
                         </div>
                     </div>
                     <div class="panel-body">
@@ -25,7 +24,7 @@
                     </div>
                     <div class="panel-footer">
                         <div class="panel-elements pull-right">
-                            <a href="{{ $x->id_kompetensi }}" class="btn btn-default pull-right">
+                            <a href="{{ $x->id_kompetensi . '_en' }}" class="btn btn-default pull-right">
                                 <span class="icon-launch"></span> Open</a>
                         </div>
                     </div>
@@ -34,7 +33,9 @@
             </div>
         @endforeach
     </div>
-    <a href="/en" class="btn btn-default btn-icon-fixed"><span class="icon-arrow-left"></span> Back</a>
+    <a href="/en#nilai-nilai" class="btn btn-default btn-icon-fixed" style="box-shadow: -1px 2px 3px #888888"><span
+            class="icon-arrow-left"></span>
+        Back</a>
     <br>
     <br>
 @endsection

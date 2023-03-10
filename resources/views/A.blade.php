@@ -1,6 +1,6 @@
 @extends('master-top')
 @section('title')
-    Kompetensi - Kompas Indorama
+    Kompetensi A - Kompas Indorama
 @endsection
 
 @section('judul')
@@ -12,11 +12,10 @@
         @foreach ($kompetensi as $x)
             <div class="col-md-4" style="margin-bottom: 20px">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"> {{ $x->nm_kompetensi }}</h3>
+                    <div class="panel-heading" style="font-size: 18px; background-color: cornflowerblue">
+                        <h3 class="panel-title" style="color: aliceblue"> {{ $x->nm_kompetensi }}</h3>
                         <div class="panel-elements pull-right">
-                            <span class="label  label-bordered label-ghost"
-                                style="font-size: 18px; background-color: cornflowerblue">
+                            <span class="label  label-bordered label-ghost" style="font-size: 18px">
                                 {{ $x->id_kompetensi }}</span>
                         </div>
                     </div>

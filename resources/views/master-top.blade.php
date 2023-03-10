@@ -41,6 +41,9 @@
                                 Version</a>
                             <a href="/logout" class="btn btn-sm btn-danger">Log Out</a>
                         @else
+                            <a href="/en"><img src="uk.png" height="10px"
+                                    style="margin-bottom: 5px; margin-right: 3px"></img>English
+                                Version</a>
                             <a href="/login" class="btn btn-sm btn-info">Login</a>
                         @endif
 
@@ -56,16 +59,17 @@
                         <nav>
                             <ul>
                                 <li>
-                                    <a href="/"><span class="icon-earth"></span> Beranda</a>
+                                    <a href="/"><span class="icon-home"></span> Beranda</a>
                                 </li>
                                 @if (isset(auth()->user()->name))
                                     <li>
                                         <a href="/profile"><span class="icon-user"></span> Profil Saya</a>
                                     </li>
+
+                                    <li>
+                                        <a href="/test"><span class="icon-laptop-phone"></span> Penilaian</a>
+                                    </li>
                                 @endif
-                                <li>
-                                    <a href="/test"><span class="icon-laptop-phone"></span> Penilaian</a>
-                                </li>
                                 {{-- <li>
                                     <a href="#"><span class="icon-sync"></span> Materi</a>
                                 </li>
