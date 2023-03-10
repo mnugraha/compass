@@ -174,9 +174,9 @@
     </div>
     <div class="block">
         <h2 style="font-weight: 700">The Compass Indorama handbook</h2>
-        <object data="/file/kompas-indorama.pdf" type="application/pdf" width="100%" height="400"></object>
-        <p>If the file not appear, please <a href="/file/kompas-indorama.pdf"> download</a> The Compass handbook <a
-                href="/file/kompas-indorama.pdf">here.</a>
+        <object data="/file/kompas-indorama_en.pdf" type="application/pdf" width="100%" height="400"></object>
+        <p>If the file not appear, please <a href="/file/kompas-indorama_en.pdf"> download</a> The Compass handbook <a
+                href="/file/kompas-indorama_en.pdf">here.</a>
         </p>
     </div>
 @endsection
