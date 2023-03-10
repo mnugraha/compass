@@ -32,7 +32,7 @@
                                 data-navigation-horizontal-toggle="true"><span class="icon-menu"></span></a></li>
                     </ul>
 
-                    <img src="/logo_indorama.png" style="margin-top: 5px">
+                    <img src="/compass1.png" height="70px" width="auto">
                     <div class="app-header-buttons pull-right" style="margin-top: 10px">
                         @if (isset(auth()->user()->name))
                             Welcome,<a href="/profile"> <strong> {{ auth()->user()->name }}</strong></a> -
@@ -48,6 +48,7 @@
                         @endif
 
                     </div>
+                    <hr style="border-top: 1px solid black;">
                 </div>
             </div>
             <!-- END APP HEADER  -->
