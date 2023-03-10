@@ -8,7 +8,7 @@
 @endsection
 
 @section('konten-tanpa-frame')
-    <div class="panel panel-biru">
+    <div class="panel panel-biru" style="box-shadow: -2px 2px 4px #888888">
         <div class="panel-heading">
             <div class="row">
                 <div class="col-md-2">
@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-    <div class="panel panel-biru">
+    <div class="panel panel-biru" style="box-shadow: -2px 2px 4px #888888">
         <div class="panel-heading" style="background-color: #c7170e">
             <div class="row">
                 <div class="col-md-2">
@@ -31,8 +31,8 @@
                 </div>
                 <div class="col-md-9">
                     <h3><strong>Perusahaan material pilihan pelanggan dan karyawan</strong></h3>
-                    <p style="font-size: 16px; color:lightgoldenrodyellow">Mendorong kemajuan, pertumbuhan, dan
-                        keberlanjutan</p>
+                    <h4 style="font-size: 16px; color:lightgoldenrodyellow">Mendorong kemajuan, pertumbuhan, dan
+                        keberlanjutan</h4>
                 </div>
             </div>
         </div>
@@ -110,9 +110,11 @@
                             </div>
                             <div class="tile-content text-center">
                                 <h4 class="tile-title">Bertindak seperti pemilik</h4>
+                                <p>penuh semangat, berani, bertanggung jawab, dan strategis</p>
                             </div>
                         </div>
                         <div class="block-footer">
+                            <span class="label" style="font-size: 28px;color: darkslategrey;margin-top: 10px;">A</span>
                             <a href="/A" class="btn btn-info pull-right">Buka</a>
                         </div>
                     </div>
@@ -125,9 +127,11 @@
                             </div>
                             <div class="tile-content text-center">
                                 <h4 class="tile-title">Beradaptasi</h4>
+                                <p>terhadap peluang, tantangan, dan ide-ide baru</p>
                             </div>
                         </div>
                         <div class="block-footer">
+                            <span class="label" style="font-size: 28px;color: darkslategrey;margin-top: 10px;">B</span>
                             <a href="/B" class="btn btn-info pull-right">Buka</a>
                         </div>
                     </div>
@@ -140,9 +144,12 @@
                             </div>
                             <div class="tile-content text-center">
                                 <h4 class="tile-title">Menunjukan kepedulian mendalam</h4>
+                                <p>untuk kepentingan masyarakat dan bumi kita dengan kepercayaan, martabat, dan kerendahan
+                                    hati</p>
                             </div>
                         </div>
                         <div class="block-footer">
+                            <span class="label" style="font-size: 28px;color: darkslategrey;margin-top: 10px;">C</span>
                             <a href="/C" class="btn btn-info pull-right">Buka</a>
                         </div>
                     </div>
@@ -155,9 +162,11 @@
                             </div>
                             <div class="tile-content text-center">
                                 <h4 class="tile-title">Menghasilkan keunggulan</h4>
+                                <p>melalui pengetahuan, ketangkasan, inovasi, dan pelaksanaan</p>
                             </div>
                         </div>
                         <div class="block-footer">
+                            <span class="label" style="font-size: 28px;color: darkslategrey;margin-top: 10px;">D</span>
                             <a href="/D" class="btn btn-info pull-right">Buka</a>
                         </div>
                     </div>

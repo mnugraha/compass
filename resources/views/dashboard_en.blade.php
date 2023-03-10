@@ -8,7 +8,7 @@
 @endsection
 
 @section('konten-tanpa-frame')
-    <div class="panel panel-biru">
+    <div class="panel panel-biru" style="box-shadow: -2px 2px 4px #888888">
         <div class="panel-heading">
             <div class="row">
                 <div class="col-md-2">
@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-    <div class="panel panel-biru">
+    <div class="panel panel-biru" style="box-shadow: -2px 2px 4px #888888">
         <div class="panel-heading" style="background-color: #c7170e">
             <div class="row">
                 <div class="col-md-2">
@@ -31,7 +31,7 @@
                 </div>
                 <div class="col-md-9">
                     <h3><strong>The materials company of choice for customers and employees</strong></h3>
-                    <p style="font-size: 16px; color:lightgoldenrodyellow">Driving scale, growth and sustainability</p>
+                    <h4 style="font-size: 16px; color:lightgoldenrodyellow">Driving scale, growth and sustainability</h4>
                 </div>
             </div>
         </div>
@@ -109,9 +109,11 @@
                             </div>
                             <div class="tile-content text-center">
                                 <h4 class="tile-title">Act like owners</h4>
+                                <p>passionate, courageous, responsible, and strategic</p>
                             </div>
                         </div>
                         <div class="block-footer">
+                            <span class="label" style="font-size: 28px;color: darkslategrey;margin-top: 10px;">A</span>
                             <a href="/A_en" class="btn btn-info pull-right">Open</a>
                         </div>
                     </div>
@@ -124,9 +126,11 @@
                             </div>
                             <div class="tile-content text-center">
                                 <h4 class="tile-title">Be adaptable</h4>
+                                <p>to opportunities, challenges, and ideas</p>
                             </div>
                         </div>
                         <div class="block-footer">
+                            <span class="label" style="font-size: 28px;color: darkslategrey;margin-top: 10px;">B</span>
                             <a href="/B_en" class="btn btn-info pull-right">Open</a>
                         </div>
                     </div>
@@ -139,9 +143,11 @@
                             </div>
                             <div class="tile-content text-center">
                                 <h4 class="tile-title">Care deeply</h4>
+                                <p>for people and our planet with trust, respect, and humility</p>
                             </div>
                         </div>
                         <div class="block-footer">
+                            <span class="label" style="font-size: 28px;color: darkslategrey;margin-top: 10px;">C</span>
                             <a href="/C_en" class="btn btn-info pull-right">Open</a>
                         </div>
                     </div>
@@ -154,9 +160,11 @@
                             </div>
                             <div class="tile-content text-center">
                                 <h4 class="tile-title">Deliver excellence</h4>
+                                <p>through knowledge, agility, innovation, and execution</p>
                             </div>
                         </div>
                         <div class="block-footer">
+                            <span class="label" style="font-size: 28px;color: darkslategrey;margin-top: 10px;">D</span>
                             <a href="/D_en" class="btn btn-info pull-right">Open</a>
                         </div>
                     </div>
