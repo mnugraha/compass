@@ -181,6 +181,15 @@
                 href="/file/kompas-indorama.pdf">disini</a>
         </p>
     </div>
+    <div class="block">
+        <h2 style="font-weight: 700">Video Kompas Indorama v2022</h2>
+        <div style="text-align: center;" class="container1">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/rdeWao5AGGM"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+    </div>
 @endsection
 
 @section('konten')
