@@ -13,7 +13,7 @@
 
             <div class="app-heading app-heading-small">
                 <div class="contact contact-rounded contact-bordered contact-lg margin-bottom-0">
-                    <img src="/theme/assets/images/users/user_6.jpg">
+                    <img src="user.png">
                     <div class="contact-container">
                         <a href="#"><strong> {{ auth()->user()->name }}</strong></a>
                         @php
@@ -23,7 +23,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="block-content row-table-holder">
             <div class="row row-table">

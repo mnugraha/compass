@@ -13,7 +13,7 @@
 
             <div class="app-heading app-heading-small">
                 <div class="contact contact-rounded contact-bordered contact-lg margin-bottom-0">
-                    <img src="/theme/assets/images/users/user_6.jpg">
+                    <img src="user.png">
                     <div class="contact-container">
                         <a href="#"><strong> {{ auth()->user()->name }}</strong></a>
                         @php
@@ -84,6 +84,7 @@
                                 </td>
                             @endif
                         @endforeach
+
                         @foreach ($profile as $x)
                             @if ($x->id_kompetensi == 'A1')
                                 <td style="vertical-align:top">{{ $x->deskripsi }}</td>
