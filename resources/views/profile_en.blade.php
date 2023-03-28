@@ -54,7 +54,7 @@
                 <div class="title">
                     @foreach ($kompetensi as $k)
                         @if ($k->id_kompetensi == 'A1')
-                            <h3 style="font-weight: 700;color: aliceblue">{{ 'A. ' . $k->value }}</h3>
+                            <p style="font-weight: 700;color: aliceblue">{{ 'A. ' . strtoupper($k->value) }}</p>
                         @break
                     @endif
                 @endforeach
@@ -77,10 +77,11 @@
                         @foreach ($kompetensi as $k)
                             @if ($k->id_kompetensi == 'A1')
                                 <td style="vertical-align:top">
-                                    <h5 style="font-weight: 700;color: cornflowerblue">
+                                    <p style="font-weight: 700;color: cornflowerblue">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}
-                                    </h5><br>
-                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}</div>
+                                    </p><br>
+                                    <div style="color: #7F8FA4; font-size: 13px; text-align: justify">
+                                        {{ $k->definisi }}</div>
                                 </td>
                             @endif
                         @endforeach
@@ -102,11 +103,12 @@
                         @foreach ($kompetensi as $k)
                             @if ($k->id_kompetensi == 'A2')
                                 <td>
-                                    <h5 style="font-weight: 700;color: cornflowerblue">
+                                    <p style="font-weight: 700;color: cornflowerblue">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}
-                                    </h5>
+                                    </p>
                                     <br>
-                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}</div>
+                                    <div style="color: #7F8FA4; font-size: 13px; text-align: justify">
+                                        {{ $k->definisi }}</div>
                                 </td>
                             @endif
                         @endforeach
@@ -128,10 +130,11 @@
                         @foreach ($kompetensi as $k)
                             @if ($k->id_kompetensi == 'A3')
                                 <td>
-                                    <h5 style="font-weight: 700;color: cornflowerblue">
+                                    <p style="font-weight: 700;color: cornflowerblue">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}
-                                    </h5><br>
-                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}</div>
+                                    </p><br>
+                                    <div style="color: #7F8FA4; font-size: 13px; text-align: justify">
+                                        {{ $k->definisi }}</div>
                                 </td>
                             @endif
                         @endforeach
@@ -150,7 +153,7 @@
                 <div class="title">
                     @foreach ($kompetensi as $k)
                         @if ($k->id_kompetensi == 'B1')
-                            <h3 style="font-weight: 700;color: aliceblue">{{ 'B. ' . $k->value }}</h3>
+                            <p style="font-weight: 700;color: aliceblue">{{ 'B. ' . strtoupper($k->value) }}</p>
                         @break
                     @endif
                 @endforeach
@@ -159,25 +162,24 @@
         &nbsp;
         <div style="overflow-x:auto;">
             <table class="table table-striped table-responsive">
-                <thead>
-                    <tr style="background-color: blueviolet">
-                        <th class="text-center" style="color: aliceblue"></th>
-                        @foreach ($struktur as $k)
-                            @if ($k->id_kompetensi == 'B1')
-                                <th class="text-center" style="color: aliceblue">{{ $k->nm_struktur }}</th>
-                            @endif
-                        @endforeach
-                    </tr>
-                </thead>
+                <tr style="background-color: blueviolet">
+                    <th class="text-center" style="color: aliceblue"></th>
+                    @foreach ($struktur as $k)
+                        @if ($k->id_kompetensi == 'B1')
+                            <th class="text-center" style="color: aliceblue">{{ $k->nm_struktur }}</th>
+                        @endif
+                    @endforeach
+                </tr>
                 <tbody>
                     <tr>
                         @foreach ($kompetensi as $k)
                             @if ($k->id_kompetensi == 'B1')
                                 <td style="vertical-align:top">
-                                    <h5 style="font-weight: 700;color: blueviolet">
+                                    <p style="font-weight: 700;color: blueviolet">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}
-                                    </h5><br>
-                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}</div>
+                                    </p><br>
+                                    <div style="color: #7F8FA4; font-size: 13px; text-align: justify">
+                                        {{ $k->definisi }}</div>
                                 </td>
                             @endif
                         @endforeach
@@ -199,11 +201,12 @@
                         @foreach ($kompetensi as $k)
                             @if ($k->id_kompetensi == 'B2')
                                 <td>
-                                    <h5 style="font-weight: 700;color: blueviolet">
+                                    <p style="font-weight: 700;color: blueviolet">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}
-                                    </h5>
+                                    </p>
                                     <br>
-                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}</div>
+                                    <div style="color: #7F8FA4; font-size: 13px; text-align: justify">
+                                        {{ $k->definisi }}</div>
                                 </td>
                             @endif
                         @endforeach
@@ -225,10 +228,11 @@
                         @foreach ($kompetensi as $k)
                             @if ($k->id_kompetensi == 'B3')
                                 <td>
-                                    <h5 style="font-weight: 700;color: blueviolet">
+                                    <p style="font-weight: 700;color: blueviolet">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}
-                                    </h5><br>
-                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}</div>
+                                    </p><br>
+                                    <div style="color: #7F8FA4; font-size: 13px; text-align: justify">
+                                        {{ $k->definisi }}</div>
                                 </td>
                             @endif
                         @endforeach
@@ -248,7 +252,7 @@
                 <div class="title">
                     @foreach ($kompetensi as $k)
                         @if ($k->id_kompetensi == 'C1')
-                            <h3 style="font-weight: 700;color: aliceblue">{{ 'C. ' . $k->value }}</h3>
+                            <p style="font-weight: 700;color: aliceblue">{{ 'C. ' . strtoupper($k->value) }}</p>
                         @break
                     @endif
                 @endforeach
@@ -258,25 +262,24 @@
 
         <div style="overflow-x:auto;">
             <table class="table table-striped table-responsive">
-                <thead>
-                    <tr style="background-color: goldenrod">
-                        <th class="text-center" style="color: aliceblue"></th>
-                        @foreach ($struktur as $k)
-                            @if ($k->id_kompetensi == 'C1')
-                                <th class="text-center" style="color: aliceblue">{{ $k->nm_struktur }}</th>
-                            @endif
-                        @endforeach
-                    </tr>
-                </thead>
+                <tr style="background-color: goldenrod">
+                    <th class="text-center" style="color: aliceblue"></th>
+                    @foreach ($struktur as $k)
+                        @if ($k->id_kompetensi == 'C1')
+                            <th class="text-center" style="color: aliceblue">{{ $k->nm_struktur }}</th>
+                        @endif
+                    @endforeach
+                </tr>
                 <tbody>
                     <tr>
                         @foreach ($kompetensi as $k)
                             @if ($k->id_kompetensi == 'C1')
                                 <td style="vertical-align:top">
-                                    <h5 style="font-weight: 700;color: goldenrod">
+                                    <p style="font-weight: 700;color: goldenrod">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}
-                                    </h5><br>
-                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}</div>
+                                    </p><br>
+                                    <div style="color: #7F8FA4; font-size: 13px; text-align: justify">
+                                        {{ $k->definisi }}</div>
                                 </td>
                             @endif
                         @endforeach
@@ -298,11 +301,12 @@
                         @foreach ($kompetensi as $k)
                             @if ($k->id_kompetensi == 'C2')
                                 <td>
-                                    <h5 style="font-weight: 700;color: goldenrod">
+                                    <p style="font-weight: 700;color: goldenrod">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}
-                                    </h5>
+                                    </p>
                                     <br>
-                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}</div>
+                                    <div style="color: #7F8FA4; font-size: 13px; text-align: justify">
+                                        {{ $k->definisi }}</div>
                                 </td>
                             @endif
                         @endforeach
@@ -324,10 +328,11 @@
                         @foreach ($kompetensi as $k)
                             @if ($k->id_kompetensi == 'C3')
                                 <td>
-                                    <h5 style="font-weight: 700;color: goldenrod">
+                                    <p style="font-weight: 700;color: goldenrod">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}
-                                    </h5><br>
-                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}</div>
+                                    </p><br>
+                                    <div style="color: #7F8FA4; font-size: 13px; text-align: justify">
+                                        {{ $k->definisi }}</div>
                                 </td>
                             @endif
                         @endforeach
@@ -347,7 +352,8 @@
                 <div class="title">
                     @foreach ($kompetensi as $k)
                         @if ($k->id_kompetensi == 'D1')
-                            <h3 style="font-weight: 700;color: aliceblue">{{ 'D. ' . $k->value }}</h3>
+                            <p style="font-weight: 700;color: aliceblue">{{ 'D. ' . strtoupper($k->value) }}
+                            </p>
                         @break
                     @endif
                 @endforeach
@@ -373,10 +379,11 @@
                         @foreach ($kompetensi as $k)
                             @if ($k->id_kompetensi == 'D1')
                                 <td style="vertical-align:top">
-                                    <h5 style="font-weight: 700;color: cadetblue">
+                                    <p style="font-weight: 700;color: cadetblue">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}
-                                    </h5><br>
-                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}
+                                    </p><br>
+                                    <div style="color: #7F8FA4; font-size: 13px; text-align: justify">
+                                        {{ $k->definisi }}
                                     </div>
                                 </td>
                             @endif
@@ -400,11 +407,12 @@
                         @foreach ($kompetensi as $k)
                             @if ($k->id_kompetensi == 'D2')
                                 <td>
-                                    <h5 style="font-weight: 700;color: cadetblue">
+                                    <p style="font-weight: 700;color: cadetblue">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}
-                                    </h5>
+                                    </p>
                                     <br>
-                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}
+                                    <div style="color: #7F8FA4; font-size: 13px; text-align: justify">
+                                        {{ $k->definisi }}
                                     </div>
                                 </td>
                             @endif
@@ -428,10 +436,11 @@
                         @foreach ($kompetensi as $k)
                             @if ($k->id_kompetensi == 'D3')
                                 <td>
-                                    <h5 style="font-weight: 700;color: cadetblue">
+                                    <p style="font-weight: 700;color: cadetblue">
                                         {{ $k->id_kompetensi . ' - ' . $k->nm_kompetensi }}
-                                    </h5><br>
-                                    <div style="color: #7F8FA4; font-size: 11px"> {{ $k->definisi }}
+                                    </p><br>
+                                    <div style="color: #7F8FA4; font-size: 13px; text-align: justify">
+                                        {{ $k->definisi }}
                                     </div>
                                 </td>
                             @endif
