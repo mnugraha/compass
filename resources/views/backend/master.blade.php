@@ -26,22 +26,18 @@
             <!-- Header Menu Samping -->
             <div class="app-sidebar app-navigation app-navigation-fixed scroll app-navigation-style-default app-navigation-open-hover dir-left"
                 data-type="close-other">
-                <a href="/" class="app-navigation-logo">
-                    Compass Indorama
-                </a>
+
 
                 <!-- Menu Samping -->
                 <nav>
                     <ul>
-                        <li class="title">Menu</li>
+                        <li class="title" style="font-weight: 700">Menu</li>
                         <li>
-                            <a href="/dashboard"><span class="fa fa-align-justify"></span> Dashboards</a>
+                            <a href="/dashboard"><span class="fa fa-align-justify" style="color: white"></span>
+                                Dashboards</a>
                         </li>
                         <li>
-                            <a href="#"><span class="fa fa-align-justify"></span> Materi</a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="fa fa-align-justify"></span> Ujian</a>
+                            <a href="/user"><span class="fa fa-user" style="color: white"></span> User</a>
                         </li>
                     </ul>
                 </nav>
@@ -60,26 +56,6 @@
                     </ul>
                     <ul class="app-header-buttons pull-right">
                         <li>
-                            <div
-                                class="contact contact-rounded contact-bordered contact-lg contact-ps-controls hidden-xs">
-                                <img src="/theme/assets/images/users/user_1.jpg" alt="John Doe">
-                                <div class="contact-container">
-                                    <a href="#">John Doe</a>
-                                    <span>Administrator</span>
-                                </div>
-                                <div class="contact-controls">
-                                    <div class="dropdown">
-                                        <button type="button" class="btn btn-default btn-icon"
-                                            data-toggle="dropdown"><span class="icon-layers"></span></button>
-                                        <ul class="dropdown-menu dropdown-left">
-                                            <li><a href="pages-profile-social.html"><span class="icon-users"></span>
-                                                    Account</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
                             <a href="pages-login.html" class="btn btn-default btn-icon"><span
                                     class="icon-power-switch"></span></a>
                         </li>
@@ -91,7 +67,7 @@
                 <div class="app-heading app-heading-bordered app-heading-page">
                     <div class="title">
                         <h1>@yield('judul') </h1>
-                        <p>We refreshed our Compass to prepare for the future</p>
+
                     </div>
                     <!--
                         <div class="heading-elements">
@@ -177,6 +153,8 @@
     <script type="text/javascript" src="/theme/js/app.js"></script>
     <script type="text/javascript" src="/theme/js/app_plugins.js"></script>
     <!-- END APP SCRIPTS -->
+    <script type="text/javascript" src="/theme/js/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/theme/js/vendor/datatables/dataTables.bootstrap.min.js"></script>
 </body>
 
 </html>

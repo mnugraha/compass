@@ -32,7 +32,7 @@
                                 data-navigation-horizontal-toggle="true"><span class="icon-menu"></span></a></li>
                     </ul>
 
-                    <img src="/compass1.png" height="70px" width="auto">
+                    <img src="/logo-header.png" height="70px" width="auto" style="padding-bottom: 10px">
                     <div class="app-header-buttons pull-right" style="margin-top: 10px">
                         @if (isset(auth()->user()->name))
                             Welcome,<a href="/profile"> <strong> {{ auth()->user()->name }}</strong></a> -

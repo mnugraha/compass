@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UtamaController;
 use App\Http\Controllers\EnglishController;
-
+use App\Http\Controllers\BackendController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,11 +18,11 @@ use App\Http\Controllers\EnglishController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::get('/user', [BackendController::class, 'user']);
 
 Route::get('/master', [UtamaController::class, 'index']);
 Route::get('/', [UtamaController::class, 'dashboard']);
 Route::get('/contoh', [UtamaController::class, 'contoh']);
-Route::get('/dashboard', [UtamaController::class, 'dashboard']);
 Route::get('/profile', [UtamaController::class, 'profil']);
 Route::get('/login', [UtamaController::class, 'login']);
 Route::get('/logout', [UtamaController::class, 'logout']);
