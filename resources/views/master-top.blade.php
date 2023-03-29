@@ -59,14 +59,16 @@
                             <a href="/en"><img src="uk.png" height="10px"
                                     style="margin-bottom: 5px; margin-right: 3px"></img>English
                                 Version</a>
-                            <a href="/logout" class="btn btn-xs btn-danger btn-rounded"
-                                style="box-shadow: -1px 1px 3px #888888; margin-left: 20px">Log Out</a>
+                            <a href="/logout" class="btn btn-xs btn-danger "
+                                style="box-shadow: -1px 1px 3px #888888; margin-left: 20px; color: darkslategray"><span
+                                    class="fa fa-power-off" style="color: black; padding-right: 5px"></span> Log Out</a>
                         @else
                             <a href="/en"><img src="uk.png" height="10px"
                                     style="margin-bottom: 5px;  margin-right: 10px"></img>English
                                 Version</a>
                             <a href="/login" class="btn btn-sm btn-info"
-                                style="box-shadow: -1px 1px 3px #888888; margin-left: 20px">Login</a>
+                                style="box-shadow: -1px 1px 3px #888888; margin-left: 20px"><span class="fa fa-sign-in"
+                                    style="padding-right: 5px"></span> Login</a>
                         @endif
 
                     </div>

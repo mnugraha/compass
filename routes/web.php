@@ -19,6 +19,7 @@ use App\Http\Controllers\BackendController;
 //     return view('welcome');
 // });
 Route::get('/user', [BackendController::class, 'user']);
+Route::post('/userSimpan', [BackendController::class, 'userSimpan']);
 
 Route::get('/master', [UtamaController::class, 'index']);
 Route::get('/', [UtamaController::class, 'dashboard']);

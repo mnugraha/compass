@@ -24,8 +24,10 @@ class User extends Authenticatable
         'id_user',
         'name',
         'email',
+        'hp',
         'password',
         'function',
+        'function_en',
         'level'
     ];
 
