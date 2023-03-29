@@ -22,18 +22,20 @@ class BackendController extends Controller
     }
     public function userSimpan(Request $a)
     {
-        // $pesan_error = [
-        //     'required' => ':attribute harus di isi',
-        //     'nim.unique' => "User dengan NIM ini Sudah terdaftar"
-        // ];
-        // $a->validate([
-        //     'nim' => 'required|unique:users',
-        //     'email' => 'required|email:dns|unique:users',
-        //     'password' => 'required'
-        // ], $pesan_error);
+        $pesan_error = [
+            'required' => ':attribute harus di isi',
+            'unique' => "User dengan ID ini Sudah terdaftar"
+        ];
+        $a->validate([
+            'id_user' => 'required|unique:users',
+            'nama' => 'required',
+            'password' => 'required',
+            'function' => 'required',
+            'level' => 'required'
+        ], $pesan_error);
 
         User::create([
-            'id_user' => $a->id,
+            'id_user' => $a->id_user,
             'name' => $a->nama,
             'password' => Hash::make($a->password),
             'email' => $a->email,
@@ -43,6 +45,25 @@ class BackendController extends Controller
             'level' => $a->level
         ]);
         //Session::flash('simpan', 'Data Berhasil Disimpan!');
+        return redirect('/user');
+    }
+
+    public function userUpdate($x, Request $a)
+    {
+        User::where('id', $x)->update([
+            'name' => $a->nama,
+            'email' => $a->email,
+            'role' => $a->role
+        ]);
+        //Session::flash('update', 'Data Berhasil Diupdate!');
+        return redirect('/user');
+    }
+
+    public function userDelete($x)
+    {
+        $data = User::find($x);
+        $data->delete();
+        //Session::flash('hapus', 'Data Berhasil Didelete!');
         return redirect('/user');
     }
 }
