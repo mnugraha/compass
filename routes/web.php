@@ -20,8 +20,8 @@ use App\Http\Controllers\BackendController;
 // });
 Route::get('/user', [BackendController::class, 'user']);
 Route::post('/userSimpan', [BackendController::class, 'userSimpan']);
-//Route::post('/userUpdate/{x}', [UserController::class, 'updateMhs']);
-//Route::post('/userUpdatePass/{x}', [UserController::class, 'updatePass']);
+Route::post('/userUpdate/{x}', [BackendController::class, 'userUpdate']);
+//Route::post('/userUpdatePass/{x}', [BackendController::class, 'updatePass']);
 Route::post('/userDelete/{x}', [BackendController::class, 'userDelete']);
 
 Route::get('/master', [UtamaController::class, 'index']);

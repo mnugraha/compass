@@ -14,7 +14,7 @@ class BackendController extends Controller
     public function user()
     {
         $dataLevel = Level::all();
-        $dataPeran = Peran::all();
+        $dataPeran = Peran_en::all();
         $dataUser = User::join('peran_en', 'users.function_en', '=', 'peran_en.id_peran')
             ->join('level', 'level.id_level', '=', 'users.level')
             ->get(['users.*', 'peran_en.*', 'level.*']);

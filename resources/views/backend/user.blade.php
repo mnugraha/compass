@@ -164,50 +164,104 @@
     <div>
         <!-- Modal Edit -->
         @foreach ($dataUser as $x)
-            <div id="edit{{ $x->id_user }}" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
+            <div id="edit{{ $x->id_user }}" class="modal fade" id="modal-large" tabindex="-1"
+                aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true" class="icon-cross"></span></button>
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="myModalLabel">Edit Data User</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
+                            <h5 class="modal-title" id="myModalLabel">Edit Data User </h5>
+
                         </div>
                         <div class="modal-body">
                             <form class="row gx-3 gy-2 align-items-center" method="POST"
-                                action="/userUpdate/{{ $x->id }}">
+                                action="/userUpdate/{{ $x->id_user }}">
                                 {{ csrf_field() }}
 
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="mb-3">
-                                            <div class="input-group">
-                                                <div class="input-group-text">Nama</div>
-                                                <input type="text" class="form-control" name="nama"
-                                                    value="{{ $x->name }}">
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="col-md-4 control-label">ID User</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" name="id_user"
+                                                value="{{ $x->id_user }}">
+                                            <div class="">
+                                                @error('id_user')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-3 control-label">Nama Lengkap</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="nama"
+                                                value="{{ $x->name }}">
+                                            <div class="">
+                                                @error('nama')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="col-md-4 control-label">E-Mail</label>
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" name="email"
+                                                value="{{ $x->email }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-md-3 control-label">Hp</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="hp"
+                                                value="{{ $x->hp }}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="col-md-4 control-label">Function / Divisi
+                                        </label>
+                                        <div class="col-md-8">
+                                            <select class="form-control" name="function">
+                                                <option value={{ $x->id_peran }} selected>
+                                                    {{ $x->nm_peran }}
+                                                </option>
+                                                @foreach ($dataPeran as $z)
+                                                    <option value="{{ $z->id_peran }}">
+                                                        {{ $z->nm_peran }}</option>
+                                                @endforeach
+                                            </select>
+
+                                            <div class="">
+                                                @error('function')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12">
-                                        <div class="mb-3">
-                                            <div class="input-group">
-                                                <div class="input-group-text">Email</div>
-                                                <input type="email" class="form-control" name="email"
-                                                    value="{{ $x->email }}">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="mb-3">
-                                            <div class="input-group">
-                                                <div class="input-group-text">Role</div>
-                                                <select class="form-select" name="role">
-                                                    <option value={{ $x->role }} selected>{{ $x->role }}
-                                                    </option>
-                                                    <option value="mahasiswa">Mahasiswa</option>
-                                                    <option value="dosen">Dosen</option>
-                                                    <option value="admin">Admin</option>
-                                                </select>
+                                    <div class="col-md-6">
+                                        <label class="col-md-3 control-label">Level </label>
+                                        <div class="col-md-9">
+                                            <select class="form-control" name="level">
+                                                <option value={{ $x->id_level }} selected>{{ $x->level }}
+                                                </option>
+                                                @foreach ($dataLevel as $x)
+                                                    <option value="{{ $x->id_level }}"
+                                                        {{ old('level') == $x->id_level ? 'selected' : '' }}>
+                                                        {{ $x->level }}</option>
+                                                @endforeach
+                                            </select>
+                                            <div class="">
+                                                @error('level')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
                                             </div>
                                         </div>
                                     </div>
@@ -216,7 +270,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary waves-effect"
-                                data-bs-dismiss="modal">Close</button>
+                                data-dismiss="modal">Close</button>
                             <input type="submit" class="btn btn-info waves-effect waves-light" value="Update">
                         </div>
                         </form>
