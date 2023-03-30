@@ -70,4 +70,13 @@ class BackendController extends Controller
         //Session::flash('hapus', 'Data Berhasil Didelete!');
         return redirect('/user');
     }
+
+    public function updatePass($x, Request $a)
+    {
+        User::where('id_user', $x)->update([
+            'password' => Hash::make($a->password)
+        ]);
+        //Session::flash('update', 'Data Berhasil Diupdate!');
+        return redirect('/user');
+    }
 }

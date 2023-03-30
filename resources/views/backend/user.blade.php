@@ -285,6 +285,8 @@
             <div id="hapus{{ $x->id_user }}" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true" class="icon-cross"></span></button>
                     <div class="modal-content">
                         <div class="modal-body">
                             <form class="row gx-3 gy-2 align-items-center" method="POST"
@@ -298,6 +300,47 @@
                             <button type="button" class="btn btn-secondary waves-effect text-center"
                                 data-dismiss="modal">Batal</button>
                             <input type="submit" class="btn btn-danger waves-effect waves-light" value="Hapus">
+                        </div>
+                        </form>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+        @endforeach
+    </div> <!-- end preview-->
+
+    <div>
+        <!-- Modal password -->
+        @foreach ($dataUser as $x)
+            <div id="password{{ $x->id_user }}" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true" class="icon-cross"></span></button>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myModalLabel">Ubah Password User</h5>
+                        </div>
+                        <div class="modal-body">
+                            <form class="row gx-3 gy-2 align-items-center" method="POST"
+                                action="/userUpdatePass/{{ $x->id_user }}">
+                                {{ csrf_field() }}
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <div class="input-group auth-pass-inputgroup">
+                                                <div class="input-group-text">Password Baru</div>
+                                                <input type="text" class="form-control" name="password"
+                                                    aria-describedby="password-addon" name="password" autocomplete="off">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary waves-effect"
+                                data-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-info waves-effect waves-light" value="Update">
                         </div>
                         </form>
                     </div><!-- /.modal-content -->
