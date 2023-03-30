@@ -25,10 +25,12 @@
         <!-- START APP CONTAINER -->
         <div class="app-container" style="background: url(/) center center no-repeat fixed;">
             <div class="app-login-box">
-                <div class="app-login-box-user"><img src="/theme/img/user/no-image.png"></div>
+                <div class="">
+                    <center><img src="/logo-header.png" height="50px" style="margin-top: 20px"></center>
+                </div>
+                <hr style="border-top: 1px solid grey;">
                 <div class="app-login-box-title">
-                    <div class="title">Already a member?</div>
-                    <div class="subtitle">Sign in to your account</div>
+                    <div class="title" style="font-weight: 600">Login Member</div>
                 </div>
                 <div class="app-login-box-container">
                     <form action="/login_proses" method="post">
@@ -41,10 +43,11 @@
                             @endforeach
                         @endif
                         @if (session()->has('loginError'))
-                            {{ session('loginError') }}
+                            <span style="color: red; margin-bottom: 5px">{{ session('loginError') }}</span>
+                            <br><br>
                         @endif
                         <div class="form-group">
-                            <input type="text" class="form-control" name="id_user" placeholder="Email Address">
+                            <input type="text" class="form-control" name="id_user" placeholder="ID User">
 
                         </div>
                         <div class="form-group">

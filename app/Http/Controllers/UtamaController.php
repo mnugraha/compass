@@ -69,7 +69,7 @@ class UtamaController extends Controller
             return redirect()->intended('/profile');
         }
         //return view('index');
-        return back()->with('loginError', 'Maaf! Gagal Login');
+        return back()->with('loginError', 'Login Gagal! User atau Password salah.');
     }
 
     public function logout(Request $a)

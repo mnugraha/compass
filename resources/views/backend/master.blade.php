@@ -26,14 +26,12 @@
             <!-- Header Menu Samping -->
             <div class="app-sidebar app-navigation app-navigation-fixed scroll app-navigation-style-default app-navigation-open-hover dir-left"
                 data-type="close-other">
-
-
                 <!-- Menu Samping -->
                 <nav>
                     <ul>
                         <li class="title" style="font-weight: 700">Menu</li>
                         <li>
-                            <a href="/dashboard"><span class="fa fa-align-justify" style="color: white"></span>
+                            <a href="/"><span class="fa fa-align-justify" style="color: white"></span>
                                 Dashboards</a>
                         </li>
                         <li>
