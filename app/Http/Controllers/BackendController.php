@@ -50,10 +50,14 @@ class BackendController extends Controller
 
     public function userUpdate($x, Request $a)
     {
-        User::where('id', $x)->update([
+        User::where('id_user', $x)->update([
             'name' => $a->nama,
+            'password' => Hash::make($a->password),
             'email' => $a->email,
-            'role' => $a->role
+            'hp' => $a->hp,
+            'function' => $a->function,
+            'function_en' => $a->function,
+            'level' => $a->level
         ]);
         //Session::flash('update', 'Data Berhasil Diupdate!');
         return redirect('/user');
