@@ -47,6 +47,7 @@
             <div class="title">
                 <h3 style="font-size: 18px;color:rgb(0, 0, 0);font-weight: 700">Profil Kompetensi Anda:</h3>
                 <p>Berikut ini adalah kompetensi yang harus di kuasai</p>
+                <p>Jumlah Kompetensi anda: {{ $jmlKompetensi }}</p>
             </div>
         </div>
         <div class="block-content">

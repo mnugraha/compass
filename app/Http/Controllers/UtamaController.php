@@ -60,10 +60,15 @@ class UtamaController extends Controller
                 ->join('level', 'level.id_level', '=', 'users.level')
                 ->where('users.id_user', '=', Auth::user()->id_user)
                 ->get(['users.*', 'level.*', 'peran.*'])->first();
+            $kompetensiUser = Profile::where('peran', '=', Auth::user()->function)
+                ->where('level', '=', Auth::user()->level)
+                ->where('nilai', '!=', null)
+                ->get();
+            $jmlKompetensi = $kompetensiUser->count();
         } else {
             return view('login');
         }
-        return view('profile', ['dataUser' => $dataUser, 'nilai' => $dataNilai, 'level' => $dataLevel, 'peran' => $dataPeran, 'profile' => $dataProfile, 'kompetensi' => $dataKompetensi, 'struktur' => $dataStruktur]);
+        return view('profile', ['dataUser' => $dataUser, 'nilai' => $dataNilai, 'level' => $dataLevel, 'peran' => $dataPeran, 'profile' => $dataProfile, 'kompetensi' => $dataKompetensi, 'struktur' => $dataStruktur, 'jmlKompetensi' => $jmlKompetensi]);
     }
     public function login()
     {
