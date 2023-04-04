@@ -265,7 +265,7 @@ class UtamaController extends Controller
             ->where('nilai.id_struktur', '=', 'B23')->first();
         $dataKompetensi = Kompetensi::where('id_kompetensi', '=', 'B2')
             ->first();
-        return view('B2', ['kompetensi' => $dataKompetensi, 'jointabel1' => $a1, 'jointabel2' => $a2, 'jointabel3' => $a3, 'A11' => $A11, 'A12' => $A12, 'A13' => $A13]);
+        return view('B1', ['kompetensi' => $dataKompetensi, 'jointabel1' => $a1, 'jointabel2' => $a2, 'jointabel3' => $a3, 'A11' => $A11, 'A12' => $A12, 'A13' => $A13]);
     }
 
     public function B3()
@@ -293,7 +293,7 @@ class UtamaController extends Controller
             ->where('nilai.id_struktur', '=', 'B33')->first();
         $dataKompetensi = Kompetensi::where('id_kompetensi', '=', 'B3')
             ->first();
-        return view('B3', ['kompetensi' => $dataKompetensi, 'jointabel1' => $a1, 'jointabel2' => $a2, 'jointabel3' => $a3, 'A11' => $A11, 'A12' => $A12, 'A13' => $A13]);
+        return view('B1', ['kompetensi' => $dataKompetensi, 'jointabel1' => $a1, 'jointabel2' => $a2, 'jointabel3' => $a3, 'A11' => $A11, 'A12' => $A12, 'A13' => $A13]);
     }
 
     public function C1()
@@ -349,7 +349,7 @@ class UtamaController extends Controller
             ->where('nilai.id_struktur', '=', 'C23')->first();
         $dataKompetensi = Kompetensi::where('id_kompetensi', '=', 'C2')
             ->first();
-        return view('C2', ['kompetensi' => $dataKompetensi, 'jointabel1' => $a1, 'jointabel2' => $a2, 'jointabel3' => $a3, 'A11' => $A11, 'A12' => $A12, 'A13' => $A13]);
+        return view('C1', ['kompetensi' => $dataKompetensi, 'jointabel1' => $a1, 'jointabel2' => $a2, 'jointabel3' => $a3, 'A11' => $A11, 'A12' => $A12, 'A13' => $A13]);
     }
 
     public function C3()
@@ -377,7 +377,7 @@ class UtamaController extends Controller
             ->where('nilai.id_struktur', '=', 'C33')->first();
         $dataKompetensi = Kompetensi::where('id_kompetensi', '=', 'C3')
             ->first();
-        return view('C3', ['kompetensi' => $dataKompetensi, 'jointabel1' => $a1, 'jointabel2' => $a2, 'jointabel3' => $a3, 'A11' => $A11, 'A12' => $A12, 'A13' => $A13]);
+        return view('C1', ['kompetensi' => $dataKompetensi, 'jointabel1' => $a1, 'jointabel2' => $a2, 'jointabel3' => $a3, 'A11' => $A11, 'A12' => $A12, 'A13' => $A13]);
     }
 
     public function D1()
@@ -433,7 +433,7 @@ class UtamaController extends Controller
             ->where('nilai.id_struktur', '=', 'D23')->first();
         $dataKompetensi = Kompetensi::where('id_kompetensi', '=', 'D2')
             ->first();
-        return view('D2', ['kompetensi' => $dataKompetensi, 'jointabel1' => $a1, 'jointabel2' => $a2, 'jointabel3' => $a3, 'A11' => $A11, 'A12' => $A12, 'A13' => $A13]);
+        return view('D1', ['kompetensi' => $dataKompetensi, 'jointabel1' => $a1, 'jointabel2' => $a2, 'jointabel3' => $a3, 'A11' => $A11, 'A12' => $A12, 'A13' => $A13]);
     }
 
     public function D3()
@@ -461,7 +461,7 @@ class UtamaController extends Controller
             ->where('nilai.id_struktur', '=', 'D33')->first();
         $dataKompetensi = Kompetensi::where('id_kompetensi', '=', 'D3')
             ->first();
-        return view('D3', ['kompetensi' => $dataKompetensi, 'jointabel1' => $a1, 'jointabel2' => $a2, 'jointabel3' => $a3, 'A11' => $A11, 'A12' => $A12, 'A13' => $A13]);
+        return view('D1', ['kompetensi' => $dataKompetensi, 'jointabel1' => $a1, 'jointabel2' => $a2, 'jointabel3' => $a3, 'A11' => $A11, 'A12' => $A12, 'A13' => $A13]);
     }
     public function kompetensi()
     {
