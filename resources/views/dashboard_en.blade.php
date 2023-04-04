@@ -47,7 +47,7 @@
                     <div class="block" style="background-color: #d5d4ca">
                         <div class="tile-basic" style="background-color: #d5d4ca">
                             <div class="tile-icon tile-icon-dashed">
-                                <img src="gambar/kemampuan1.png">
+                                <img src="gambar/Kemampuan1.png">
                             </div>
                             <div class="tile-content text-center">
                                 <h4 class="tile-title" style="color: darkblue">Investing for <br>the future</h4>
@@ -59,7 +59,7 @@
                     <div class="block" style="background-color: #d5d4ca">
                         <div class="tile-basic" style="background-color: #d5d4ca">
                             <div class="tile-icon tile-icon-dashed">
-                                <img src="gambar/kemampuan2.png">
+                                <img src="gambar/Kemampuan2.png">
                             </div>
                             <div class="tile-content text-center">
                                 <h4 class="tile-title" style="color: darkblue">Lasting relationships</h4>
@@ -71,7 +71,7 @@
                     <div class="block" style="background-color: #d5d4ca">
                         <div class="tile-basic" style="background-color: #d5d4ca">
                             <div class="tile-icon tile-icon-dashed">
-                                <img src="gambar/kemampuan3.png">
+                                <img src="gambar/Kemampuan3.png">
                             </div>
                             <div class="tile-content text-center">
                                 <h4 class="tile-title" style="color: darkblue">People first</h4>
@@ -83,7 +83,7 @@
                     <div class="block" style="background-color: #d5d4ca">
                         <div class="tile-basic" style="background-color: #d5d4ca">
                             <div class="tile-icon tile-icon-dashed">
-                                <img src="gambar/kemampuan4.png">
+                                <img src="gambar/Kemampuan4.png">
                             </div>
                             <div class="tile-content text-center">
                                 <h4 class="tile-title" style="color: darkblue">Best-inclass assets and operations</h4>
