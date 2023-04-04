@@ -49,8 +49,8 @@
                 <p>Berikut ini adalah kompetensi yang harus di kuasai</p>
 
             </div>
-            <p style="text-align: right">Jumlah Kompetensi anda: <span class="label label-default label-bordered"
-                    style="font-size: 20px">{{ $jmlKompetensi }}</span>
+            <p style="text-align: left; padding-top: 10px">Jumlah Kompetensi: <span
+                    class="label label-default label-bordered" style="font-size: 20px">{{ $jmlKompetensi }}</span>
             </p>
         </div>
         <div class="block-content">
