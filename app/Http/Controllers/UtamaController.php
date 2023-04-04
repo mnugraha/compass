@@ -463,6 +463,7 @@ class UtamaController extends Controller
             ->first();
         return view('D1', ['kompetensi' => $dataKompetensi, 'jointabel1' => $a1, 'jointabel2' => $a2, 'jointabel3' => $a3, 'A11' => $A11, 'A12' => $A12, 'A13' => $A13]);
     }
+
     public function kompetensi()
     {
 
