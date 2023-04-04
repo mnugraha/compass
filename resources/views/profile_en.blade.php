@@ -46,6 +46,7 @@
             <div class="title">
                 <h3 style="font-size: 18px;color:rgb(0, 0, 0);font-weight: 700">Your Competencies Profile:</h3>
                 <p>The following are the competencies that must be know</p>
+                <p>Total of your competencies: {{ $jmlKompetensi }}</p>
             </div>
         </div>
         <div class="block-content">
