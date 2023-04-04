@@ -46,8 +46,10 @@
             <div class="title">
                 <h3 style="font-size: 18px;color:rgb(0, 0, 0);font-weight: 700">Your Competencies Profile:</h3>
                 <p>The following are the competencies that must be know</p>
-                <p>Total of your competencies: {{ $jmlKompetensi }}</p>
             </div>
+            <p style="text-align: right">Total of your competencies: <span class="label label-default label-bordered"
+                    style="font-size: 20px">{{ $jmlKompetensi }}</span>
+            </p>
         </div>
         <div class="block-content">
             <div class="app-heading title-only" style="background-color: #57778e;box-shadow: -2px 3px 5px #888888;">
