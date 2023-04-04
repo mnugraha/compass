@@ -6,9 +6,9 @@
 @section('judul')
     <div class="app-heading app-heading-bordered" style="background-color: #57778e;box-shadow: -1px 3px 5px #888888">
         <div class="title">
-            <h2 style="font-size: 20px;font-weight: 700;color:bisque">
+            <h2 style="font-size: 20px;font-weight: 700;color:aliceblue">
                 {{ $kompetensi->id_kompetensi . '. ' . $kompetensi->nm_kompetensi }}</h2>
-            <p style="font-size: 12px;color: aliceblue">{{ $kompetensi->definisi }}</p>
+            <p style="font-size: 12px;color: antiquewhite">{{ $kompetensi->definisi }}</p>
         </div>
     </div>
 @endsection
@@ -19,9 +19,9 @@
             <div style="overflow-x:auto;">
                 <table class="table table-striped table-responsive">
                     <tr style="background-color: #57778e">
-                        <th class="text-center" style="color: bisque">Struktur / Poin</th>
+                        <th class="text-center" style="color: aliceblue">Struktur / Poin</th>
                         @for ($i = 1; $i <= 5; $i++)
-                            <th class="text-center" style="color: bisque; ">{{ $i }}
+                            <th class="text-center" style="color: aliceblue; ">{{ $i }}
                                 @if ($i == 1)
                                     <br> {{ 'Tidak Ada Bukti' }}
                                 @elseif($i == 2)
