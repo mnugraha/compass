@@ -22,6 +22,16 @@ class EnglishController extends Controller
         return view('dashboard_en');
     }
 
+    public function handbook()
+    {
+        return view('handbook_en');
+    }
+
+    public function video()
+    {
+        return view('video_en');
+    }
+
     public function profil_en()
     {
         $dataNilai = Nilai_en::all();

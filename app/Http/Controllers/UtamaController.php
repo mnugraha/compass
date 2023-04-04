@@ -19,14 +19,27 @@ class UtamaController extends Controller
     {
         return view('master-top');
     }
+
     public function contoh()
     {
         return view('contoh');
     }
+
     public function dashboard()
     {
         return view('dashboard');
     }
+
+    public function handbook()
+    {
+        return view('handbook');
+    }
+
+    public function video()
+    {
+        return view('video');
+    }
+
     public function profil()
     {
         $dataNilai = Nilai::all();
@@ -449,6 +462,31 @@ class UtamaController extends Controller
         $dataKompetensi = Kompetensi::where('id_kompetensi', '=', 'D3')
             ->first();
         return view('D3', ['kompetensi' => $dataKompetensi, 'jointabel1' => $a1, 'jointabel2' => $a2, 'jointabel3' => $a3, 'A11' => $A11, 'A12' => $A12, 'A13' => $A13]);
+    }
+    public function kompetensi()
+    {
+
+        $dataKompetensiA = Kompetensi::where('id_kompetensi', '=', 'A1')
+            ->orWhere('id_kompetensi', '=', 'A2')
+            ->orWhere('id_kompetensi', '=', 'A3')
+            ->get();
+
+        $dataKompetensiB = Kompetensi::where('id_kompetensi', '=', 'B1')
+            ->orWhere('id_kompetensi', '=', 'B2')
+            ->orWhere('id_kompetensi', '=', 'B3')
+            ->get();
+
+        $dataKompetensiC = Kompetensi::where('id_kompetensi', '=', 'C1')
+            ->orWhere('id_kompetensi', '=', 'C2')
+            ->orWhere('id_kompetensi', '=', 'C3')
+            ->get();
+
+        $dataKompetensiD = Kompetensi::where('id_kompetensi', '=', 'D1')
+            ->orWhere('id_kompetensi', '=', 'D2')
+            ->orWhere('id_kompetensi', '=', 'D3')
+            ->get();
+        return view('kompetensi', ['kompetensiA' => $dataKompetensiA, 'kompetensiB' => $dataKompetensiB, 'kompetensiC' => $dataKompetensiC, 'kompetensiD' => $dataKompetensiD]);
+        // return view('kompetensi');
     }
 
     public function underConstruction()

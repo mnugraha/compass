@@ -12,11 +12,10 @@
         @foreach ($kompetensi as $x)
             <div class="col-md-4" style="margin-bottom: 20px">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"> {{ $x->nm_kompetensi }}</h3>
+                    <div class="panel-heading" style="font-size: 18px; background-color: #618b7c">
+                        <h3 class="panel-title" style="color: aliceblue"> {{ $x->nm_kompetensi }}</h3>
                         <div class="panel-elements pull-right">
-                            <span class="label label-bordered label-ghost"
-                                style="font-size: 18px; background-color: cadetblue">
+                            <span class="label label-ghost" style="font-size: 18px; ">
                                 {{ $x->id_kompetensi }}</span>
 
                         </div>
@@ -35,7 +34,7 @@
             </div>
         @endforeach
     </div>
-    <a href="/dashboard#nilai-nilai" class="btn btn-default btn-icon-fixed" style="box-shadow: -1px 2px 3px #888888"><span
+    <a href="/#nilai-nilai" class="btn btn-default btn-icon-fixed" style="box-shadow: -1px 2px 3px #888888"><span
             class="icon-arrow-left"></span>
         Kembali</a>
     <br>

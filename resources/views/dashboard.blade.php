@@ -31,7 +31,8 @@
                 </div>
                 <div class="col-md-9">
                     <h3><strong>Perusahaan material pilihan pelanggan dan karyawan</strong></h3>
-                    <h4 style="font-size: 16px; color:lightgoldenrodyellow">Mendorong kemajuan, pertumbuhan, dan
+                    <h4 style="font-size: 16px; color:lightgoldenrodyellow; font-weight: 700">Mendorong kemajuan,
+                        pertumbuhan, dan
                         keberlanjutan</h4>
                 </div>
             </div>
@@ -44,49 +45,49 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-3">
-                    <div class="block">
-                        <div class="tile-basic">
+                    <div class="block" style="background-color: #d5d4ca">
+                        <div class="tile-basic" style="background-color: #d5d4ca">
                             <div class="tile-icon tile-icon-dashed">
-                                <span class="fa fa-building-o text-biru"></span>
+                                <img src="gambar/kemampuan1.png">
                             </div>
                             <div class="tile-content text-center">
-                                <h4 class="tile-title">Berinvestasi untuk masa depan</h4>
+                                <h4 class="tile-title" style="color: darkblue">Berinvestasi untuk masa depan</h4>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="block">
-                        <div class="tile-basic">
+                    <div class="block" style="background-color: #d5d4ca">
+                        <div class="tile-basic" style="background-color: #d5d4ca">
                             <div class="tile-icon tile-icon-dashed">
-                                <span class="fa fa-users text-biru"></span>
+                                <img src="gambar/kemampuan2.png">
                             </div>
                             <div class="tile-content text-center">
-                                <h4 class="tile-title">Relasi jangka panjang</h4>
+                                <h4 class="tile-title" style="color: darkblue">Relasi jangka panjang</h4>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="block">
-                        <div class="tile-basic">
+                    <div class="block" style="background-color: #d5d4ca">
+                        <div class="tile-basic" style="background-color: #d5d4ca">
                             <div class="tile-icon tile-icon-dashed">
-                                <span class="fa fa-male text-biru"></span>
+                                <img src="gambar/kemampuan3.png">
                             </div>
                             <div class="tile-content text-center">
-                                <h4 class="tile-title">Mengutamankan manusia</h4>
+                                <h4 class="tile-title" style="color: darkblue">Mengutamankan manusia</h4>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="block">
-                        <div class="tile-basic">
+                    <div class="block" style="background-color: #d5d4ca">
+                        <div class="tile-basic" style="background-color: #d5d4ca">
                             <div class="tile-icon tile-icon-dashed">
-                                <span class="fa fa-trophy text-biru"></span>
+                                <img src="gambar/kemampuan4.png">
                             </div>
                             <div class="tile-content text-center">
-                                <h4 class="tile-title">Terbaik dikelasnya aset & operasi</h4>
+                                <h4 class="tile-title" style="color: darkblue">Terbaik dikelasnya aset & operasi</h4>
                             </div>
                         </div>
                     </div>
@@ -103,91 +104,82 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-3">
-                    <div class="block block-condensed">
-                        <div class="tile-basic">
+                    <div class="block block-condensed" style="padding-bottom: 10px">
+                        <div class="tile-basic" style="background-color: #e9e8e3">
                             <div class="tile-icon tile-icon-dashed">
-                                <span class="icon-users text-biru"></span>
+                                <img src="gambar/Value1.png">
                             </div>
                             <div class="tile-content text-center">
-                                <h4 class="tile-title">Bertindak seperti pemilik</h4>
+                                <h4 class="tile-title" style="font-weight: 700">Bertindak seperti pemilik</h4>
                                 <p>penuh semangat, berani, bertanggung jawab, dan strategis</p>
                             </div>
+
                         </div>
-                        <div class="block-footer">
-                            <span class="label" style="font-size: 28px;color: darkslategrey;margin-top: 10px;">A</span>
-                            <a href="/A" class="btn btn-info pull-right">Buka</a>
-                        </div>
+                        <center><a href="/A" class="btn btn-default btn-sm ">Buka</a>
+                        </center>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="block block-condensed">
-                        <div class="tile-basic">
+                    <div class="block block-condensed" style="padding-bottom: 10px">
+                        <div class="tile-basic" style="background-color: #e9e8e3">
                             <div class="tile-icon tile-icon-dashed">
-                                <span class="fa fa-slideshare text-biru"></span>
+                                <img src="gambar/Value2.png">
                             </div>
                             <div class="tile-content text-center">
-                                <h4 class="tile-title">Beradaptasi</h4>
+                                <h4 class="tile-title" style="font-weight: 700">Beradaptasi</h4>
                                 <p>terhadap peluang, tantangan, dan ide-ide baru</p>
                             </div>
                         </div>
-                        <div class="block-footer">
-                            <span class="label" style="font-size: 28px;color: darkslategrey;margin-top: 10px;">B</span>
-                            <a href="/B" class="btn btn-info pull-right">Buka</a>
-                        </div>
+                        <center><a href="/B" class="btn btn-default btn-sm">Buka</a></center>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="block block-condensed">
-                        <div class="tile-basic">
+                    <div class="block block-condensed" style="padding-bottom: 10px">
+                        <div class="tile-basic" style="background-color: #e9e8e3">
                             <div class="tile-icon tile-icon-dashed">
-                                <span class="fa fa-sign-language text-biru"></span>
+                                <img src="gambar/Value3.png">
                             </div>
                             <div class="tile-content text-center">
-                                <h4 class="tile-title">Menunjukan kepedulian mendalam</h4>
+                                <h4 class="tile-title" style="font-weight: 700">Menunjukan kepedulian mendalam</h4>
                                 <p>untuk kepentingan masyarakat dan bumi kita dengan kepercayaan, martabat, dan kerendahan
                                     hati</p>
                             </div>
                         </div>
-                        <div class="block-footer">
-                            <span class="label" style="font-size: 28px;color: darkslategrey;margin-top: 10px;">C</span>
-                            <a href="/C" class="btn btn-info pull-right">Buka</a>
-                        </div>
+                        <center><a href="/C" class="btn btn-default btn-sm">Buka</a></center>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="block block-condensed">
-                        <div class="tile-basic">
+                    <div class="block block-condensed" style="padding-bottom: 10px">
+                        <div class="tile-basic" style="background-color: #e9e8e3">
                             <div class="tile-icon tile-icon-dashed">
-                                <span class="fa fa-send text-biru"></span>
+                                <img src="gambar/Value4.png">
                             </div>
                             <div class="tile-content text-center">
-                                <h4 class="tile-title">Menghasilkan keunggulan</h4>
+                                <h4 class="tile-title" style="font-weight: 700">Menghasilkan keunggulan</h4>
                                 <p>melalui pengetahuan, ketangkasan, inovasi, dan pelaksanaan</p>
                             </div>
                         </div>
-                        <div class="block-footer">
-                            <span class="label" style="font-size: 28px;color: darkslategrey;margin-top: 10px;">D</span>
-                            <a href="/D" class="btn btn-info pull-right">Buka</a>
-                        </div>
+
+                        <center><a href="/D" class="btn btn-default btn-sm">Buka</a></center>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="block">
-        <h2 style="font-weight: 700">Buku Panduan Kompas Indorama</h2>
-        <object data="/file/kompas-indorama.pdf" type="application/pdf" width="100%" height="400"></object>
-        <p>Jika file tidak muncul, silahkan <a href="/file/kompas-indorama.pdf"> download</a> Handbook Kompas Indorama <a
-                href="/file/kompas-indorama.pdf">disini</a>
-        </p>
-    </div>
-    <div class="block">
-        <h2 style="font-weight: 700">Video Kompas Indorama v2022</h2>
-        <div style="text-align: center;" class="container1">
-            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/rdeWao5AGGM"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+    <div class="panel panel-primary" id="skema">
+        <div class="panel-heading">
+            <h3 class="panel-title" style="font-size: 18px;"><span class="fa fa-file-text-o"></span> Skema
+                Kompetensi
+            </h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <center><img src="gambar/Kompas Indorama.png"></center>
+                <center><a href="/kompetensi" class="btn btn-default">Kompetensi Global</a>
+                    <a href="/profile" class="btn btn-default">Kompetensi Anda</a>
+                </center>
+            </div>
         </div>
     </div>
 @endsection

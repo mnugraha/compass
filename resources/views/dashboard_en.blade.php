@@ -31,7 +31,8 @@
                 </div>
                 <div class="col-md-9">
                     <h3><strong>The materials company of choice for customers and employees</strong></h3>
-                    <h4 style="font-size: 16px; color:lightgoldenrodyellow">Driving scale, growth and sustainability</h4>
+                    <h4 style="font-size: 16px; color:lightgoldenrodyellow; font-weight: 700">Driving scale, growth and
+                        sustainability</h4>
                 </div>
             </div>
         </div>
@@ -43,49 +44,49 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-3">
-                    <div class="block">
-                        <div class="tile-basic">
+                    <div class="block" style="background-color: #d5d4ca">
+                        <div class="tile-basic" style="background-color: #d5d4ca">
                             <div class="tile-icon tile-icon-dashed">
-                                <span class="fa fa-building-o text-biru"></span>
+                                <img src="gambar/kemampuan1.png">
                             </div>
                             <div class="tile-content text-center">
-                                <h4 class="tile-title">Investing for the future</h4>
+                                <h4 class="tile-title" style="color: darkblue">Investing for <br>the future</h4>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="block">
-                        <div class="tile-basic">
+                    <div class="block" style="background-color: #d5d4ca">
+                        <div class="tile-basic" style="background-color: #d5d4ca">
                             <div class="tile-icon tile-icon-dashed">
-                                <span class="fa fa-users text-biru"></span>
+                                <img src="gambar/kemampuan2.png">
                             </div>
                             <div class="tile-content text-center">
-                                <h4 class="tile-title">Lasting relationships</h4>
+                                <h4 class="tile-title" style="color: darkblue">Lasting relationships</h4>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="block">
-                        <div class="tile-basic">
+                    <div class="block" style="background-color: #d5d4ca">
+                        <div class="tile-basic" style="background-color: #d5d4ca">
                             <div class="tile-icon tile-icon-dashed">
-                                <span class="fa fa-male text-biru"></span>
+                                <img src="gambar/kemampuan3.png">
                             </div>
                             <div class="tile-content text-center">
-                                <h4 class="tile-title">People first</h4>
+                                <h4 class="tile-title" style="color: darkblue">People first</h4>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="block">
-                        <div class="tile-basic">
+                    <div class="block" style="background-color: #d5d4ca">
+                        <div class="tile-basic" style="background-color: #d5d4ca">
                             <div class="tile-icon tile-icon-dashed">
-                                <span class="fa fa-trophy text-biru"></span>
+                                <img src="gambar/kemampuan4.png">
                             </div>
                             <div class="tile-content text-center">
-                                <h4 class="tile-title">Best-inclass assets and operations</h4>
+                                <h4 class="tile-title" style="color: darkblue">Best-inclass assets and operations</h4>
                             </div>
                         </div>
                     </div>
@@ -102,92 +103,70 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-3">
-                    <div class="block block-condensed">
-                        <div class="tile-basic">
+                    <div class="block block-condensed" style="padding-bottom: 10px">
+                        <div class="tile-basic" style="background-color: #e9e8e3">
                             <div class="tile-icon tile-icon-dashed">
-                                <span class="icon-users text-biru"></span>
+                                <img src="gambar/Value1.png">
                             </div>
                             <div class="tile-content text-center">
-                                <h4 class="tile-title">Act like owners</h4>
+                                <h4 class="tile-title" style="font-weight: 700">Act like owners</h4>
                                 <p>passionate, courageous, responsible, and strategic</p>
                             </div>
                         </div>
-                        <div class="block-footer">
-                            <span class="label" style="font-size: 28px;color: darkslategrey;margin-top: 10px;">A</span>
-                            <a href="/A_en" class="btn btn-info pull-right">Open</a>
-                        </div>
+
+                        <center><a href="/A_en" class="btn btn-default btn-sm">Open</a></center>
+
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="block block-condensed">
-                        <div class="tile-basic">
+                    <div class="block block-condensed" style="padding-bottom: 10px">
+                        <div class="tile-basic" style="background-color: #e9e8e3">
                             <div class="tile-icon tile-icon-dashed">
-                                <span class="fa fa-slideshare text-biru"></span>
+                                <img src="gambar/Value2.png">
                             </div>
                             <div class="tile-content text-center">
-                                <h4 class="tile-title">Be adaptable</h4>
+                                <h4 class="tile-title" style="font-weight: 700">Be adaptable</h4>
                                 <p>to opportunities, challenges, and ideas</p>
                             </div>
                         </div>
-                        <div class="block-footer">
-                            <span class="label" style="font-size: 28px;color: darkslategrey;margin-top: 10px;">B</span>
-                            <a href="/B_en" class="btn btn-info pull-right">Open</a>
-                        </div>
+                        <center><a href="/B_en" class="btn btn-default btn-sm">Open</a></center>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="block block-condensed">
-                        <div class="tile-basic">
+                    <div class="block block-condensed" style="padding-bottom: 10px">
+                        <div class="tile-basic" style="background-color: #e9e8e3">
                             <div class="tile-icon tile-icon-dashed">
-                                <span class="fa fa-sign-language text-biru"></span>
+                                <img src="gambar/Value3.png">
                             </div>
                             <div class="tile-content text-center">
-                                <h4 class="tile-title">Care deeply</h4>
+                                <h4 class="tile-title" style="font-weight: 700">Care deeply</h4>
                                 <p>for people and our planet with trust, respect, and humility</p>
                             </div>
                         </div>
-                        <div class="block-footer">
-                            <span class="label" style="font-size: 28px;color: darkslategrey;margin-top: 10px;">C</span>
-                            <a href="/C_en" class="btn btn-info pull-right">Open</a>
-                        </div>
+                        <center> <a href="/C_en" class="btn btn-default btn-sm">Open</a></center>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="block block-condensed">
-                        <div class="tile-basic">
+                    <div class="block block-condensed" style="padding-bottom: 10px">
+                        <div class="tile-basic" style="background-color: #e9e8e3">
                             <div class="tile-icon tile-icon-dashed">
-                                <span class="fa fa-send text-biru"></span>
+                                <img src="gambar/Value4.png">
                             </div>
                             <div class="tile-content text-center">
-                                <h4 class="tile-title">Deliver excellence</h4>
+                                <h4 class="tile-title" style="font-weight: 700">Deliver excellence</h4>
                                 <p>through knowledge, agility, innovation, and execution</p>
                             </div>
                         </div>
-                        <div class="block-footer">
-                            <span class="label" style="font-size: 28px;color: darkslategrey;margin-top: 10px;">D</span>
-                            <a href="/D_en" class="btn btn-info pull-right">Open</a>
-                        </div>
+
+                        <center><a href="/D_en" class="btn btn-default btn-sm">Open</a></center>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="block">
-        <h2 style="font-weight: 700">The Compass Indorama handbook</h2>
-        <object data="/file/kompas-indorama_en.pdf" type="application/pdf" width="100%" height="400"></object>
-        <p>If the file not appear, please <a href="/file/kompas-indorama_en.pdf"> download</a> The Compass handbook <a
-                href="/file/kompas-indorama_en.pdf">here.</a>
-        </p>
-    </div>
 
-    <div class="block">
-        <h2 style="font-weight: 700">The Compass Indorama Video v2022</h2>
-        <div style="text-align: center;" class="container1">
-            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/rdeWao5AGGM"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-        </div>
     </div>
 @endsection
 

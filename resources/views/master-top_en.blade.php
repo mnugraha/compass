@@ -88,7 +88,13 @@
                                     <li>
                                         <a href="/profile-en"><span class="icon-user"></span> My Profile</a>
                                     </li>
+                                    <li>
+                                        <a href="/book_en"><span class="fa fa-book"></span> Hand Book</a>
+                                    </li>
 
+                                    <li>
+                                        <a href="/video_en"><span class="fa fa-play"></span> Video</a>
+                                    </li>
                                     <li>
                                         <a href="/test"><span class="icon-laptop-phone"></span> Assessment</a>
                                     </li>

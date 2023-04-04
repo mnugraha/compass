@@ -48,8 +48,9 @@ Route::get('/D1', [UtamaController::class, 'D1']);
 Route::get('/D2', [UtamaController::class, 'D2']);
 Route::get('/D3', [UtamaController::class, 'D3']);
 Route::get('/test', [UtamaController::class, 'underConstruction']);
-
-
+Route::get('/book', [UtamaController::class, 'handbook']);
+Route::get('/video', [UtamaController::class, 'video']);
+Route::get('/kompetensi', [UtamaController::class, 'kompetensi']);
 
 Route::get('/profile-en', [EnglishController::class, 'profil_en']);
 Route::get('/en', [EnglishController::class, 'dashboard_en']);
@@ -69,3 +70,5 @@ Route::get('/C3_en', [EnglishController::class, 'C3_en']);
 Route::get('/D1_en', [EnglishController::class, 'D1_en']);
 Route::get('/D2_en', [EnglishController::class, 'D2_en']);
 Route::get('/D3_en', [EnglishController::class, 'D3_en']);
+Route::get('/book_en', [EnglishController::class, 'handbook']);
+Route::get('/video_en', [EnglishController::class, 'video']);

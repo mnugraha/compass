@@ -12,7 +12,7 @@
         @foreach ($kompetensi as $x)
             <div class="col-md-4" style="margin-bottom: 20px">
                 <div class="panel panel-default">
-                    <div class="panel-heading" style="font-size: 18px; background-color: goldenrod">
+                    <div class="panel-heading" style="font-size: 18px; background-color: #d2b84a">
                         <h3 class="panel-title" style="color: aliceblue;"> {{ $x->nm_kompetensi }}</h3>
                         <div class="panel-elements pull-right">
                             <span class="label  label-bordered label-ghost" style="font-size: 18px">

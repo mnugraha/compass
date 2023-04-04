@@ -92,7 +92,13 @@
                                     <li>
                                         <a href="/profile"><span class="icon-user"></span> Profil Saya</a>
                                     </li>
+                                    <li>
+                                        <a href="/book"><span class="fa fa-book"></span> Hand Book</a>
+                                    </li>
 
+                                    <li>
+                                        <a href="/video"><span class="fa fa-play"></span> Video</a>
+                                    </li>
                                     <li>
                                         <a href="/test"><span class="icon-laptop-phone"></span> Penilaian</a>
                                     </li>
