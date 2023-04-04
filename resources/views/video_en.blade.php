@@ -1,4 +1,4 @@
-@extends('master-top')
+@extends('master-top_en')
 @section('title')
     Video - The Compass Indorama
 @endsection

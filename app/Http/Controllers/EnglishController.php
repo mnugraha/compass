@@ -419,4 +419,29 @@ class EnglishController extends Controller
         $dataKompetensi = Kompetensi_en::where('id_kompetensi', '=', 'D3')->first();
         return view('D1_en', ['kompetensi' => $dataKompetensi, 'jointabel1' => $a1, 'jointabel2' => $a2, 'jointabel3' => $a3, 'A11' => $A11, 'A12' => $A12, 'A13' => $A13]);
     }
+    public function kompetensi_en()
+    {
+
+        $dataKompetensiA = Kompetensi_en::where('id_kompetensi', '=', 'A1')
+            ->orWhere('id_kompetensi', '=', 'A2')
+            ->orWhere('id_kompetensi', '=', 'A3')
+            ->get();
+
+        $dataKompetensiB = Kompetensi_en::where('id_kompetensi', '=', 'B1')
+            ->orWhere('id_kompetensi', '=', 'B2')
+            ->orWhere('id_kompetensi', '=', 'B3')
+            ->get();
+
+        $dataKompetensiC = Kompetensi_en::where('id_kompetensi', '=', 'C1')
+            ->orWhere('id_kompetensi', '=', 'C2')
+            ->orWhere('id_kompetensi', '=', 'C3')
+            ->get();
+
+        $dataKompetensiD = Kompetensi_en::where('id_kompetensi', '=', 'D1')
+            ->orWhere('id_kompetensi', '=', 'D2')
+            ->orWhere('id_kompetensi', '=', 'D3')
+            ->get();
+        return view('Kompetensi_en', ['kompetensiA' => $dataKompetensiA, 'kompetensiB' => $dataKompetensiB, 'kompetensiC' => $dataKompetensiC, 'kompetensiD' => $dataKompetensiD]);
+        // return view('kompetensi');
+    }
 }

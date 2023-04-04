@@ -93,7 +93,7 @@
                                         <a href="/profile"><span class="icon-user"></span> Profil Saya</a>
                                     </li>
                                     <li>
-                                        <a href="/book"><span class="fa fa-book"></span> Hand Book</a>
+                                        <a href="/book"><span class="fa fa-book"></span> Buku Saku</a>
                                     </li>
 
                                     <li>

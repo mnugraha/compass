@@ -72,3 +72,4 @@ Route::get('/D2_en', [EnglishController::class, 'D2_en']);
 Route::get('/D3_en', [EnglishController::class, 'D3_en']);
 Route::get('/book_en', [EnglishController::class, 'handbook']);
 Route::get('/video_en', [EnglishController::class, 'video']);
+Route::get('/kompetensi_en', [EnglishController::class, 'kompetensi_en']);

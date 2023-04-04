@@ -165,8 +165,20 @@
             </div>
         </div>
     </div>
-    <div class="block">
 
+    <div class="panel panel-primary" id="skema">
+        <div class="panel-heading">
+            <h3 class="panel-title" style="font-size: 18px;"><span class="fa fa-file-text-o"></span> Competency Framework
+            </h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <center><img src="gambar/Kompas Indorama En.png"></center>
+                <center><a href="/kompetensi_en" class="btn btn-default">Global Competency</a>
+                    <a href="/profile-en" class="btn btn-default">Your Competency</a>
+                </center>
+            </div>
+        </div>
     </div>
 @endsection
 

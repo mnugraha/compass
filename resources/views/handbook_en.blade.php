@@ -1,4 +1,4 @@
-@extends('master-top')
+@extends('master-top_en')
 @section('title')
     Hand Book - The Compass Indorama
 @endsection
@@ -8,16 +8,14 @@
 @endsection
 
 @section('konten-tanpa-frame')
-    <div class="row">
-        <div class="block">
-            <object data="/file/kompas-indorama_en.pdf" type="application/pdf" width="100%" height="600"></object>
-            <p>If the file not appear, please <a href="/file/kompas-indorama_en.pdf"> download</a> The Compass handbook <a
-                    href="/file/kompas-indorama_en.pdf">here.</a>
-            </p>
-        </div>
+    <div class="block block-condensed">
+        <object data="/file/kompas-indorama_en.pdf" type="application/pdf" width="100%" height="600"></object>
+
     </div>
-    <br>
-    <br>
+
+    <code>If the file not appear, please <a href="/file/kompas-indorama_en.pdf"> download</a> The Compass handbook <a
+            href="/file/kompas-indorama_en.pdf">here.</a>
+    </code>
 @endsection
 
 

@@ -8,18 +8,14 @@
 @endsection
 
 @section('konten-tanpa-frame')
-    <div class="row">
-        <div class="block">
+    <div class="block block-condensed">
+        <object data="/file/kompas-indorama.pdf" type="application/pdf" width="100%" height="600"></object>
 
-            <object data="/file/kompas-indorama.pdf" type="application/pdf" width="100%" height="600"></object>
-            <p>Jika file tidak muncul, silahkan <a href="/file/kompas-indorama.pdf"> download</a> Handbook Kompas Indorama <a
-                    href="/file/kompas-indorama.pdf">disini</a>
-            </p>
-        </div>
     </div>
 
-    <br>
-    <br>
+    <code>Jika file tidak munncul, silahkan <a href="/file/kompas-indorama_en.pdf"> download</a>Buku Saku Kompas Indorama <a
+            href="/file/kompas-indorama_en.pdf">disini.</a>
+    </code>
 @endsection
 
 
