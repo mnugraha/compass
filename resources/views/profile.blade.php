@@ -97,7 +97,7 @@
                                     substr($x->nilai, 0, 3) == 'D11' ||
                                     substr($x->nilai, 0, 3) == 'D21' ||
                                     substr($x->nilai, 0, 3) == 'D31' ||
-                                    $x->nilai == null)
+                                    $x->nilai == '')
                                 <td style="vertical-align:top; text-align: center">
                                     @if (substr($x->nilai, 3) == 'e')
                                         5
@@ -108,7 +108,7 @@
                                     @if (substr($x->nilai, 3) == 'c')
                                         3
                                     @endif
-                                    @if ($x->nilai == null)
+                                    @if ($x->nilai == '')
                                         T/A
                                     @endif
                                 </td>
