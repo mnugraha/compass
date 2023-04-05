@@ -96,7 +96,8 @@
                                     substr($x->nilai, 0, 3) == 'C31' ||
                                     substr($x->nilai, 0, 3) == 'D11' ||
                                     substr($x->nilai, 0, 3) == 'D21' ||
-                                    substr($x->nilai, 0, 3) == 'D31')
+                                    substr($x->nilai, 0, 3) == 'D31' ||
+                                    $x->nilai == null)
                                 <td style="vertical-align:top; text-align: center">
                                     @if (substr($x->nilai, 3) == 'e')
                                         5
