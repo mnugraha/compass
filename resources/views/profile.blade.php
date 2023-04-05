@@ -4,7 +4,6 @@
 @endsection
 
 @section('judul')
-    Profil Anda
 @endsection
 
 @section('konten-tanpa-frame')
@@ -27,17 +26,21 @@
         </div>
         <div class="block-content row-table-holder">
             <div class="row row-table">
-                <div class="col-md-4 col-xs-12">
+                <div class="col-md-3 col-xs-12">
                     <span class="text-bolder text-uppercase text-sm">Function:</span>
                     <p><strong>{{ $dataUser->nm_peran }} </strong></p>
                 </div>
-                <div class="col-md-4 col-xs-12">
+                <div class="col-md-3 col-xs-12">
                     <span class="text-bolder text-uppercase text-sm">Department:</span>
                     <p>{{ $dataUser->email }}</p>
                 </div>
-                <div class="col-md-4 col-xs-12">
+                <div class="col-md-3 col-xs-12">
                     <span class="text-bolder text-uppercase text-sm">Level:</span>
                     <p>{{ $dataUser->level }}</p>
+                </div>
+                <div class="col-md-3 col-xs-12">
+                    <span class="text-bolder text-uppercase text-sm">Jumlah Kompetensi:</span>
+                    <p>{{ $jmlKompetensi }}</p>
                 </div>
             </div>
         </div>
@@ -45,13 +48,10 @@
     <div class="block block-condensed">
         <div class="app-heading app-heading-small" id="app-tour-heading-inside">
             <div class="title">
-                <h3 style="font-size: 18px;color:rgb(0, 0, 0);font-weight: 700">Profil Kompetensi Anda:</h3>
-                <p>Berikut ini adalah kompetensi yang harus di kuasai</p>
-
+                <h3 style="font-size: 18px;color:rgb(0, 0, 0);font-weight: 700">Profil Kompetensi Anda</h3>
+                <p>Berikut ini adalah kompetensi yang harus diketahui: </p>
             </div>
-            <p style="text-align: left; padding-top: 10px">Jumlah Kompetensi: <span
-                    class="label label-default label-bordered" style="font-size: 20px">{{ $jmlKompetensi }}</span>
-            </p>
+
         </div>
         <div class="block-content">
             <div class="app-heading title-only" style="box-shadow: -1px 2px 3px #888888;">

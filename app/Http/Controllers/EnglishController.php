@@ -56,7 +56,7 @@ class EnglishController extends Controller
                 ->where('level', '=', Auth::user()->level)
                 ->where('nilai', '!=', null)
                 ->get();
-            $jmlKompetensi = ($kompetensiUser->count()) / 3;
+            $jmlKompetensi = (int)(($kompetensiUser->count()) / 3);
         } else {
             return view('login');
         }
