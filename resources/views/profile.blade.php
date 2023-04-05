@@ -108,7 +108,7 @@
                                     @if (substr($x->nilai, 3) == 'c')
                                         3
                                     @endif
-                                    @if (substr($x->nilai, 3) == null)
+                                    @if ($x->nilai == null)
                                         T/A
                                     @endif
                                 </td>
