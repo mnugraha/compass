@@ -302,7 +302,7 @@
             </table>
         </div>
         <hr style="border-top: 1px dashed black;">
-        < class="block-content">
+        <div class="block-content">
             <div class="app-heading title-only" style="box-shadow: -1px 2px 3px #888888;">
                 <div class="title">
                     @foreach ($kompetensi as $k)
@@ -623,46 +623,45 @@
         <a href="/kompetensi" class="btn btn-default pull-right ">Lihat Semua Kompetensi</a>
     </div>
 </div>
-
+</div>
 <div>
-    <!-- Modal password -->
-    @foreach ($dataUser1 as $x)
-        <div id="password{{ $x->id_user }}" class="modal fade" tabindex="-1"
-            aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true" class="icon-cross"></span></button>
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="myModalLabel">Ubah Password</h5>
-                    </div>
-                    <div class="modal-body">
-                        <form class="row gx-3 gy-2 align-items-center" method="POST"
-                            action="/userUpdatePass1/{{ $x->id_user }}">
-                            {{ csrf_field() }}
-                            <div class="col-md-12">
-                                <div class="mb-3">
-                                    <div class="input-group auth-pass-inputgroup">
-                                        <div class="input-group-text">Masukan Password Baru</div>
-                                        <input type="text" class="form-control" name="password"
-                                            aria-describedby="password-addon" name="password"
-                                            autocomplete="off">
+<!-- Modal password -->
+@foreach ($dataUser1 as $x)
+    <div id="password{{ $x->id_user }}" class="modal fade" tabindex="-1"
+        aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                    aria-hidden="true" class="icon-cross"></span></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">Ubah Password</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="row gx-3 gy-2 align-items-center" method="POST"
+                        action="/userUpdatePass1/{{ $x->id_user }}">
+                        {{ csrf_field() }}
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <div class="input-group auth-pass-inputgroup">
+                                    <div class="input-group-text">Masukan Password Baru</div>
+                                    <input type="text" class="form-control" name="password"
+                                        aria-describedby="password-addon" name="password"
+                                        autocomplete="off">
 
-                                    </div>
                                 </div>
                             </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary waves-effect"
-                            data-dismiss="modal">Close</button>
-                        <input type="submit" class="btn btn-info waves-effect waves-light"
-                            value="Update">
-                    </div>
-                    </form>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
-    @endforeach
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary waves-effect"
+                        data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-info waves-effect waves-light" value="Update">
+                </div>
+                </form>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+@endforeach
 </div> <!-- end preview-->
 @endsection
 

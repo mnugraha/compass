@@ -622,45 +622,46 @@
         <a href="/kompetensi_en" class="btn btn-default pull-right ">See More Competency</a>
     </div>
 </div>
-<div>
-    <!-- Modal password -->
-    @foreach ($dataUser1 as $x)
-        <div id="password{{ $x->id_user }}" class="modal fade" tabindex="-1"
-            aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true" class="icon-cross"></span></button>
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="myModalLabel">Change Password</h5>
-                    </div>
-                    <div class="modal-body">
-                        <form class="row gx-3 gy-2 align-items-center" method="POST"
-                            action="/userUpdatePass1_en/{{ $x->id_user }}">
-                            {{ csrf_field() }}
-                            <div class="col-md-12">
-                                <div class="mb-3">
-                                    <div class="input-group auth-pass-inputgroup">
-                                        <div class="input-group-text">Insert new password</div>
-                                        <input type="text" class="form-control" name="password"
-                                            aria-describedby="password-addon" name="password"
-                                            autocomplete="off">
+</div>
 
-                                    </div>
+<div>
+<!-- Modal password -->
+@foreach ($dataUser1 as $x)
+    <div id="password{{ $x->id_user }}" class="modal fade" tabindex="-1"
+        aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                    aria-hidden="true" class="icon-cross"></span></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">Change Password</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="row gx-3 gy-2 align-items-center" method="POST"
+                        action="/userUpdatePass1_en/{{ $x->id_user }}">
+                        {{ csrf_field() }}
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <div class="input-group auth-pass-inputgroup">
+                                    <div class="input-group-text">Insert new password</div>
+                                    <input type="text" class="form-control" name="password"
+                                        aria-describedby="password-addon" name="password"
+                                        autocomplete="off">
+
                                 </div>
                             </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary waves-effect"
-                            data-dismiss="modal">Close</button>
-                        <input type="submit" class="btn btn-info waves-effect waves-light"
-                            value="Update">
-                    </div>
-                    </form>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
-    @endforeach
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary waves-effect"
+                        data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-info waves-effect waves-light" value="Update">
+                </div>
+                </form>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+@endforeach
 </div> <!-- end preview-->
 @endsection
 

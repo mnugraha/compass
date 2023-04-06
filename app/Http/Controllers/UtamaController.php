@@ -507,6 +507,11 @@ class UtamaController extends Controller
         return redirect('/profile');
     }
 
+    public function faq()
+    {
+        return view('faq');
+    }
+
     public function underConstruction()
     {
         return view('underConstruction');

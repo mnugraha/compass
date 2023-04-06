@@ -52,6 +52,7 @@ Route::get('/book', [UtamaController::class, 'handbook']);
 Route::get('/video', [UtamaController::class, 'video']);
 Route::get('/kompetensi', [UtamaController::class, 'kompetensi']);
 Route::post('/userUpdatePass1/{x}', [UtamaController::class, 'updatePass']);
+Route::get('/faq', [UtamaController::class, 'faq']);
 
 Route::get('/profile-en', [EnglishController::class, 'profil_en']);
 Route::get('/en', [EnglishController::class, 'dashboard_en']);
@@ -75,3 +76,4 @@ Route::get('/book_en', [EnglishController::class, 'handbook']);
 Route::get('/video_en', [EnglishController::class, 'video']);
 Route::get('/kompetensi_en', [EnglishController::class, 'kompetensi_en']);
 Route::post('/userUpdatePass1_en/{x}', [EnglishController::class, 'updatePass']);
+Route::get('/faq_en', [EnglishController::class, 'faq']);

@@ -459,4 +459,9 @@ class EnglishController extends Controller
         ]);
         return redirect('/profile-en');
     }
+
+    public function faq()
+    {
+        return view('faq_en');
+    }
 }

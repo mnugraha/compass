@@ -93,14 +93,17 @@
                                         <a href="/profile"><span class="icon-user"></span> Profil Saya</a>
                                     </li>
                                     <li>
-                                        <a href="/book"><span class="fa fa-book"></span> Buku Saku</a>
+                                        <a href="/book"><span class="icon-book"></span> Buku Saku</a>
                                     </li>
 
                                     <li>
-                                        <a href="/video"><span class="fa fa-play"></span> Video</a>
+                                        <a href="/video"><span class="icon-film-play"></span> Video</a>
                                     </li>
                                     <li>
-                                        <a href="/test"><span class="icon-laptop-phone"></span> Penilaian</a>
+                                        <a href="/test"><span class="icon-license"></span> Penilaian</a>
+                                    </li>
+                                    <li>
+                                        <a href="/faq"><span class="icon-bubble"></span> FAQ</a>
                                     </li>
                                 @endif
                                 {{-- <li>
@@ -190,6 +193,8 @@
     <script type="text/javascript" src="/theme/js/app_plugins.js"></script>
     <script type="text/javascript" src="js/app_demo.js"></script>
     <!-- END APP SCRIPTS -->
+    <script type="text/javascript" src="/theme/js/vendor/highlight/jquery.highlight.js"></script>
+    <script type="text/javascript" src="/theme/js/app_faq.js"></script>
 </body>
 
 </html>
