@@ -446,7 +446,7 @@ class EnglishController extends Controller
             ->orWhere('id_kompetensi', '=', 'D2')
             ->orWhere('id_kompetensi', '=', 'D3')
             ->get();
-        return view('Kompetensi_en', ['kompetensiA' => $dataKompetensiA, 'kompetensiB' => $dataKompetensiB, 'kompetensiC' => $dataKompetensiC, 'kompetensiD' => $dataKompetensiD]);
+        return view('kompetensi_en', ['kompetensiA' => $dataKompetensiA, 'kompetensiB' => $dataKompetensiB, 'kompetensiC' => $dataKompetensiC, 'kompetensiD' => $dataKompetensiD]);
         // return view('kompetensi');
     }
 }

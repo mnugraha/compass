@@ -83,7 +83,7 @@
                             @endif
                         @endforeach
                     </tr>
-
+                    {{-- Pemeringkatan --}}
                     <tr>
                         @foreach ($dataPeringkat as $x)
                             @if ($dataUser->id_peran == $x->id_peran && $dataUser->id_level == $x->id_level)
@@ -554,7 +554,7 @@
             </table>
         </div>
 
-        <a href="/" class="btn btn-default pull-right ">Lihat Semua Kompetensi</a>
+        <a href="/kompetensi" class="btn btn-default pull-right ">Lihat Semua Kompetensi</a>
     </div>
 </div>
 </div>

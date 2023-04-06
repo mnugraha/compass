@@ -473,7 +473,7 @@
             </table>
         </div>
 
-        <a href="/en" class="btn btn-default pull-right ">See More Competency</a>
+        <a href="/kompetensi_en" class="btn btn-default pull-right ">See More Competency</a>
     </div>
 </div>
 </div>
