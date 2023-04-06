@@ -87,37 +87,62 @@
                     <tr>
                         @foreach ($dataPeringkat as $x)
                             @if ($dataUser->id_peran == $x->id_peran && $dataUser->id_level == $x->id_level)
-                                <td style="text-align: center">{{ $x->score }}</td>
+                                @if ($x->score == '-')
+                                    @php
+                                        $warna = '#cac9c7';
+                                    @endphp
+                                @endif
+                                @if ($x->score == 2)
+                                    @php
+                                        $warna = '#f69490';
+                                    @endphp
+                                @endif
+                                @if ($x->score == 3)
+                                    @php
+                                        $warna = '#feefab';
+                                    @endphp
+                                @endif
+                                @if ($x->score == 4)
+                                    @php
+                                        $warna = '#c8dea5';
+                                    @endphp
+                                @endif
+                                @if ($x->score == 5)
+                                    @php
+                                        $warna = '#82caa0';
+                                    @endphp
+                                @endif
+                                <td style="text-align: center; background-color:<?php echo $warna; ?>">{{ $x->score }}
+                                </td>
                             @endif
                         @endforeach
                     </tr>
-
                 </table>
             </div>
             <div style="overflow-x:auto;">
                 <table class="table  table-responsive table-bordered">
                     <tr>
                         <td
-                            style="width: 30px;background-color: black;color: aliceblue;font-weight: 700;text-align: center">
+                            style="width: 30px;background-color: #404144;color: aliceblue;font-weight: 700;text-align: center">
                             1</td>
                         <td style="width: 15%">Tidak ditampilkan</td>
                         <td
-                            style="width: 30px;background-color: black;color: aliceblue;font-weight: 700;text-align: center">
+                            style="width: 30px;background-color: #f69490;color: aliceblue;font-weight: 700;text-align: center">
                             2
                         </td>
                         <td style="width: 15%">Dalam Pengembangan</td>
                         <td
-                            style="width: 30px;background-color: black;color: aliceblue;font-weight: 700;text-align: center">
+                            style="width: 30px;background-color: #feefab;color: aliceblue;font-weight: 700;text-align: center">
                             3
                         </td>
                         <td style="width: 15%">Mahir</td>
                         <td
-                            style="width: 30px;background-color: black;color: aliceblue;font-weight: 700;text-align: center">
+                            style="width: 30px;background-color: #c8dea5;color: aliceblue;font-weight: 700;text-align: center">
                             4
                         </td>
                         <td style="width: 15%">Panutan</td>
                         <td
-                            style="width: 30px;background-color: black;color: aliceblue;font-weight: 700;text-align: center">
+                            style="width: 30px;background-color: #82caa0;color: aliceblue;font-weight: 700;text-align: center">
                             5
                         </td>
                         <td style="width: 15%">Strategis</td>

@@ -68,7 +68,7 @@
 
     <a href="/en#skema" class="btn btn-default btn-icon-fixed" style="box-shadow: -1px 2px 3px #888888"><span
             class="icon-arrow-left"></span>
-        Kembali</a>
+        Back</a>
     <br>
     <br>
 @endsection

@@ -13,6 +13,7 @@ use App\Models\Kompetensi_en;
 use App\Models\Peran_en;
 use App\Models\Level;
 use App\Models\User;
+use App\Models\Peringkat;
 
 
 class EnglishController extends Controller
@@ -38,6 +39,7 @@ class EnglishController extends Controller
         $dataKompetensi = Kompetensi_en::all();
         $dataStruktur = Struktur_en::all();
         $dataLevel = Level::all();
+        $dataPeringkat = Peringkat::all();
         $dataPeran = Peran_en::all();
         if (isset(Auth::user()->id_user)) {
             $dataProfile = Profile_en::join('nilai_en', 'profile_en.nilai', '=', 'nilai_en.id_nilai')
@@ -60,7 +62,7 @@ class EnglishController extends Controller
         } else {
             return view('login');
         }
-        return view('profile_en', ['dataUser' => $dataUser, 'nilai' => $dataNilai, 'level' => $dataLevel, 'peran' => $dataPeran, 'profile' => $dataProfile, 'kompetensi' => $dataKompetensi, 'struktur' => $dataStruktur, 'jmlKompetensi' => $jmlKompetensi]);
+        return view('profile_en', ['dataUser' => $dataUser, 'nilai' => $dataNilai, 'level' => $dataLevel, 'peran' => $dataPeran, 'profile' => $dataProfile, 'kompetensi' => $dataKompetensi, 'struktur' => $dataStruktur, 'jmlKompetensi' => $jmlKompetensi, 'dataPeringkat' => $dataPeringkat]);
     }
 
     public function A_en()

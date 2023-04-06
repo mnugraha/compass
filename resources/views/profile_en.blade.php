@@ -44,6 +44,109 @@
             </div>
         </div>
     </div>
+    <div class="block ">
+        <div class="block-content">
+            <h3 style="font-weight: 700">Tingkat kemahiran minimal yang diharapkan pada function
+                <span style="color: dodgerblue">{{ $dataUser->nm_peran }}</span>
+                level <span style="color: dodgerblue">{{ $dataUser->level }}</span>
+            </h3>
+
+            -
+            <div style="overflow-x:auto;">
+                <table class="table  table-responsive table-bordered">
+                    <tr style="text-align: center">
+                        @foreach ($kompetensi as $k)
+                            @if ($k->id_kompetensi == 'A1' || $k->id_kompetensi == 'A2' || $k->id_kompetensi == 'A3')
+                                <td style="width: 8.3%; background-color: #57778e">
+                                    <p style="font-size: 10px;line-height: normal;color: aliceblue">{{ $k->nm_kompetensi }}
+                                    </p>
+                                </td>
+                            @endif
+                            @if ($k->id_kompetensi == 'B1' || $k->id_kompetensi == 'B2' || $k->id_kompetensi == 'B3')
+                                <td style="width: 8.3%; background-color: #aa5288">
+                                    <p style="font-size: 10px;line-height: normal;color: aliceblue">{{ $k->nm_kompetensi }}
+                                    </p>
+                                </td>
+                            @endif
+                            @if ($k->id_kompetensi == 'C1' || $k->id_kompetensi == 'C2' || $k->id_kompetensi == 'C3')
+                                <td style="width: 8.3%; background-color: #d2b84a">
+                                    <p style="font-size: 10px;line-height: normal;color: aliceblue">{{ $k->nm_kompetensi }}
+                                    </p>
+                                </td>
+                            @endif
+                            @if ($k->id_kompetensi == 'D1' || $k->id_kompetensi == 'D2' || $k->id_kompetensi == 'D3')
+                                <td style="width: 8.3%; background-color: #618b7c">
+                                    <p style="font-size: 10px;line-height: normal;color: aliceblue">{{ $k->nm_kompetensi }}
+                                    </p>
+                                </td>
+                            @endif
+                        @endforeach
+                    </tr>
+                    {{-- Pemeringkatan --}}
+                    <tr>
+                        @foreach ($dataPeringkat as $x)
+                            @if ($dataUser->id_peran == $x->id_peran && $dataUser->id_level == $x->id_level)
+                                @if ($x->score == '-')
+                                    @php
+                                        $warna = '#cac9c7';
+                                    @endphp
+                                @endif
+                                @if ($x->score == 2)
+                                    @php
+                                        $warna = '#f69490';
+                                    @endphp
+                                @endif
+                                @if ($x->score == 3)
+                                    @php
+                                        $warna = '#feefab';
+                                    @endphp
+                                @endif
+                                @if ($x->score == 4)
+                                    @php
+                                        $warna = '#c8dea5';
+                                    @endphp
+                                @endif
+                                @if ($x->score == 5)
+                                    @php
+                                        $warna = '#82caa0';
+                                    @endphp
+                                @endif
+                                <td style="text-align: center; background-color:<?php echo $warna; ?>">{{ $x->score }}
+                                </td>
+                            @endif
+                        @endforeach
+                    </tr>
+
+                </table>
+            </div>
+            <div style="overflow-x:auto;">
+                <table class="table  table-responsive table-bordered">
+                    <tr>
+                        <td
+                            style="width: 30px;background-color: #404144;color: aliceblue;font-weight: 700;text-align: center">
+                            1</td>
+                        <td style="width: 15%">Not demonstrated</td>
+                        <td style="width: 30px;background-color: #f69490;color: black;font-weight: 700;text-align: center">
+                            2
+                        </td>
+                        <td style="width: 15%">Developing</td>
+                        <td style="width: 30px;background-color: #feefab;color: black;font-weight: 700;text-align: center">
+                            3
+                        </td>
+                        <td style="width: 15%">Proficient</td>
+                        <td style="width: 30px;background-color: #c8dea5;color: black;font-weight: 700;text-align: center">
+                            4
+                        </td>
+                        <td style="width: 15%">Role Model</td>
+                        <td style="width: 30px;background-color: #82caa0;color: black;font-weight: 700;text-align: center">
+                            5
+                        </td>
+                        <td style="width: 15%">Strategic</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
     <div class="block block-condensed">
         <div class="app-heading app-heading-small" id="app-tour-heading-inside">
             <div class="title">
