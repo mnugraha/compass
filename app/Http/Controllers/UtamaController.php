@@ -12,6 +12,7 @@ use App\Models\Level;
 use App\Models\User;
 use App\Models\Peran;
 use App\Models\Profile;
+use App\Models\Peringkat;
 
 class UtamaController extends Controller
 {
@@ -46,6 +47,7 @@ class UtamaController extends Controller
         $dataKompetensi = Kompetensi::all();
         $dataStruktur = Struktur::all();
         $dataLevel = Level::all();
+        $dataPeringkat = Peringkat::all();
         $dataPeran = Peran::all();
         if (isset(Auth::user()->id_user)) {
             $dataProfile = Profile::join('nilai', 'profile.nilai', '=', 'nilai.id_nilai')
@@ -68,7 +70,7 @@ class UtamaController extends Controller
         } else {
             return view('login');
         }
-        return view('profile', ['dataUser' => $dataUser, 'nilai' => $dataNilai, 'level' => $dataLevel, 'peran' => $dataPeran, 'profile' => $dataProfile, 'kompetensi' => $dataKompetensi, 'struktur' => $dataStruktur, 'jmlKompetensi' => $jmlKompetensi]);
+        return view('profile', ['dataUser' => $dataUser, 'nilai' => $dataNilai, 'level' => $dataLevel, 'peran' => $dataPeran, 'profile' => $dataProfile, 'kompetensi' => $dataKompetensi, 'struktur' => $dataStruktur, 'jmlKompetensi' => $jmlKompetensi, 'dataPeringkat' => $dataPeringkat]);
     }
     public function login()
     {

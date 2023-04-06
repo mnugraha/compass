@@ -83,38 +83,15 @@
                             @endif
                         @endforeach
                     </tr>
+
                     <tr>
-                        @foreach ($profile as $x)
-                            @if (substr($x->nilai, 0, 3) == 'A11' ||
-                                    substr($x->nilai, 0, 3) == 'A21' ||
-                                    substr($x->nilai, 0, 3) == 'A31' ||
-                                    substr($x->nilai, 0, 3) == 'B11' ||
-                                    substr($x->nilai, 0, 3) == 'B21' ||
-                                    substr($x->nilai, 0, 3) == 'B31' ||
-                                    substr($x->nilai, 0, 3) == 'C11' ||
-                                    substr($x->nilai, 0, 3) == 'C21' ||
-                                    substr($x->nilai, 0, 3) == 'C31' ||
-                                    substr($x->nilai, 0, 3) == 'D11' ||
-                                    substr($x->nilai, 0, 3) == 'D21' ||
-                                    substr($x->nilai, 0, 3) == 'D31' ||
-                                    $x->nilai == '')
-                                <td style="vertical-align:top; text-align: center">
-                                    @if (substr($x->nilai, 3) == 'e')
-                                        5
-                                    @endif
-                                    @if (substr($x->nilai, 3) == 'd')
-                                        4
-                                    @endif
-                                    @if (substr($x->nilai, 3) == 'c')
-                                        3
-                                    @endif
-                                    @if ($x->nilai == '')
-                                        T/A
-                                    @endif
-                                </td>
+                        @foreach ($dataPeringkat as $x)
+                            @if ($dataUser->id_peran == $x->id_peran && $dataUser->id_level == $x->id_level)
+                                <td style="text-align: center">{{ $x->score }}</td>
                             @endif
                         @endforeach
                     </tr>
+
                 </table>
             </div>
             <div style="overflow-x:auto;">
