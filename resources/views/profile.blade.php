@@ -274,13 +274,31 @@
                     @endforeach
                     @foreach ($profile as $x)
                         @if ($x->id_kompetensi == 'A2' && $x->id_struktur == 'A21')
-                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @if ($x->deskripsi == '-')
+                                @php
+                                    $warna = '#cac9c7';
+                                @endphp
+                            @endif
+                            <td style="vertical-align:top;background-color: {{ $warna }}">{{ $x->deskripsi }}
+                            </td>
                         @endif
                         @if ($x->id_kompetensi == 'A2' && $x->id_struktur == 'A22')
-                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @if ($x->deskripsi == '-')
+                                @php
+                                    $warna = '#cac9c7';
+                                @endphp
+                            @endif
+                            <td style="vertical-align:top;background-color: {{ $warna }}">{{ $x->deskripsi }}
+                            </td>
                         @endif
                         @if ($x->id_kompetensi == 'A2' && $x->id_struktur == 'A23')
-                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @if ($x->deskripsi == '-')
+                                @php
+                                    $warna = '#cac9c7';
+                                @endphp
+                            @endif
+                            <td style="vertical-align:top;background-color: {{ $warna }}">{{ $x->deskripsi }}
+                            </td>
                         @endif
                     @endforeach
                 </tr>
@@ -307,13 +325,31 @@
                     @endforeach
                     @foreach ($profile as $x)
                         @if ($x->id_kompetensi == 'A3' && $x->id_struktur == 'A31')
-                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @if ($x->deskripsi == '-')
+                                @php
+                                    $warna = '#cac9c7';
+                                @endphp
+                            @endif
+                            <td style="vertical-align:top;background-color: {{ $warna }}">{{ $x->deskripsi }}
+                            </td>
                         @endif
                         @if ($x->id_kompetensi == 'A3' && $x->id_struktur == 'A32')
-                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @if ($x->deskripsi == '-')
+                                @php
+                                    $warna = '#cac9c7';
+                                @endphp
+                            @endif
+                            <td style="vertical-align:top;background-color: {{ $warna }}">{{ $x->deskripsi }}
+                            </td>
                         @endif
                         @if ($x->id_kompetensi == 'A3' && $x->id_struktur == 'A33')
-                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @if ($x->deskripsi == '-')
+                                @php
+                                    $warna = '#cac9c7';
+                                @endphp
+                            @endif
+                            <td style="vertical-align:top;background-color: {{ $warna }}">{{ $x->deskripsi }}
+                            </td>
                         @endif
                     @endforeach
                 </tr>
@@ -552,13 +588,34 @@
                     @endforeach
                     @foreach ($profile as $x)
                         @if ($x->id_kompetensi == 'C3' && $x->id_struktur == 'C31')
-                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @if ($x->deskripsi == '-')
+                                @php
+                                    $warna = '#cac9c7';
+                                @endphp
+                            @endif
+                            <td style="vertical-align:top;background-color: {{ $warna }}">
+                                {{ $x->deskripsi }}
+                            </td>
                         @endif
                         @if ($x->id_kompetensi == 'C3' && $x->id_struktur == 'C32')
-                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @if ($x->deskripsi == '-')
+                                @php
+                                    $warna = '#cac9c7';
+                                @endphp
+                            @endif
+                            <td style="vertical-align:top;background-color: {{ $warna }}">
+                                {{ $x->deskripsi }}
+                            </td>
                         @endif
                         @if ($x->id_kompetensi == 'C3' && $x->id_struktur == 'C33')
-                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @if ($x->deskripsi == '-')
+                                @php
+                                    $warna = '#cac9c7';
+                                @endphp
+                            @endif
+                            <td style="vertical-align:top;background-color: {{ $warna }}">
+                                {{ $x->deskripsi }}
+                            </td>
                         @endif
                     @endforeach
                 </tr>
@@ -646,13 +703,34 @@
                     @endforeach
                     @foreach ($profile as $x)
                         @if ($x->id_kompetensi == 'D2' && $x->id_struktur == 'D21')
-                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @if ($x->deskripsi == '-')
+                                @php
+                                    $warna = '#cac9c7';
+                                @endphp
+                            @endif
+                            <td style="vertical-align:top;background-color: {{ $warna }}">
+                                {{ $x->deskripsi }}
+                            </td>
                         @endif
                         @if ($x->id_kompetensi == 'D2' && $x->id_struktur == 'D22')
-                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @if ($x->deskripsi == '-')
+                                @php
+                                    $warna = '#cac9c7';
+                                @endphp
+                            @endif
+                            <td style="vertical-align:top;background-color: {{ $warna }}">
+                                {{ $x->deskripsi }}
+                            </td>
                         @endif
                         @if ($x->id_kompetensi == 'D2' && $x->id_struktur == 'D23')
-                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                            @if ($x->deskripsi == '-')
+                                @php
+                                    $warna = '#cac9c7';
+                                @endphp
+                            @endif
+                            <td style="vertical-align:top;background-color: {{ $warna }}">
+                                {{ $x->deskripsi }}
+                            </td>
                         @endif
                     @endforeach
                 </tr>
