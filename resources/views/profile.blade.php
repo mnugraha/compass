@@ -240,7 +240,13 @@
                         @endif
                     @endforeach
                     @foreach ($profile as $x)
-                        @if ($x->id_kompetensi == 'A1')
+                        @if ($x->id_kompetensi == 'A1' && $x->id_struktur == 'A11')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'A1' && $x->id_struktur == 'A12')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'A1' && $x->id_struktur == 'A13')
                             <td style="vertical-align:top">{{ $x->deskripsi }}</td>
                         @endif
                     @endforeach
@@ -267,7 +273,13 @@
                         @endif
                     @endforeach
                     @foreach ($profile as $x)
-                        @if ($x->id_kompetensi == 'A2')
+                        @if ($x->id_kompetensi == 'A2' && $x->id_struktur == 'A21')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'A2' && $x->id_struktur == 'A22')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'A2' && $x->id_struktur == 'A23')
                             <td style="vertical-align:top">{{ $x->deskripsi }}</td>
                         @endif
                     @endforeach
@@ -294,7 +306,13 @@
                         @endif
                     @endforeach
                     @foreach ($profile as $x)
-                        @if ($x->id_kompetensi == 'A3')
+                        @if ($x->id_kompetensi == 'A3' && $x->id_struktur == 'A31')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'A3' && $x->id_struktur == 'A32')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'A3' && $x->id_struktur == 'A33')
                             <td style="vertical-align:top">{{ $x->deskripsi }}</td>
                         @endif
                     @endforeach
@@ -343,7 +361,13 @@
                         @endif
                     @endforeach
                     @foreach ($profile as $x)
-                        @if ($x->id_kompetensi == 'B1')
+                        @if ($x->id_kompetensi == 'B1' && $x->id_struktur == 'B11')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'B1' && $x->id_struktur == 'B12')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'B1' && $x->id_struktur == 'B13')
                             <td style="vertical-align:top">{{ $x->deskripsi }}</td>
                         @endif
                     @endforeach
@@ -370,7 +394,13 @@
                         @endif
                     @endforeach
                     @foreach ($profile as $x)
-                        @if ($x->id_kompetensi == 'B2')
+                        @if ($x->id_kompetensi == 'B2' && $x->id_struktur == 'B21')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'B2' && $x->id_struktur == 'B22')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'B2' && $x->id_struktur == 'B23')
                             <td style="vertical-align:top">{{ $x->deskripsi }}</td>
                         @endif
                     @endforeach
@@ -397,7 +427,13 @@
                         @endif
                     @endforeach
                     @foreach ($profile as $x)
-                        @if ($x->id_kompetensi == 'B3')
+                        @if ($x->id_kompetensi == 'B3' && $x->id_struktur == 'B31')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'B3' && $x->id_struktur == 'B32')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'B3' && $x->id_struktur == 'B33')
                             <td style="vertical-align:top">{{ $x->deskripsi }}</td>
                         @endif
                     @endforeach
@@ -449,7 +485,13 @@
                         @endif
                     @endforeach
                     @foreach ($profile as $x)
-                        @if ($x->id_kompetensi == 'C1')
+                        @if ($x->id_kompetensi == 'C1' && $x->id_struktur == 'C11')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'C1' && $x->id_struktur == 'C12')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'C1' && $x->id_struktur == 'C13')
                             <td style="vertical-align:top">{{ $x->deskripsi }}</td>
                         @endif
                     @endforeach
@@ -476,7 +518,13 @@
                         @endif
                     @endforeach
                     @foreach ($profile as $x)
-                        @if ($x->id_kompetensi == 'C2')
+                        @if ($x->id_kompetensi == 'C2' && $x->id_struktur == 'C21')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'C2' && $x->id_struktur == 'C22')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'C2' && $x->id_struktur == 'C23')
                             <td style="vertical-align:top">{{ $x->deskripsi }}</td>
                         @endif
                     @endforeach
@@ -503,7 +551,13 @@
                         @endif
                     @endforeach
                     @foreach ($profile as $x)
-                        @if ($x->id_kompetensi == 'C3')
+                        @if ($x->id_kompetensi == 'C3' && $x->id_struktur == 'C31')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'C3' && $x->id_struktur == 'C32')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'C3' && $x->id_struktur == 'C33')
                             <td style="vertical-align:top">{{ $x->deskripsi }}</td>
                         @endif
                     @endforeach
@@ -558,7 +612,13 @@
                         @endif
                     @endforeach
                     @foreach ($profile as $x)
-                        @if ($x->id_kompetensi == 'D1')
+                        @if ($x->id_kompetensi == 'D1' && $x->id_struktur == 'D11')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'D1' && $x->id_struktur == 'D12')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'D1' && $x->id_struktur == 'D13')
                             <td style="vertical-align:top">{{ $x->deskripsi }}</td>
                         @endif
                     @endforeach
@@ -585,7 +645,13 @@
                         @endif
                     @endforeach
                     @foreach ($profile as $x)
-                        @if ($x->id_kompetensi == 'D2')
+                        @if ($x->id_kompetensi == 'D2' && $x->id_struktur == 'D21')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'D2' && $x->id_struktur == 'D22')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'D2' && $x->id_struktur == 'D23')
                             <td style="vertical-align:top">{{ $x->deskripsi }}</td>
                         @endif
                     @endforeach
@@ -612,7 +678,13 @@
                         @endif
                     @endforeach
                     @foreach ($profile as $x)
-                        @if ($x->id_kompetensi == 'D3')
+                        @if ($x->id_kompetensi == 'D3' && $x->id_struktur == 'D31')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'D3' && $x->id_struktur == 'D32')
+                            <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                        @endif
+                        @if ($x->id_kompetensi == 'D3' && $x->id_struktur == 'D33')
                             <td style="vertical-align:top">{{ $x->deskripsi }}</td>
                         @endif
                     @endforeach
