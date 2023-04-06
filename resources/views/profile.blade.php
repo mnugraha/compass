@@ -15,10 +15,11 @@
                     <img src="user.png">
                     <div class="contact-container">
                         <a href="#"><strong> {{ auth()->user()->name }}</strong></a>
-                        @php
-                            //$peran = auth()->user();
-                        @endphp
                         <span>ID: {{ $dataUser->id_user }} </span>
+                        <a class="btn btn-default btn-xs" style="color: tomato; font-size: 10px" data-toggle="modal"
+                            data-target="#password{{ $dataUser->id_user }}">
+                            Ubah Password
+                        </a>
                     </div>
                 </div>
             </div>
@@ -45,7 +46,7 @@
             </div>
         </div>
     </div>
-    <div class="block ">
+    <div class="block " style="background-color: whitesmoke;">
         <div class="block-content">
             <h3 style="font-weight: 700">Tingkat kemahiran minimal yang diharapkan pada function
                 <span style="color: dodgerblue">{{ $dataUser->nm_peran }}</span>
@@ -126,30 +127,70 @@
                             style="width: 30px;background-color: #404144;color: aliceblue;font-weight: 700;text-align: center">
                             1</td>
                         <td style="width: 15%">Tidak ditampilkan</td>
-                        <td
-                            style="width: 30px;background-color: #f69490;color: aliceblue;font-weight: 700;text-align: center">
+                        <td style="width: 30px;background-color: #f69490;font-weight: 700;text-align: center">
                             2
                         </td>
                         <td style="width: 15%">Dalam Pengembangan</td>
-                        <td
-                            style="width: 30px;background-color: #feefab;color: aliceblue;font-weight: 700;text-align: center">
+                        <td style="width: 30px;background-color: #feefab;font-weight: 700;text-align: center">
                             3
                         </td>
                         <td style="width: 15%">Mahir</td>
-                        <td
-                            style="width: 30px;background-color: #c8dea5;color: aliceblue;font-weight: 700;text-align: center">
+                        <td style="width: 30px;background-color: #c8dea5;font-weight: 700;text-align: center">
                             4
                         </td>
                         <td style="width: 15%">Panutan</td>
-                        <td
-                            style="width: 30px;background-color: #82caa0;color: aliceblue;font-weight: 700;text-align: center">
+                        <td style="width: 30px;background-color: #82caa0;font-weight: 700;text-align: center">
                             5
                         </td>
                         <td style="width: 15%">Strategis</td>
                     </tr>
                 </table>
             </div>
+            <h4 style="font-weight: 700">Deskripsi mengenai skala peringkat dan panduan pemeringkatan terperinci untuk tiap
+                kompetensi:</h4>
+            -
+            <div style="overflow-x:auto;">
+                <table class="table  table-responsive table-bordered">
+                    <tr>
+                        <td
+                            style="width: 30px;background-color: #404144;color: aliceblue;font-weight: 700;text-align: center">
+                            1</td>
+                        <td style="width: 15%">Tidak ditampilkan</td>
+                        <td>Sedikitnya bukti yang mempresentasikan kompetensi; atau tidak berlaku untuk peran tersebut.</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 30px;background-color: #f69490;font-weight: 700;text-align: center">
+                            2</td>
+                        <td style="width: 15%">Dalam Pengembangan</td>
+                        <td>Memperlihatkan kompetensi level dasar. Mungkin membutuhkan dukungan dari orang lain, khususnya
+                            pada skenario yang tidak dikenal dengan baik atau yang menantang.</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 30px;background-color: #feefab;font-weight: 700;text-align: center">
+                            3</td>
+                        <td style="width: 15%">Mahir</td>
+                        <td>Secara konsisten menampilkan kompetensi level ahli di berbagai situasi.</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 30px;background-color: #c8dea5;font-weight: 700;text-align: center">
+                            4</td>
+                        <td style="width: 15%">Panutan</td>
+                        <td>Secara proaktif memperlihatkan penggunaan kompetensi yang dominan dan konsisten, memengaruhi
+                            orang-orang di sekitarnya dengan cara positif.</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 30px;background-color: #82caa0;font-weight: 700;text-align: center">
+                            5</td>
+                        <td style="width: 15%">Strategis</td>
+                        <td>Mencontohkan penggunaan kompetensi, menggalakkan penerapannya secara efektif di lingkungan
+                            divisinya, tidak hanya dalam tim langsungnya.</td>
+                    </tr>
+
+                </table>
+            </div>
+
         </div>
+
     </div>
     <div class="block block-condensed">
         <div class="app-heading app-heading-small" id="app-tour-heading-inside">
@@ -261,7 +302,7 @@
             </table>
         </div>
         <hr style="border-top: 1px dashed black;">
-        <div class="block-content">
+        < class="block-content">
             <div class="app-heading title-only" style="box-shadow: -1px 2px 3px #888888;">
                 <div class="title">
                     @foreach ($kompetensi as $k)
@@ -582,7 +623,47 @@
         <a href="/kompetensi" class="btn btn-default pull-right ">Lihat Semua Kompetensi</a>
     </div>
 </div>
-</div>
+
+<div>
+    <!-- Modal password -->
+    @foreach ($dataUser1 as $x)
+        <div id="password{{ $x->id_user }}" class="modal fade" tabindex="-1"
+            aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true" class="icon-cross"></span></button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="myModalLabel">Ubah Password</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row gx-3 gy-2 align-items-center" method="POST"
+                            action="/userUpdatePass1/{{ $x->id_user }}">
+                            {{ csrf_field() }}
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <div class="input-group auth-pass-inputgroup">
+                                        <div class="input-group-text">Masukan Password Baru</div>
+                                        <input type="text" class="form-control" name="password"
+                                            aria-describedby="password-addon" name="password"
+                                            autocomplete="off">
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary waves-effect"
+                            data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-info waves-effect waves-light"
+                            value="Update">
+                    </div>
+                    </form>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    @endforeach
+</div> <!-- end preview-->
 @endsection
 
 @section('konten')

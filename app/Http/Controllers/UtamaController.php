@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
@@ -49,6 +50,7 @@ class UtamaController extends Controller
         $dataLevel = Level::all();
         $dataPeringkat = Peringkat::all();
         $dataPeran = Peran::all();
+        $dataUser1 = User::all();
         if (isset(Auth::user()->id_user)) {
             $dataProfile = Profile::join('nilai', 'profile.nilai', '=', 'nilai.id_nilai')
                 ->join('peran', 'peran.id_peran', '=', 'profile.peran')
@@ -70,7 +72,7 @@ class UtamaController extends Controller
         } else {
             return view('login');
         }
-        return view('profile', ['dataUser' => $dataUser, 'nilai' => $dataNilai, 'level' => $dataLevel, 'peran' => $dataPeran, 'profile' => $dataProfile, 'kompetensi' => $dataKompetensi, 'struktur' => $dataStruktur, 'jmlKompetensi' => $jmlKompetensi, 'dataPeringkat' => $dataPeringkat]);
+        return view('profile', ['dataUser' => $dataUser, 'nilai' => $dataNilai, 'level' => $dataLevel, 'peran' => $dataPeran, 'profile' => $dataProfile, 'kompetensi' => $dataKompetensi, 'struktur' => $dataStruktur, 'jmlKompetensi' => $jmlKompetensi, 'dataPeringkat' => $dataPeringkat, 'dataUser1' => $dataUser1]);
     }
     public function login()
     {
@@ -495,6 +497,14 @@ class UtamaController extends Controller
             ->get();
         return view('kompetensi', ['kompetensiA' => $dataKompetensiA, 'kompetensiB' => $dataKompetensiB, 'kompetensiC' => $dataKompetensiC, 'kompetensiD' => $dataKompetensiD]);
         // return view('kompetensi');
+    }
+
+    public function updatePass($x, Request $a)
+    {
+        User::where('id_user', $x)->update([
+            'password' => Hash::make($a->password)
+        ]);
+        return redirect('/profile');
     }
 
     public function underConstruction()

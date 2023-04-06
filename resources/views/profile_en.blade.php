@@ -15,10 +15,11 @@
                     <img src="user.png">
                     <div class="contact-container">
                         <a href="#"><strong> {{ auth()->user()->name }}</strong></a>
-                        @php
-                            //$peran = auth()->user();
-                        @endphp
                         <span>ID: {{ $dataUser->id_user }} </span>
+                        <a class="btn btn-default btn-xs" style="color: tomato; font-size: 10px" data-toggle="modal"
+                            data-target="#password{{ $dataUser->id_user }}">
+                            Change Password
+                        </a>
                     </div>
                 </div>
             </div>
@@ -44,7 +45,7 @@
             </div>
         </div>
     </div>
-    <div class="block ">
+    <div class="block " style="background-color: whitesmoke;">
         <div class="block-content">
             <h3 style="font-weight: 700">Tingkat kemahiran minimal yang diharapkan pada function
                 <span style="color: dodgerblue">{{ $dataUser->nm_peran }}</span>
@@ -143,6 +144,48 @@
                         </td>
                         <td style="width: 15%">Strategic</td>
                     </tr>
+                </table>
+            </div>
+            <h4 style="font-weight: 700">Description of the rating scale and detailed rating guide for each competency:</h4>
+            -
+            <div style="overflow-x:auto;">
+                <table class="table  table-responsive table-bordered">
+                    <tr>
+                        <td
+                            style="width: 30px;background-color: #404144;color: aliceblue;font-weight: 700;text-align: center">
+                            1</td>
+                        <td style="width: 15%">No evidence</td>
+                        <td>Limited evidence of demonstrating the competency or does not apply to role.</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 30px;background-color: #f69490;font-weight: 700;text-align: center">
+                            2</td>
+                        <td style="width: 15%">Developing</td>
+                        <td>Demonstrates the competency at a basic level. May require support from others, particularly in
+                            unfamiliar or challenging scenarios.</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 30px;background-color: #feefab;font-weight: 700;text-align: center">
+                            3</td>
+                        <td style="width: 15%">Proficient</td>
+                        <td>Consistently demonstrates the competency at a proficient level across a range of situations.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 30px;background-color: #c8dea5;font-weight: 700;text-align: center">
+                            4</td>
+                        <td style="width: 15%">Role Model</td>
+                        <td>Proactively displays a strong and consistent use of the competency, positively influencing those
+                            in proximity.</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 30px;background-color: #82caa0;font-weight: 700;text-align: center">
+                            5</td>
+                        <td style="width: 15%">Strategic</td>
+                        <td>Exemplifies the competency, promoting its effective application across a wide sphere of
+                            influence, beyond their direct team.</td>
+                    </tr>
+
                 </table>
             </div>
         </div>
@@ -579,7 +622,46 @@
         <a href="/kompetensi_en" class="btn btn-default pull-right ">See More Competency</a>
     </div>
 </div>
-</div>
+<div>
+    <!-- Modal password -->
+    @foreach ($dataUser1 as $x)
+        <div id="password{{ $x->id_user }}" class="modal fade" tabindex="-1"
+            aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true" class="icon-cross"></span></button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="myModalLabel">Change Password</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row gx-3 gy-2 align-items-center" method="POST"
+                            action="/userUpdatePass1_en/{{ $x->id_user }}">
+                            {{ csrf_field() }}
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <div class="input-group auth-pass-inputgroup">
+                                        <div class="input-group-text">Insert new password</div>
+                                        <input type="text" class="form-control" name="password"
+                                            aria-describedby="password-addon" name="password"
+                                            autocomplete="off">
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary waves-effect"
+                            data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-info waves-effect waves-light"
+                            value="Update">
+                    </div>
+                    </form>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    @endforeach
+</div> <!-- end preview-->
 @endsection
 
 @section('konten')

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use App\Models\Profile_en;
@@ -40,6 +40,7 @@ class EnglishController extends Controller
         $dataStruktur = Struktur_en::all();
         $dataLevel = Level::all();
         $dataPeringkat = Peringkat::all();
+        $dataUser1 = User::all();
         $dataPeran = Peran_en::all();
         if (isset(Auth::user()->id_user)) {
             $dataProfile = Profile_en::join('nilai_en', 'profile_en.nilai', '=', 'nilai_en.id_nilai')
@@ -62,7 +63,7 @@ class EnglishController extends Controller
         } else {
             return view('login');
         }
-        return view('profile_en', ['dataUser' => $dataUser, 'nilai' => $dataNilai, 'level' => $dataLevel, 'peran' => $dataPeran, 'profile' => $dataProfile, 'kompetensi' => $dataKompetensi, 'struktur' => $dataStruktur, 'jmlKompetensi' => $jmlKompetensi, 'dataPeringkat' => $dataPeringkat]);
+        return view('profile_en', ['dataUser' => $dataUser, 'nilai' => $dataNilai, 'level' => $dataLevel, 'peran' => $dataPeran, 'profile' => $dataProfile, 'kompetensi' => $dataKompetensi, 'struktur' => $dataStruktur, 'jmlKompetensi' => $jmlKompetensi, 'dataPeringkat' => $dataPeringkat, 'dataUser1' => $dataUser1]);
     }
 
     public function A_en()
@@ -449,6 +450,13 @@ class EnglishController extends Controller
             ->orWhere('id_kompetensi', '=', 'D3')
             ->get();
         return view('kompetensi_en', ['kompetensiA' => $dataKompetensiA, 'kompetensiB' => $dataKompetensiB, 'kompetensiC' => $dataKompetensiC, 'kompetensiD' => $dataKompetensiD]);
-        // return view('kompetensi');
+    }
+
+    public function updatePass($x, Request $a)
+    {
+        User::where('id_user', $x)->update([
+            'password' => Hash::make($a->password)
+        ]);
+        return redirect('/profile-en');
     }
 }
