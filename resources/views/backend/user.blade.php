@@ -49,9 +49,10 @@
 
                 <div class="form-group">
                     <div class="col-md-6">
-                        <label class="col-md-4 control-label">E-Mail</label>
+                        <label class="col-md-4 control-label">Departemen</label>
                         <div class="col-md-8">
-                            <input type="text" class="form-control" name="email" value="{{ old('email') }}">
+
+                            <input type="text" class="form-control" name="departemen" value="{{ old('departemen') }}">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -129,7 +130,7 @@
                 <tr>
                     <th class="text-center" style="font-size: 14px">Employee ID</th>
                     <th class="text-center" style="font-size: 14px">Full Name</th>
-                    <th class="text-center" style="font-size: 14px">Email</th>
+                    <th class="text-center" style="font-size: 14px">Departemen</th>
                     <th class="text-center" style="font-size: 14px">Function</th>
                     <th class="text-center" style="font-size: 14px">Level</th>
                     <th class="text-center" style="font-size: 14px">Action</th>
@@ -141,7 +142,7 @@
                     <tr>
                         <td class="text-center">{{ $x->id_user }}</td>
                         <td>{{ $x->name }}</td>
-                        <td>{{ $x->email }}</td>
+                        <td>{{ $x->departemen }}</td>
                         <td>{{ $x->nm_peran }}</td>
                         <td class="text-center">{{ $x->level }}</td>
                         <td class="text-center">
@@ -210,10 +211,10 @@
 
                                 <div class="form-group">
                                     <div class="col-md-6">
-                                        <label class="col-md-4 control-label">E-Mail</label>
+                                        <label class="col-md-4 control-label">Departemen</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control" name="email"
-                                                value="{{ $x->email }}">
+                                            <input type="text" class="form-control" name="departemen"
+                                                value="{{ $x->departemen }}">
                                         </div>
                                     </div>
                                     <div class="col-md-6">

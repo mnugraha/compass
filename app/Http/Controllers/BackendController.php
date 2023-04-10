@@ -38,7 +38,7 @@ class BackendController extends Controller
             'id_user' => $a->id_user,
             'name' => $a->nama,
             'password' => Hash::make($a->password),
-            'email' => $a->email,
+            'departemen' => $a->departemen,
             'hp' => $a->hp,
             'function' => $a->function,
             'function_en' => $a->function,
@@ -53,7 +53,7 @@ class BackendController extends Controller
         User::where('id_user', $x)->update([
             'name' => $a->nama,
             'password' => Hash::make($a->password),
-            'email' => $a->email,
+            'departemen' => $a->departemen,
             'hp' => $a->hp,
             'function' => $a->function,
             'function_en' => $a->function,
