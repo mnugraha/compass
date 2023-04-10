@@ -47,7 +47,7 @@
     </div>
     <div class="block " style="background-color: whitesmoke;">
         <div class="block-content">
-            <h3 style="font-weight: 700">Tingkat kemahiran minimal yang diharapkan pada function
+            <h3 style="font-weight: 700">Minimum expected levels of mastery on function
                 <span style="color: dodgerblue">{{ $dataUser->nm_peran }}</span>
                 level <span style="color: dodgerblue">{{ $dataUser->level }}</span>
             </h3>

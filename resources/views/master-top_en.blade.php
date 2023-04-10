@@ -56,14 +56,22 @@
                     <div class="app-header-buttons pull-right" style="margin-top: 10px">
                         @if (isset(auth()->user()->name))
                             Welcome,<a href="/profile-en"> <strong> {{ auth()->user()->name }}</strong></a> -
-                            <a href="/"><img src="idn.png" height="10px"
-                                    style="margin-bottom: 5px; margin-right: 3px"></img>Versi Indonesia</a>
+                            <select onchange="if (this.value) window.location.href=this.value">
+                                <option value="/profile">Indonesia</option>
+                                <option value="/profile-en" selected>English</option>
+                            </select>
+                            {{-- <a href="/"><img src="idn.png" height="10px"
+                                    style="margin-bottom: 5px; margin-right: 3px"></img>Versi Indonesia</a> --}}
                             <a href="/logout" class="btn btn-xs btn-danger "
                                 style="box-shadow: -1px 1px 3px #888888; margin-left: 20px; color: darkslategray"><span
                                     class="fa fa-power-off" style="color: black; padding-right: 5px"></span> Log Out</a>
                         @else
-                            <a href="/"><img src="idn.png" height="10px"
-                                    style="margin-bottom: 5px; margin-right: 3px"></img>Versi Indonesia</a>
+                            <select onchange="if (this.value) window.location.href=this.value">
+                                <option value="/">Indonesia</option>
+                                <option value="/en" selected>English</option>
+                            </select>
+                            {{-- <a href="/"><img src="idn.png" height="10px"
+                                    style="margin-bottom: 5px; margin-right: 3px"></img>Versi Indonesia</a> --}}
                             <a href="/login" class="btn btn-sm btn-info"
                                 style="box-shadow: -1px 1px 3px #888888; margin-left: 20px"><span class="fa fa-sign-in"
                                     style="padding-right: 5px"></span> Login</a>
