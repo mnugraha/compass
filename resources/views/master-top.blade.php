@@ -55,7 +55,7 @@
                     <img src="/logo-header.png" height="70px" width="auto" style="padding-bottom: 10px">
                     <div class="app-header-buttons pull-right" style="margin-top: 10px">
                         @if (isset(auth()->user()->name))
-                            Welcome,<a href="/profile"> <strong> {{ auth()->user()->name }}</strong></a> -
+                            Selamat Datang,<a href="/profile"> <strong> {{ auth()->user()->name }}</strong></a> -
                             <a href="/en"><img src="uk.png" height="10px"
                                     style="margin-bottom: 5px; margin-right: 3px"></img>English
                                 Version</a>
