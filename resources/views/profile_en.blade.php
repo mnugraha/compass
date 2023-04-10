@@ -276,33 +276,35 @@
                                 @php
                                     $warna = '#cac9c7';
                                 @endphp
-                                <td style="vertical-align:top;background-color: {{ $warna }}">
-                                    {{ $x->deskripsi }}
-                                </td>
                             @endif
-                            <td style="vertical-align:top">{{ $x->deskripsi }} </td>
+                            @if ($x->deskripsi != '-')
+                                @php
+                                    $warna = '';
+                                @endphp
+                            @endif
+                            <td style="vertical-align:top;background-color: {{ $warna }}">
+                                {{ $x->deskripsi }}
+                            </td>
                         @endif
                         @if ($x->id_kompetensi == 'A2' && $x->id_struktur == 'A22')
                             @if ($x->deskripsi == '-')
                                 @php
                                     $warna = '#cac9c7';
                                 @endphp
-                                <td style="vertical-align:top;background-color: {{ $warna }}">
-                                    {{ $x->deskripsi }}
-                                </td>
                             @endif
-                            <td style="vertical-align:top">{{ $x->deskripsi }} </td>
+                            <td style="vertical-align:top;background-color: {{ $warna }}">
+                                {{ $x->deskripsi }}
+                            </td>
                         @endif
                         @if ($x->id_kompetensi == 'A2' && $x->id_struktur == 'A23')
                             @if ($x->deskripsi == '-')
                                 @php
                                     $warna = '#cac9c7';
                                 @endphp
-                                <td style="vertical-align:top;background-color: {{ $warna }}">
-                                    {{ $x->deskripsi }}
-                                </td>
                             @endif
-                            <td style="vertical-align:top">{{ $x->deskripsi }} </td>
+                            <td style="vertical-align:top;background-color: {{ $warna }}">
+                                {{ $x->deskripsi }}
+                            </td>
                         @endif
                     @endforeach
                 </tr>
@@ -333,35 +335,30 @@
                                 @php
                                     $warna = '#cac9c7';
                                 @endphp
-                                <td style="vertical-align:top;background-color: {{ $warna }}">
-                                    {{ $x->deskripsi }}
-                                </td>
                             @endif
-
-                            <td style="vertical-align:top">{{ $x->deskripsi }} </td>
+                            <td style="vertical-align:top;background-color: {{ $warna }}">
+                                {{ $x->deskripsi }}
+                            </td>
                         @endif
                         @if ($x->id_kompetensi == 'A3' && $x->id_struktur == 'A32')
                             @if ($x->deskripsi == '-')
                                 @php
                                     $warna = '#cac9c7';
                                 @endphp
-                                <td style="vertical-align:top;background-color: {{ $warna }}">
-                                    {{ $x->deskripsi }}
-                                </td>
                             @endif
-                            <td style="vertical-align:top">{{ $x->deskripsi }} </td>
+                            <td style="vertical-align:top;background-color: {{ $warna }}">
+                                {{ $x->deskripsi }}
+                            </td>
                         @endif
                         @if ($x->id_kompetensi == 'A3' && $x->id_struktur == 'A33')
                             @if ($x->deskripsi == '-')
                                 @php
                                     $warna = '#cac9c7';
                                 @endphp
-                                <td style="vertical-align:top;background-color: {{ $warna }}">
-                                    {{ $x->deskripsi }}
-                                </td>
                             @endif
-
-                            <td style="vertical-align:top">{{ $x->deskripsi }} </td>
+                            <td style="vertical-align:top;background-color: {{ $warna }}">
+                                {{ $x->deskripsi }}
+                            </td>
                         @endif
                     @endforeach
                 </tr>
@@ -605,34 +602,30 @@
                                 @php
                                     $warna = '#cac9c7';
                                 @endphp
-                                <td style="vertical-align:top;background-color: {{ $warna }}">
-                                    {{ $x->deskripsi }}
-                                </td>
                             @endif
-
-                            <td style="vertical-align:top">{{ $x->deskripsi }} </td>
+                            <td style="vertical-align:top;background-color: {{ $warna }}">
+                                {{ $x->deskripsi }}
+                            </td>
                         @endif
                         @if ($x->id_kompetensi == 'C3' && $x->id_struktur == 'C32')
                             @if ($x->deskripsi == '-')
                                 @php
                                     $warna = '#cac9c7';
                                 @endphp
-                                <td style="vertical-align:top;background-color: {{ $warna }}">
-                                    {{ $x->deskripsi }}
-                                </td>
                             @endif
-                            <td style="vertical-align:top">{{ $x->deskripsi }} </td>
+                            <td style="vertical-align:top;background-color: {{ $warna }}">
+                                {{ $x->deskripsi }}
+                            </td>
                         @endif
                         @if ($x->id_kompetensi == 'C3' && $x->id_struktur == 'C33')
                             @if ($x->deskripsi == '-')
                                 @php
                                     $warna = '#cac9c7';
                                 @endphp
-                                <td style="vertical-align:top;background-color: {{ $warna }}">
-                                    {{ $x->deskripsi }}
-                                </td>
                             @endif
-                            <td style="vertical-align:top">{{ $x->deskripsi }} </td>
+                            <td style="vertical-align:top;background-color: {{ $warna }}">
+                                {{ $x->deskripsi }}
+                            </td>
                         @endif
                     @endforeach
                 </tr>
@@ -724,36 +717,30 @@
                                 @php
                                     $warna = '#cac9c7';
                                 @endphp
-                                <td style="vertical-align:top;background-color: {{ $warna }}">
-                                    {{ $x->deskripsi }}
-                                </td>
                             @endif
-
-                            <td style="vertical-align:top">{{ $x->deskripsi }} </td>
+                            <td style="vertical-align:top;background-color: {{ $warna }}">
+                                {{ $x->deskripsi }}
+                            </td>
                         @endif
                         @if ($x->id_kompetensi == 'D2' && $x->id_struktur == 'D22')
                             @if ($x->deskripsi == '-')
                                 @php
                                     $warna = '#cac9c7';
                                 @endphp
-                                <td style="vertical-align:top;background-color: {{ $warna }}">
-                                    {{ $x->deskripsi }}
-                                </td>
                             @endif
-
-                            <td style="vertical-align:top">{{ $x->deskripsi }} </td>
+                            <td style="vertical-align:top;background-color: {{ $warna }}">
+                                {{ $x->deskripsi }}
+                            </td>
                         @endif
                         @if ($x->id_kompetensi == 'D2' && $x->id_struktur == 'D23')
                             @if ($x->deskripsi == '-')
                                 @php
                                     $warna = '#cac9c7';
                                 @endphp
-                                <td style="vertical-align:top;background-color: {{ $warna }}">
-                                    {{ $x->deskripsi }}
-                                </td>
                             @endif
-
-                            <td style="vertical-align:top">{{ $x->deskripsi }} </td>
+                            <td style="vertical-align:top;background-color: {{ $warna }}">
+                                {{ $x->deskripsi }}
+                            </td>
                         @endif
                     @endforeach
                 </tr>
