@@ -26,19 +26,16 @@
         </div>
         <div class="block-content row-table-holder">
             <div class="row row-table">
-                <div class="col-md-3 col-xs-12">
+                <div class="col-md-4 col-xs-12">
                     <span class="text-bolder text-uppercase text-sm">Function:</span>
                     <p><strong>{{ $dataUser->nm_peran }} </strong></p>
                 </div>
-                <div class="col-md-3 col-xs-12">
-                    <span class="text-bolder text-uppercase text-sm">Department:</span>
-                    <p>{{ $dataUser->email }}</p>
-                </div>
-                <div class="col-md-3 col-xs-12">
+
+                <div class="col-md-4 col-xs-12">
                     <span class="text-bolder text-uppercase text-sm">Level:</span>
                     <p>{{ $dataUser->level }}</p>
                 </div>
-                <div class="col-md-3 col-xs-12">
+                <div class="col-md-4 col-xs-12">
                     <span class="text-bolder text-uppercase text-sm">Total Compentecies:</span>
                     <p>{{ $jmlKompetensi }}</p>
                 </div>

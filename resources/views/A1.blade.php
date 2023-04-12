@@ -41,10 +41,11 @@
                             <td style="vertical-align:top">
                                 <h5 style="font-weight: 700;">
                                     {{ $A11->nm_struktur }}</h5><br>
-
                             </td>
                             @foreach ($jointabel1 as $x)
-                                <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                                @if ($x->deskripsi != '-')
+                                    <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                                @endif
                             @endforeach
                         </tr>
                         <tr>
@@ -54,7 +55,9 @@
 
                             </td>
                             @foreach ($jointabel2 as $x)
-                                <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                                @if ($x->deskripsi != '-')
+                                    <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                                @endif
                             @endforeach
                         </tr>
                         <tr>
@@ -64,7 +67,9 @@
 
                             </td>
                             @foreach ($jointabel3 as $x)
-                                <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                                @if ($x->deskripsi != '-')
+                                    <td style="vertical-align:top">{{ $x->deskripsi }}</td>
+                                @endif
                             @endforeach
                         </tr>
 
