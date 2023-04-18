@@ -4,7 +4,7 @@
 @endsection
 
 @section('judul')
-    Kompas Indorama
+    <img src="gambar/head compass.png" width="100%" height="auto" style="max-width: 400px">
 @endsection
 
 @section('konten-tanpa-frame')

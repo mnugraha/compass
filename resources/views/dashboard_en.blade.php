@@ -4,7 +4,7 @@
 @endsection
 
 @section('judul')
-    The Compass Indorama
+    <img src="gambar/head compass_en.png" width="100%" height="auto" style="max-width: 400px">
 @endsection
 
 @section('konten-tanpa-frame')
@@ -126,7 +126,7 @@
                             </div>
                             <div class="tile-content text-center">
                                 <h4 class="tile-title" style="font-weight: 700">Be adaptable</h4>
-                                <p>to opportunities, challenges, and ideas</p>
+                                <p>to opportunities, challenges, and ideas &emsp; &emsp; &emsp; &emsp;</p>
                             </div>
                         </div>
                         <center><a href="/B_en" class="btn btn-default btn-sm">Open</a></center>

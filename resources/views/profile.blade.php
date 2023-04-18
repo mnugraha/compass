@@ -45,9 +45,7 @@
     </div>
     <div class="block " style="background-color: whitesmoke;">
         <div class="block-content">
-            <h3 style="font-weight: 700">Tingkat kemahiran minimal yang diharapkan pada function
-                <span style="color: dodgerblue">{{ $dataUser->nm_peran }}</span>
-                level <span style="color: dodgerblue">{{ $dataUser->level }}</span>
+            <h3 style="font-weight: 700">Tingkat kemahiran minimal yang diharapkan sesuai jabatan dan level manajemen
             </h3>
 
             -
@@ -143,8 +141,11 @@
                     </tr>
                 </table>
             </div>
-            <h4 style="font-weight: 700">Deskripsi mengenai skala peringkat dan panduan pemeringkatan terperinci untuk tiap
-                kompetensi:</h4>
+            <p style="text-align: left;font-size: 14px">Terdapat 5 level umum untuk masing-masing kompetensi. Level yang
+                dicapai oleh seseorang tergantung pada <b>kualitas</b> dan <b>frekuensi</b> kompetensi ditampilkan. Setiap
+                level memiliki
+                kriteria khusus dalam setiap kompetensi, tetapi 5 level yang dimaksud secara umum didefinisikan seperti di
+                bawah ini.</p>
             -
             <div style="overflow-x:auto;">
                 <table class="table  table-responsive table-bordered">
@@ -185,7 +186,9 @@
 
                 </table>
             </div>
-
+            <p style="text-align: left;font-size: 14px">Setiap tingkat kepemimpinan fungsional akan diwajibkan memiliki
+                ‘Tingkat Penguasaan’ tertentu atas kompetensi dalam skema ini. Tingkat Penguasaan tersebut akan memberikan
+                pemahaman yang jelas kepada individu tentang tingkat kompetensi yang diharapkan dapat mereka capai.</p>
         </div>
 
     </div>

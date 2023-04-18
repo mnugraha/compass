@@ -44,12 +44,9 @@
     </div>
     <div class="block " style="background-color: whitesmoke;">
         <div class="block-content">
-            <h3 style="font-weight: 700">Minimum expected levels of mastery on function
-                <span style="color: dodgerblue">{{ $dataUser->nm_peran }}</span>
-                level <span style="color: dodgerblue">{{ $dataUser->level }}</span>
+            <h3 style="font-weight: 700">Minimum expected levels of mastery by management and function
             </h3>
-
-            -
+            .
             <div style="overflow-x:auto;">
                 <table class="table  table-responsive table-bordered">
                     <tr style="text-align: center">
@@ -114,7 +111,6 @@
                             @endif
                         @endforeach
                     </tr>
-
                 </table>
             </div>
             <div style="overflow-x:auto;">
@@ -143,8 +139,10 @@
                     </tr>
                 </table>
             </div>
-            <h4 style="font-weight: 700">Description of the rating scale and detailed rating guide for each competency:</h4>
-            -
+            <p style="text-align: left;font-size: 14px">There are 5 broad levels to each competency. The level achieved by
+                a person depends on the <b>quality</b> and <b>frequency</b> with which they demonstrate that competency.
+                Each level has specific criteria within each competency, but the 5 levels are broadly defined below.</p>
+            .
             <div style="overflow-x:auto;">
                 <table class="table  table-responsive table-bordered">
                     <tr>
@@ -185,6 +183,9 @@
 
                 </table>
             </div>
+            <p style="text-align: left;font-size: 14px">Each level of functional leadership will be allocated a specific
+                ‘Mastery Level’ against the competencies in the framework. The set of Mastery Levels will provide
+                individuals with a clear understanding of the expected level of competency they need to achieve.</p>
         </div>
     </div>
     <div class="block block-condensed">
