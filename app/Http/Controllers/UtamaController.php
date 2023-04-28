@@ -66,7 +66,7 @@ class UtamaController extends Controller
                 ->get(['users.*', 'level.*', 'peran.*'])->first();
             $kompetensiUser = Profile::where('peran', '=', Auth::user()->function)
                 ->where('level', '=', Auth::user()->level)
-                ->where('nilai', '!=', null)
+                ->where('nilai', 'NOT LIKE', '%f')
                 ->get();
             $jmlKompetensi = (int)(($kompetensiUser->count()) / 3);
         } else {
