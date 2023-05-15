@@ -116,4 +116,12 @@ class BackendController extends Controller
         //Session::flash('update', 'Data Berhasil Diupdate!');
         return redirect('/Dkompetensi');
     }
+
+    public function kompetensiDelete($x)
+    {
+        $data = Kompetensi::find($x);
+        $data->delete();
+        //Session::flash('hapus', 'Data Berhasil Didelete!');
+        return redirect('/Dkompetensi');
+    }
 }

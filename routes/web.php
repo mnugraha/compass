@@ -26,6 +26,7 @@ Route::post('/userDelete/{x}', [BackendController::class, 'userDelete']);
 Route::get('/Dkompetensi', [BackendController::class, 'kompetensi']);
 Route::post('/kompetensiSimpan', [BackendController::class, 'kompetensiSimpan']);
 Route::post('/kompetensiUpdate/{x}', [BackendController::class, 'kompetensiUpdate']);
+Route::post('/kompetensiDelete/{x}', [BackendController::class, 'kompetensiDelete']);
 
 Route::get('/master', [UtamaController::class, 'index']);
 Route::get('/', [UtamaController::class, 'dashboard']);

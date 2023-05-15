@@ -207,11 +207,11 @@
                     <div class="modal-content">
                         <div class="modal-body">
                             <form class="row gx-3 gy-2 align-items-center" method="POST"
-                                action="/userDelete/{{ $x->id_user }}">
+                                action="/kompetensiDelete/{{ $x->id_kompetensi }}">
                                 {{ csrf_field() }}
                                 <br>
                                 <h4 class="text-center">Apakah anda yakin akan menghapus data <span
-                                        style="color:red">{{ $x->name }}</span> ?</h4>
+                                        style="color:red">{{ $x->id_kompetensi . '-' . $x->nm_kompetensi }}</span> ?</h4>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary waves-effect text-center"
