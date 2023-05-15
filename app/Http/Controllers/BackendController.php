@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Peran;
+use App\Models\Kompetensi;
 use App\Models\Peran_en;
 use App\Models\Level;
 use Illuminate\Support\Facades\Hash;
@@ -78,5 +79,41 @@ class BackendController extends Controller
         ]);
         //Session::flash('update', 'Data Berhasil Diupdate!');
         return redirect('/user');
+    }
+
+    public function kompetensi()
+    {
+        $dataKompetensi = Kompetensi::all();
+        return view('backend/kompetensi', ['dataKompetensi' => $dataKompetensi]);
+    }
+
+    public function kompetensiSimpan(Request $a)
+    {
+        $pesan_error = [
+            'required' => ':attribute harus di isi',
+        ];
+        $a->validate([
+            'id_kompetensi' => 'required|unique:kompetensi'
+        ], $pesan_error);
+
+        Kompetensi::create([
+            'id_kompetensi' => $a->id_kompetensi,
+            'nm_kompetensi' => $a->kompetensi,
+            'value' => $a->value,
+            'definisi' => $a->definisi
+        ]);
+        //Session::flash('simpan', 'Data Berhasil Disimpan!');
+        return redirect('/Dkompetensi');
+    }
+
+    public function kompetensiUpdate($x, Request $a)
+    {
+        Kompetensi::where('id_kompetensi', $x)->update([
+            'nm_kompetensi' => $a->kompetensi,
+            'value' => $a->value,
+            'definisi' => $a->definisi
+        ]);
+        //Session::flash('update', 'Data Berhasil Diupdate!');
+        return redirect('/Dkompetensi');
     }
 }

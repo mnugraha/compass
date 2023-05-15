@@ -37,6 +37,22 @@
                         <li>
                             <a href="/user"><span class="fa fa-user" style="color: white"></span> User</a>
                         </li>
+                        <li>
+                            <a href="/Dkompetensi"><span class="icon-chart-bars" style="color: white"></span>
+                                Kompetensi</a>
+                        </li>
+                        <li>
+                            <a href="/Dlevel"><span class="fa fa-bank" style="color: white"></span> Level</a>
+                        </li>
+                        <li>
+                            <a href="/Dvalue"><span class="fa fa-archive" style="color: white"></span> Value</a>
+                        </li>
+                        <li>
+                            <a href="/Dfunction"><span class="fa fa-male" style="color: white"></span> Function</a>
+                        </li>
+                        <li>
+                            <a href="/Dstruktur"><span class="fa fa-sitemap" style="color: white"></span> Struktur</a>
+                        </li>
                     </ul>
                 </nav>
             </div>

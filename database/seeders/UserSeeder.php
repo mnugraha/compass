@@ -35,3 +35,4 @@ class UserSeeder extends Seeder
         fclose($csvFile);
     }
 }
+//Perintah terminal: php artisan db:seed --class=UserSeeder

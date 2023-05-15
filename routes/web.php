@@ -23,6 +23,9 @@ Route::post('/userSimpan', [BackendController::class, 'userSimpan']);
 Route::post('/userUpdate/{x}', [BackendController::class, 'userUpdate']);
 Route::post('/userUpdatePass/{x}', [BackendController::class, 'updatePass']);
 Route::post('/userDelete/{x}', [BackendController::class, 'userDelete']);
+Route::get('/Dkompetensi', [BackendController::class, 'kompetensi']);
+Route::post('/kompetensiSimpan', [BackendController::class, 'kompetensiSimpan']);
+Route::post('/kompetensiUpdate/{x}', [BackendController::class, 'kompetensiUpdate']);
 
 Route::get('/master', [UtamaController::class, 'index']);
 Route::get('/', [UtamaController::class, 'dashboard']);
