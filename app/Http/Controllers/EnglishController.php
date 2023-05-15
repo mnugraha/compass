@@ -55,9 +55,13 @@ class EnglishController extends Controller
                 ->join('level', 'level.id_level', '=', 'users.level')
                 ->where('users.id_user', '=', Auth::user()->id_user)
                 ->get(['users.*', 'level.*', 'peran_en.*'])->first();
+            // $kompetensiUser = Profile_en::where('peran', '=', Auth::user()->function)
+            //     ->where('level', '=', Auth::user()->level)
+            //     ->where('nilai', '!=', null)
+            //     ->get();
             $kompetensiUser = Profile_en::where('peran', '=', Auth::user()->function)
                 ->where('level', '=', Auth::user()->level)
-                ->where('nilai', '!=', null)
+                ->where('nilai', 'NOT LIKE', '%f')
                 ->get();
             $jmlKompetensi = (int)(($kompetensiUser->count()) / 3);
         } else {
