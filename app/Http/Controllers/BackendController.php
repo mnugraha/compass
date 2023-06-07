@@ -8,6 +8,8 @@ use App\Models\Peran;
 use App\Models\Kompetensi;
 use App\Models\Peran_en;
 use App\Models\Level;
+use App\Models\Nilai;
+use App\Models\Struktur;
 use Illuminate\Support\Facades\Hash;
 
 class BackendController extends Controller
@@ -93,7 +95,7 @@ class BackendController extends Controller
             'required' => ':attribute harus di isi',
         ];
         $a->validate([
-            'id_kompetensi' => 'required|unique:kompetensi'
+            'id_kompetensi' => 'required'
         ], $pesan_error);
 
         Kompetensi::create([
@@ -123,5 +125,94 @@ class BackendController extends Controller
         $data->delete();
         //Session::flash('hapus', 'Data Berhasil Didelete!');
         return redirect('/Dkompetensi');
+    }
+
+    public function level()
+    {
+        $dataLevel = Level::all();
+        return view('backend/level', ['dataLevel' => $dataLevel]);
+    }
+
+    public function levelSimpan(Request $a)
+    {
+        $pesan_error = [
+            'required' => ':attribute harus di isi',
+        ];
+        $a->validate([
+            'id_level' => 'required'
+        ], $pesan_error);
+
+        Level::create([
+            'id_level' => $a->id_level,
+            'level' => $a->level
+        ]);
+        //Session::flash('simpan', 'Data Berhasil Disimpan!');
+        return redirect('/Dlevel');
+    }
+
+    public function levelUpdate($x, Request $a)
+    {
+        Level::where('id_level', $x)->update([
+            'level' => $a->level
+        ]);
+        //Session::flash('update', 'Data Berhasil Diupdate!');
+        return redirect('/Dlevel');
+    }
+
+    public function levelDelete($x)
+    {
+        $data = Level::find($x);
+        $data->delete();
+        //Session::flash('hapus', 'Data Berhasil Didelete!');
+        return redirect('/Dlevel');
+    }
+
+    public function value()
+    {
+        //$dataValue = Nilai::all();
+        $dataValue = Nilai::join('struktur', 'nilai.id_struktur', '=', 'struktur.id_struktur')
+            ->join('kompetensi', 'nilai.id_kompetensi', '=', 'kompetensi.id_kompetensi')
+            ->get(['nilai.*', 'struktur.*', 'kompetensi.*']);
+        $dataStruktur = Struktur::all();
+        $dataKompetensi = Kompetensi::all();
+        return view('backend/value', ['dataValue' => $dataValue, 'dataStruktur' => $dataStruktur, 'dataKompetensi' => $dataKompetensi]);
+    }
+
+    public function valueSimpan(Request $a)
+    {
+        $pesan_error = [
+            'required' => ':attribute harus di isi',
+        ];
+        $a->validate([
+            'id_value' => 'required'
+        ], $pesan_error);
+
+        Nilai::create([
+            'id_nilai' => $a->id_value,
+            'id_struktur' => $a->struktur,
+            'id_kompetensi' => $a->kompetensi,
+            'deskripsi' => $a->deskripsi
+        ]);
+        //Session::flash('simpan', 'Data Berhasil Disimpan!');
+        return redirect('/Dvalue');
+    }
+
+    public function valueUpdate($x, Request $a)
+    {
+        Nilai::where('id_nilai', $x)->update([
+            'id_struktur' => $a->struktur,
+            'id_kompetensi' => $a->kompetensi,
+            'deskripsi' => $a->deskripsi
+        ]);
+        //Session::flash('update', 'Data Berhasil Diupdate!');
+        return redirect('/Dvalue');
+    }
+
+    public function valueDelete($x)
+    {
+        $data = Nilai::find($x);
+        $data->delete();
+        //Session::flash('hapus', 'Data Berhasil Didelete!');
+        return redirect('/Dvalue');
     }
 }

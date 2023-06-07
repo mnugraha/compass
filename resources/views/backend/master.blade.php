@@ -38,7 +38,7 @@
                             <a href="/user"><span class="fa fa-user" style="color: white"></span> User</a>
                         </li>
                         <li>
-                            <a href="/Dkompetensi"><span class="icon-chart-bars" style="color: white"></span>
+                            <a href="/Dkompetensi"><span class="fa fa-bar-chart-o" style="color: white"></span>
                                 Kompetensi</a>
                         </li>
                         <li>

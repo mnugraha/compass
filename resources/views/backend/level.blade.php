@@ -1,31 +1,30 @@
 @extends('/backend/master')
 @section('title')
-    Kompetensi - Kompas Indorama
+    Level - Kompas Indorama
 @endsection
 
 @section('judul')
 @endsection
 
 @section('sub-judul')
-    Manage Data Kompetensi
+    Manage Data Level
 @endsection
 
 @section('konten')
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title"><span class="fa fa-bar-chart-o"></span> Insert Data Kompetensi</h3>
+            <h3 class="panel-title"><span class="fa fa-bar-chart-o"></span> Insert Data Level</h3>
         </div>
         <div class="panel-body">
-            <form class="form-horizontal" method="POST" action="/kompetensiSimpan">
+            <form class="form-horizontal" method="POST" action="/levelSimpan">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <div class="col-md-12">
                         <label class="col-md-1 control-label">ID </label>
                         <div class="col-md-2">
-                            <input type="text" class="form-control" name="id_kompetensi"
-                                value="{{ old('id_kompetensi') }}">
+                            <input type="text" class="form-control" name="id_level" value="{{ old('id_level') }}">
                             <div class="">
-                                @error('id_kompetensi')
+                                @error('id_level')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -34,38 +33,14 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-12">
-                        <label class="col-md-1 control-label">Kompetensi</label>
+                        <label class="col-md-1 control-label">Level</label>
                         <div class="col-md-4">
-                            <input type="text" class="form-control" name="kompetensi" value="{{ old('kompetensi') }}">
+                            <input type="text" class="form-control" name="level" value="{{ old('level') }}">
                             <div class="">
-                                @error('kompetensi')
+                                @error('level')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="form-group">
-                    <div class="col-md-12">
-                        <label class="col-md-1 control-label">Value</label>
-                        <div class="col-md-4">
-                            <input type="text" class="form-control" name="value" value="{{ old('value') }}">
-                            <div class="">
-                                @error('value')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-md-12">
-                        <label class="col-md-1 control-label">Definisi</label>
-                        <div class="col-md-11">
-                            {{-- <input type="text" class="form-control" name="definisi" value="{{ old('definisi') }}"> --}}
-                            <textarea class="form-control" name="definisi" cols="60" rows="3"></textarea>
                         </div>
                     </div>
                 </div>
@@ -83,26 +58,22 @@
             <thead>
                 <tr>
                     <th class="text-center" style="font-size: 14px">ID </th>
-                    <th class="text-center" style="font-size: 14px">Kompetensi</th>
-                    <th class="text-center" style="font-size: 14px">Value</th>
-                    <th class="text-center" style="font-size: 14px">Definisi</th>
+                    <th class="text-center" style="font-size: 14px">Level</th>
                     <th class="text-center" style="font-size: 14px; width: 80px">Action</th>
 
                 </tr>
             </thead>
             <tbody>
-                @foreach ($dataKompetensi as $x)
+                @foreach ($dataLevel as $x)
                     <tr>
-                        <td class="text-center">{{ $x->id_kompetensi }}</td>
-                        <td>{{ $x->nm_kompetensi }}</td>
-                        <td>{{ $x->value }}</td>
-                        <td>{{ $x->definisi }}</td>
+                        <td class="text-center">{{ $x->id_level }}</td>
+                        <td>{{ $x->level }}</td>
                         <td class="text-center">
                             <a type="button" class="btn btn-info btn-icon" data-toggle="modal"
-                                data-target="#edit{{ $x->id_kompetensi }}"><span class="icon-pencil"
+                                data-target="#edit{{ $x->id_level }}"><span class="icon-pencil"
                                     style="margin: 3px"></span></a>
                             <a type="button" class="btn btn-danger btn-icon" data-toggle="modal"
-                                data-target="#hapus{{ $x->id_kompetensi }}" style="margin: 3px"><span
+                                data-target="#hapus{{ $x->id_level }}" style="margin: 3px"><span
                                     class="icon-trash"></span></a>
                         </td>
                     </tr>
@@ -114,29 +85,28 @@
 
     <div>
         <!-- Modal Edit -->
-        @foreach ($dataKompetensi as $x)
-            <div id="edit{{ $x->id_kompetensi }}" class="modal fade" id="modal-large" tabindex="-1"
+        @foreach ($dataLevel as $x)
+            <div id="edit{{ $x->id_level }}" class="modal fade" id="modal-large" tabindex="-1"
                 aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-dialog " role="document">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"
                             class="icon-cross"></span></button>
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="myModalLabel">Edit Data Kompetensi </h5>
-
+                            <h5 class="modal-title" id="myModalLabel">Edit Data Level </h5>
                         </div>
                         <div class="modal-body">
                             <form class="row gx-3 gy-2 align-items-center" method="POST"
-                                action="/kompetensiUpdate/{{ $x->id_kompetensi }}">
+                                action="/levelUpdate/{{ $x->id_level }}">
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <div class="col-md-12">
                                         <label class="col-md-2 control-label">ID </label>
                                         <div class="col-md-2">
-                                            <input type="text" class="form-control" name="id_kompetensi"
-                                                value="{{ $x->id_kompetensi }}">
+                                            <input type="text" class="form-control" name="id_level"
+                                                value="{{ $x->id_level }}">
                                             <div class="">
-                                                @error('id_kompetensi')
+                                                @error('id_level')
                                                     <span class="text-danger">{{ $message }}</span>
                                                 @enderror
                                             </div>
@@ -145,43 +115,18 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-12">
-                                        <label class="col-md-2 control-label">Kompetensi</label>
+                                        <label class="col-md-2 control-label">Level</label>
                                         <div class="col-md-4">
-                                            <input type="text" class="form-control" name="kompetensi"
-                                                value="{{ $x->nm_kompetensi }}">
+                                            <input type="text" class="form-control" name="level"
+                                                value="{{ $x->level }}">
                                             <div class="">
-                                                @error('kompetensi')
-                                                    <span class="text-danger">{{ $message }}</span>
-                                                @enderror
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-md-12">
-                                        <label class="col-md-2 control-label">Value</label>
-                                        <div class="col-md-4">
-                                            <input type="text" class="form-control" name="value"
-                                                value="{{ $x->value }}">
-                                            <div class="">
-                                                @error('value')
+                                                @error('level')
                                                     <span class="text-danger">{{ $message }}</span>
                                                 @enderror
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="form-group">
-                                    <div class="col-md-12">
-                                        <label class="col-md-2 control-label">Definisi</label>
-                                        <div class="col-md-10">
-                                            <textarea class="form-control" name="definisi" cols="40" rows="5">{{ $x->definisi }}</textarea>
-                                        </div>
-                                    </div>
-                                </div>
-
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary waves-effect"
@@ -196,8 +141,8 @@
     </div> <!-- end preview-->
     <div>
         <!-- Modal Delete -->
-        @foreach ($dataKompetensi as $x)
-            <div id="hapus{{ $x->id_kompetensi }}" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel"
+        @foreach ($dataLevel as $x)
+            <div id="hapus{{ $x->id_level }}" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
@@ -205,11 +150,11 @@
                     <div class="modal-content">
                         <div class="modal-body">
                             <form class="row gx-3 gy-2 align-items-center" method="POST"
-                                action="/kompetensiDelete/{{ $x->id_kompetensi }}">
+                                action="/levelDelete/{{ $x->id_level }}">
                                 {{ csrf_field() }}
                                 <br>
                                 <h4 class="text-center">Apakah anda yakin akan menghapus data <span
-                                        style="color:red">{{ $x->id_kompetensi . '-' . $x->nm_kompetensi }}</span> ?</h4>
+                                        style="color:red">{{ $x->id_level . '-' . $x->level }}</span> ?</h4>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary waves-effect text-center"

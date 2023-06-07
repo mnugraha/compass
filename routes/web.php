@@ -27,6 +27,14 @@ Route::get('/Dkompetensi', [BackendController::class, 'kompetensi']);
 Route::post('/kompetensiSimpan', [BackendController::class, 'kompetensiSimpan']);
 Route::post('/kompetensiUpdate/{x}', [BackendController::class, 'kompetensiUpdate']);
 Route::post('/kompetensiDelete/{x}', [BackendController::class, 'kompetensiDelete']);
+Route::get('/Dlevel', [BackendController::class, 'level']);
+Route::post('/levelSimpan', [BackendController::class, 'levelSimpan']);
+Route::post('/levelUpdate/{x}', [BackendController::class, 'levelUpdate']);
+Route::post('/levelDelete/{x}', [BackendController::class, 'levelDelete']);
+Route::get('/Dvalue', [BackendController::class, 'value']);
+Route::post('/valueSimpan', [BackendController::class, 'valueSimpan']);
+Route::post('/valueUpdate/{x}', [BackendController::class, 'valueUpdate']);
+Route::post('/valueDelete/{x}', [BackendController::class, 'valueDelete']);
 
 Route::get('/master', [UtamaController::class, 'index']);
 Route::get('/', [UtamaController::class, 'dashboard']);
