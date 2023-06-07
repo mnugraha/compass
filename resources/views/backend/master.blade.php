@@ -29,7 +29,8 @@
                 <!-- Menu Samping -->
                 <nav>
                     <ul>
-                        <li class="title" style="font-weight: 700">Menu</li>
+                        <li class="title" style="font-weight: 700"><img src="/logo-header.png"
+                                style="background-color: white; margin-left: 10px" width="230px"></li>
                         <li>
                             <a href="/"><span class="fa fa-align-justify" style="color: white"></span>
                                 Dashboards</a>

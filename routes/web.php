@@ -39,6 +39,10 @@ Route::get('/Dperan', [BackendController::class, 'peran']);
 Route::post('/peranSimpan', [BackendController::class, 'peranSimpan']);
 Route::post('/peranUpdate/{x}', [BackendController::class, 'peranUpdate']);
 Route::post('/peranDelete/{x}', [BackendController::class, 'peranDelete']);
+Route::get('/Dstruktur', [BackendController::class, 'struktur']);
+Route::post('/strukturSimpan', [BackendController::class, 'strukturSimpan']);
+Route::post('/strukturUpdate/{x}', [BackendController::class, 'strukturUpdate']);
+Route::post('/strukturDelete/{x}', [BackendController::class, 'strukturDelete']);
 
 Route::get('/master', [UtamaController::class, 'index']);
 Route::get('/', [UtamaController::class, 'dashboard']);

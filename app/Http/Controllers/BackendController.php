@@ -256,4 +256,49 @@ class BackendController extends Controller
         //Session::flash('hapus', 'Data Berhasil Didelete!');
         return redirect('/Dperan');
     }
+
+    public function struktur()
+    {
+        $dataStruktur = Struktur::join('kompetensi', 'struktur.id_kompetensi', '=', 'kompetensi.id_kompetensi')
+            ->get(['struktur.*', 'kompetensi.*']);
+        $dataKompetensi = Kompetensi::all();
+        return view('backend/struktur', ['dataStruktur' => $dataStruktur, 'dataKompetensi' => $dataKompetensi]);
+    }
+
+    public function strukturSimpan(Request $a)
+    {
+        $pesan_error = [
+            'required' => ':attribute harus di isi',
+        ];
+        $a->validate([
+            'id_struktur' => 'required'
+        ], $pesan_error);
+
+        Struktur::create([
+            'id_struktur' => $a->id_struktur,
+            'nm_struktur' => $a->struktur,
+            'id_kompetensi' => $a->kompetensi
+        ]);
+        //Session::flash('simpan', 'Data Berhasil Disimpan!');
+        return redirect('/Dstruktur');
+    }
+
+    public function strukturUpdate($x, Request $a)
+    {
+        Struktur::where('id_struktur', $x)->update([
+            'id_struktur' => $a->id_struktur,
+            'nm_struktur' => $a->struktur,
+            'id_kompetensi' => $a->kompetensi
+        ]);
+        //Session::flash('update', 'Data Berhasil Diupdate!');
+        return redirect('/Dstruktur');
+    }
+
+    public function strukturDelete($x)
+    {
+        $data = Struktur::find($x);
+        $data->delete();
+        //Session::flash('hapus', 'Data Berhasil Didelete!');
+        return redirect('/Dstruktur');
+    }
 }
