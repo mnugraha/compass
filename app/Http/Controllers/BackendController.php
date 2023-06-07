@@ -215,4 +215,45 @@ class BackendController extends Controller
         //Session::flash('hapus', 'Data Berhasil Didelete!');
         return redirect('/Dvalue');
     }
+
+    public function peran()
+    {
+        $dataPeran = Peran::all();
+        return view('backend/peran', ['dataPeran' => $dataPeran]);
+    }
+
+    public function peranSimpan(Request $a)
+    {
+        $pesan_error = [
+            'required' => ':attribute harus di isi',
+        ];
+        $a->validate([
+            'id_peran' => 'required'
+        ], $pesan_error);
+
+        Peran::create([
+            'id_peran' => $a->id_peran,
+            'nm_peran' => $a->peran
+        ]);
+        //Session::flash('simpan', 'Data Berhasil Disimpan!');
+        return redirect('/Dperan');
+    }
+
+    public function peranUpdate($x, Request $a)
+    {
+        Peran::where('id_peran', $x)->update([
+            'id_peran' => $a->id_peran,
+            'nm_peran' => $a->peran
+        ]);
+        //Session::flash('update', 'Data Berhasil Diupdate!');
+        return redirect('/Dperan');
+    }
+
+    public function peranDelete($x)
+    {
+        $data = Peran::find($x);
+        $data->delete();
+        //Session::flash('hapus', 'Data Berhasil Didelete!');
+        return redirect('/Dperan');
+    }
 }

@@ -71,7 +71,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <div class="col-md-12">
                         <label class="col-md-1 control-label">Deskripsi</label>

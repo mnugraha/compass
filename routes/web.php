@@ -35,6 +35,10 @@ Route::get('/Dvalue', [BackendController::class, 'value']);
 Route::post('/valueSimpan', [BackendController::class, 'valueSimpan']);
 Route::post('/valueUpdate/{x}', [BackendController::class, 'valueUpdate']);
 Route::post('/valueDelete/{x}', [BackendController::class, 'valueDelete']);
+Route::get('/Dperan', [BackendController::class, 'peran']);
+Route::post('/peranSimpan', [BackendController::class, 'peranSimpan']);
+Route::post('/peranUpdate/{x}', [BackendController::class, 'peranUpdate']);
+Route::post('/peranDelete/{x}', [BackendController::class, 'peranDelete']);
 
 Route::get('/master', [UtamaController::class, 'index']);
 Route::get('/', [UtamaController::class, 'dashboard']);

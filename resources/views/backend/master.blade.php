@@ -48,7 +48,7 @@
                             <a href="/Dvalue"><span class="fa fa-archive" style="color: white"></span> Value</a>
                         </li>
                         <li>
-                            <a href="/Dfunction"><span class="fa fa-male" style="color: white"></span> Function</a>
+                            <a href="/Dperan"><span class="fa fa-male" style="color: white"></span> Function</a>
                         </li>
                         <li>
                             <a href="/Dstruktur"><span class="fa fa-sitemap" style="color: white"></span> Struktur</a>
