@@ -475,22 +475,18 @@ class UtamaController extends Controller
 
     public function kompetensi()
     {
-
         $dataKompetensiA = Kompetensi::where('id_kompetensi', '=', 'A1')
             ->orWhere('id_kompetensi', '=', 'A2')
             ->orWhere('id_kompetensi', '=', 'A3')
             ->get();
-
         $dataKompetensiB = Kompetensi::where('id_kompetensi', '=', 'B1')
             ->orWhere('id_kompetensi', '=', 'B2')
             ->orWhere('id_kompetensi', '=', 'B3')
             ->get();
-
         $dataKompetensiC = Kompetensi::where('id_kompetensi', '=', 'C1')
             ->orWhere('id_kompetensi', '=', 'C2')
             ->orWhere('id_kompetensi', '=', 'C3')
             ->get();
-
         $dataKompetensiD = Kompetensi::where('id_kompetensi', '=', 'D1')
             ->orWhere('id_kompetensi', '=', 'D2')
             ->orWhere('id_kompetensi', '=', 'D3')
