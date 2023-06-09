@@ -31,7 +31,7 @@ class BackendController extends Controller
             'unique' => "User dengan ID ini Sudah terdaftar"
         ];
         $a->validate([
-            'id_user' => 'required|unique:users',
+            'id_user' => 'required',
             'nama' => 'required',
             'password' => 'required',
             'function' => 'required',
@@ -42,8 +42,8 @@ class BackendController extends Controller
             'id_user' => $a->id_user,
             'name' => $a->nama,
             'password' => Hash::make($a->password),
-            'departemen' => $a->departemen,
             'hp' => $a->hp,
+            'role' => $a->role,
             'function' => $a->function,
             'function_en' => $a->function,
             'level' => $a->level
@@ -57,7 +57,7 @@ class BackendController extends Controller
         User::where('id_user', $x)->update([
             'name' => $a->nama,
             'password' => Hash::make($a->password),
-            'departemen' => $a->departemen,
+            'role' => $a->role,
             'hp' => $a->hp,
             'function' => $a->function,
             'function_en' => $a->function,

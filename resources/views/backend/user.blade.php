@@ -49,10 +49,14 @@
 
                 <div class="form-group">
                     <div class="col-md-6">
-                        <label class="col-md-4 control-label">Departemen</label>
+                        <label class="col-md-4 control-label">Role <span class="help-block">(Isi jika ingin buat akun
+                                admin)</span></label>
                         <div class="col-md-8">
-
-                            <input type="text" class="form-control" name="departemen" value="{{ old('departemen') }}">
+                            <select class="form-control" name="role">
+                                <option value=""> - </option>
+                                <option value="admin">admin</option>
+                                <option value="non admin">non admin</option>
+                            </select>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -211,10 +215,17 @@
 
                                 <div class="form-group">
                                     <div class="col-md-6">
-                                        <label class="col-md-4 control-label">Departemen</label>
+                                        <label class="col-md-4 control-label">Role</label>
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control" name="departemen"
-                                                value="{{ $x->departemen }}">
+                                            <select class="form-control" name="role">
+                                                <option value={{ $x->role }} selected>
+                                                    {{ $x->role }}
+                                                </option>
+                                                <option value="">-</option>
+                                                <option value="admin">admin</option>
+                                                <option value="non admin">non admin</option>
+                                            </select>
+
                                         </div>
                                     </div>
                                     <div class="col-md-6">
