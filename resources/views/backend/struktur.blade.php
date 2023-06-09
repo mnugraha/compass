@@ -92,8 +92,7 @@
                         <td>{{ '[' . $x->id_kompetensi . '] ' . $x->nm_kompetensi }}</td>
                         <td class="text-center">
                             <a type="button" class="btn btn-info btn-icon" data-toggle="modal"
-                                data-target="#edit{{ $x->id_struktur }}"><span class="icon-pencil"
-                                    style="margin: 3px"></span></a>
+                                data-target="#edit{{ $x->id_struktur }}"><span class="icon-pencil"></span></a>
                             <a type="button" class="btn btn-danger btn-icon" data-toggle="modal"
                                 data-target="#hapus{{ $x->id_struktur }}" style="margin: 3px"><span
                                     class="icon-trash"></span></a>

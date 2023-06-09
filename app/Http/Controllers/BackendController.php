@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Peran;
@@ -300,5 +301,25 @@ class BackendController extends Controller
         $data->delete();
         //Session::flash('hapus', 'Data Berhasil Didelete!');
         return redirect('/Dstruktur');
+    }
+
+    public function LoginAdmin()
+    {
+        return view('loginAdmin');
+    }
+
+    public function login_proses(Request $a)
+    {
+        $cek = $a->validate([
+            'id_user' => 'required',
+            'password' => 'required'
+        ]);
+
+        if (Auth::attempt($cek)) {
+            $a->session()->regenerate();
+            return redirect()->intended('/user');
+        }
+        //return view('index');
+        return back()->with('loginError', 'Login Gagal! User atau Password salah.');
     }
 }

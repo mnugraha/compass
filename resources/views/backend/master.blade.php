@@ -71,8 +71,7 @@
                     </ul>
                     <ul class="app-header-buttons pull-right">
                         <li>
-                            <a href="pages-login.html" class="btn btn-default btn-icon"><span
-                                    class="icon-power-switch"></span></a>
+                            <a href="/logout" class="btn btn-danger btn-icon"><span class="fa fa-power-off"></span></a>
                         </li>
                     </ul>
                 </div>
