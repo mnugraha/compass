@@ -4,6 +4,7 @@
 @endsection
 
 @section('judul')
+    Welcome, <span style="color: cornflowerblue"> {{ auth()->user()->name }}</span>
 @endsection
 
 @section('sub-judul')

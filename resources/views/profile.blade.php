@@ -16,8 +16,8 @@
                     <div class="contact-container">
                         <a href="#"><strong> {{ auth()->user()->name }}</strong></a>
                         <span>ID: {{ $dataUser->id_user }} </span>
-                        <a class="btn btn-default btn-xs" style="color: tomato; font-size: 10px" data-toggle="modal"
-                            data-target="#password{{ $dataUser->id_user }}">
+                        <a class="btn btn-default btn-xs" style="color: tomato; font-size: 10px; padding: 1px 5px"
+                            data-toggle="modal" data-target="#password{{ $dataUser->id_user }}">
                             Ubah Password
                         </a>
                     </div>

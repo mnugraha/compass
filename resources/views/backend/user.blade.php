@@ -4,7 +4,7 @@
 @endsection
 
 @section('judul')
-    User
+    Welcome, <span style="color: cornflowerblue"> {{ auth()->user()->name }}</span>
 @endsection
 
 @section('sub-judul')
@@ -134,7 +134,7 @@
                 <tr>
                     <th class="text-center" style="font-size: 14px">Employee ID</th>
                     <th class="text-center" style="font-size: 14px">Full Name</th>
-
+                    <th class="text-center" style="font-size: 14px">Role</th>
                     <th class="text-center" style="font-size: 14px">Function</th>
                     <th class="text-center" style="font-size: 14px">Level</th>
                     <th class="text-center" style="font-size: 14px">Action</th>
@@ -146,7 +146,9 @@
                     <tr>
                         <td class="text-center">{{ $x->id_user }}</td>
                         <td>{{ $x->name }}</td>
-
+                        <td style="font-weight: 800; color: red;font-size: 16px" class="text-center">
+                            {{ $x->role }}
+                        </td>
                         <td>{{ $x->nm_peran }}</td>
                         <td class="text-center">{{ $x->level }}</td>
                         <td class="text-center">
